@@ -20,7 +20,8 @@ class ContactoController extends Controller
      */
     public function create()
     {
-        //
+        $mensajevar = new Mensaje();
+        return view ('contacto.create',compact('mensajevar'));
     }
 
     /**
@@ -28,7 +29,14 @@ class ContactoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        if (Mensaje::create($request->all())) {
+            
+        }else
+        {
+           
+        }
+        return redirect()->route('inicio');
     }
 
     /**

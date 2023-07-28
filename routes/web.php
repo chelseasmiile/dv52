@@ -22,9 +22,11 @@ Route::get('Comunicados', function () {
     return view('comunicados.index');
 })->name('comunicados');
 
-Route::get('Contacto', function () {
-    return view('contacto.index');
-})->name('contacto');
+Route::resource('contacto', ContactoController::class)->except(['show','destroy']);
+
+// Route::get('Contacto', function () {
+//     return view('contacto.index');
+// })->name('contacto');
 
 Route::get('Galerias', function () {
     return view('galerias.index');
@@ -50,4 +52,3 @@ Route::get('Videos', function () {
     return view('videos.index');
 })->name('videos');
 
-Route::resource('contacto', ContactoController::class)->except(['show','destroy']);

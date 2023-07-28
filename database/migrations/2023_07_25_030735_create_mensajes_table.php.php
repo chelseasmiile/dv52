@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('Seccion',25)->comment('Esta es la seccion sindical a la que pertenece el remitente');
             $table->string('Mensaje',255)->comment('Este es el mensaje que quiere atender el remitente');
             $table->string('Correo',45)->comment('Este es el correo del remitente');
-            $table->string('Telefono',10)->comment('Este es el numero telefonico del remitente');
+            $table->string('Telefono',15)->comment('Este es el numero telefonico del remitente');
         });
     }
 
