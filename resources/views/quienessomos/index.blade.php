@@ -1,5 +1,6 @@
 @extends('layouts.layout')
 @section('content')
+<div class="bg-color-stripe"></div></div>
 <div id="ajax-content-wrap">
 <div class="container-wrap" style="padding-top: 0px; min-height: 183.969px;">
 <div class="container main-content" role="main">
@@ -98,4 +99,7 @@
 </div>
 </div>
 </div>
+
 @endsection
+
+

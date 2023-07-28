@@ -5,21 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Mensaje extends Model
+class Video extends Model
 {
     use HasFactory;
-    protected $table = 'mensajes';
+    protected $table = 'videos';
     public $incrementing = true;
-    public $timestamps = false;
+    public $timestamps = true;
 
     protected $fillable = [
-        'Nombre', 'Seccion', 'Mensaje', 'Correo', 'Telefono'
+        'titulo', 'vista_previa_video', 'descripcion'
     ];
 
     // Definir relaciones con otros modelos si es necesario
-
-    public static function attributeNames(){
-        return ['Nombre'=>'Nombre', 'Correo'=>'Correo'];
-    }
 }
-
