@@ -11,7 +11,7 @@ class ComunicadoController extends Controller
      */
     public function index()
     {
-        //
+        return view('comunicados.index');
     }
 
     /**
@@ -19,7 +19,7 @@ class ComunicadoController extends Controller
      */
     public function create()
     {
-        //
+        return view('comunicados.create');
     }
 
     /**

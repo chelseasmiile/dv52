@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ComunicadoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +16,20 @@ use App\Http\Controllers\ContactoController;
 |
 */
 
+// Rutas para el inicio de sesión
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [LoginController::class, 'login']);
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
 Route::get('/', function () {
     return view('principal.index');
 })->name('inicio');
 
-Route::get('Comunicados', function () {
-    return view('comunicados.index');
-})->name('comunicados');
+Route::resource('comunicados', ComunicadoController::class)->except(['show','destroy']);
+
+// Route::get('Comunicados', function () {
+//     return view('comunicados.index');
+// })->name('comunicados');
 
 Route::resource('contacto', ContactoController::class)->except(['show','destroy']);
 
