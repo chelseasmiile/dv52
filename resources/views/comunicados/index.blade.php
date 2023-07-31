@@ -647,7 +647,7 @@
         <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-42 current_page_item nectar-regular-menu-item menu-item-44"><a href="{!!route('inicio')!!}" aria-current="page"><span class="menu-title-text">Inicio</span></a></li>
         <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nectar-regular-menu-item menu-item-27"><a href="#"><span class="menu-title-text">Sección Sindical</span></a>
         <ul class="sub-menu">
-        <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-28"><a href="{!!route('quienessomos')!!}"><span class="menu-title-text">Quiénes somos</span></a></li>
+        <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-28"><a href="{!!route('quienessomos.index')!!}"><span class="menu-title-text">Quiénes somos</span></a></li>
         <li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom nectar-regular-menu-item menu-item-29"><a target="_blank" rel="noopener" href="https://s3-us-west-1.amazonaws.com/cdnsnte1/wp-content/uploads/sites/37/2020/04/17202623/comite_ejecutivo_seccional_36.pdf"><span class="menu-title-text">Comité Ejecutivo Seccional</span></a></li>
         <li id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom nectar-regular-menu-item menu-item-30"><a target="_blank" rel="noopener" href="https://snte.org.mx/wp-content/uploads/2019/12/Estatuto-SNTE12-Marzo-2019.pdf"><span class="menu-title-text">Estatuto</span></a></li>
         <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-40"><a href="{!!route('legislacion')!!}"><span class="menu-title-text">Legislación</span></a></li>
@@ -657,9 +657,9 @@
         <li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nectar-regular-menu-item menu-item-36"><a href="#"><span class="menu-title-text">Multimedia</span></a>
         <ul class="sub-menu">
         <li id="menu-item-2454" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-2454"><a href="{!!route('comunicados.index')!!}"><span class="menu-title-text">Comunicados</span></a></li>
-        <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-34"><a href="{!!route('notas')!!}"><span class="menu-title-text">Notas</span></a></li>
-        <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-35"><a href="{!!route('videos')!!}"><span class="menu-title-text">Videos</span></a></li>
-        <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-33"><a href="{!!route('galerias')!!}"><span class="menu-title-text">Galerías</span></a></li>
+        <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-34"><a href="{!!route('notas.index')!!}"><span class="menu-title-text">Notas</span></a></li>
+        <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-35"><a href="{!!route('videos.index')!!}"><span class="menu-title-text">Videos</span></a></li>
+        <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-33"><a href="{!!route('galerias.index')!!}"><span class="menu-title-text">Galerías</span></a></li>
         <li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom nectar-regular-menu-item menu-item-37"><a href="https://www.maestrotvsnte.mx/"><span class="menu-title-text">Maestro TV</span></a></li>
         </ul>
         </li>

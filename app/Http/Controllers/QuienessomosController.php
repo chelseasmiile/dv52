@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class GaleriaController extends Controller
+class QuienessomosController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('galerias.index');
+        return view('quienessomos.index');
     }
 
     /**
@@ -19,7 +19,7 @@ class GaleriaController extends Controller
      */
     public function create()
     {
-        return view('galerias.create');
+        return view('quienessomos.create');
     }
 
     /**

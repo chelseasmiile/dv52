@@ -11,7 +11,7 @@ class ArchivosController extends Controller
      */
     public function index()
     {
-        //
+        return view('archivos.index');
     }
 
     /**
@@ -19,7 +19,7 @@ class ArchivosController extends Controller
      */
     public function create()
     {
-        //
+        return view('archivos.create');
     }
 
     /**

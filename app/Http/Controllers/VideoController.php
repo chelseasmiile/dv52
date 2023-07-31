@@ -11,7 +11,7 @@ class VideoController extends Controller
      */
     public function index()
     {
-        //
+        return view('videos.index');
     }
 
     /**
@@ -19,7 +19,7 @@ class VideoController extends Controller
      */
     public function create()
     {
-        //
+        return view('videos.create');
     }
 
     /**

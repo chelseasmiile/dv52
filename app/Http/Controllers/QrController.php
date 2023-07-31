@@ -11,7 +11,7 @@ class QrController extends Controller
      */
     public function index()
     {
-        //
+        return view('qr.index');
     }
 
     /**
@@ -19,7 +19,7 @@ class QrController extends Controller
      */
     public function create()
     {
-        //
+        return view('qr.create');
     }
 
     /**

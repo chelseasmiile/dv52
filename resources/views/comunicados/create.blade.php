@@ -720,7 +720,7 @@
         <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-42 current_page_item nectar-regular-menu-item menu-item-44"><a href="{!!route('inicio')!!}" aria-current="page"><span class="menu-title-text">Inicio</span></a></li>
         <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nectar-regular-menu-item menu-item-27"><a href="#"><span class="menu-title-text">Sección Sindical</span></a>
         <ul class="sub-menu">
-        <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-28"><a href="{!!route('quienessomos')!!}"><span class="menu-title-text">Quiénes somos</span></a></li>
+        <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-28"><a href="{!!route('quienessomos.index')!!}"><span class="menu-title-text">Quiénes somos</span></a></li>
         <li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom nectar-regular-menu-item menu-item-29"><a target="_blank" rel="noopener" href="https://s3-us-west-1.amazonaws.com/cdnsnte1/wp-content/uploads/sites/37/2020/04/17202623/comite_ejecutivo_seccional_36.pdf"><span class="menu-title-text">Comité Ejecutivo Seccional</span></a></li>
         <li id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom nectar-regular-menu-item menu-item-30"><a target="_blank" rel="noopener" href="https://snte.org.mx/wp-content/uploads/2019/12/Estatuto-SNTE12-Marzo-2019.pdf"><span class="menu-title-text">Estatuto</span></a></li>
         <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-40"><a href="{!!route('legislacion')!!}"><span class="menu-title-text">Legislación</span></a></li>
@@ -730,9 +730,9 @@
         <li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nectar-regular-menu-item menu-item-36"><a href="#"><span class="menu-title-text">Multimedia</span></a>
         <ul class="sub-menu">
         <li id="menu-item-2454" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-2454"><a href="{!!route('comunicados.index')!!}"><span class="menu-title-text">Comunicados</span></a></li>
-        <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-34"><a href="{!!route('notas')!!}"><span class="menu-title-text">Notas</span></a></li>
-        <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-35"><a href="{!!route('videos')!!}"><span class="menu-title-text">Videos</span></a></li>
-        <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-33"><a href="{!!route('galerias')!!}"><span class="menu-title-text">Galerías</span></a></li>
+        <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-34"><a href="{!!route('notas.index')!!}"><span class="menu-title-text">Notas</span></a></li>
+        <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-35"><a href="{!!route('videos.index')!!}"><span class="menu-title-text">Videos</span></a></li>
+        <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-33"><a href="{!!route('galerias.index')!!}"><span class="menu-title-text">Galerías</span></a></li>
         <li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom nectar-regular-menu-item menu-item-37"><a href="https://www.maestrotvsnte.mx/"><span class="menu-title-text">Maestro TV</span></a></li>
         </ul>
         </li>
@@ -753,7 +753,8 @@
     <div class="container main-content" role="main">
     <div class="row">
     <div id="fws_64910eb9e1e1f" data-column-margin="default" data-midnight="dark" class="wpb_row vc_row-fluid vc_row top-level full-width-content vc_row-o-equal-height vc_row-flex first-section loaded" style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap" data-bg-animation="none" data-bg-animation-delay="" data-bg-overlay="false"><div class="inner-wrap row-bg-layer"><div class="row-bg viewport-desktop" style=""></div></div></div><div class="row_col_wrap_12 col span_12 dark left">
-    <div style="" class="vc_col-sm-6 wpb_column column_container vc_column_container col padding-1-percent instance-0" data-using-bg="true" data-bg-cover="true" data-padding-pos="all" data-has-bg-color="true" data-bg-color="rgba(51,51,51,0.7)" data-bg-opacity="1" data-animation="" data-delay="0">
+      <div class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-1-percent instance-0" data-using-bg="true" data-bg-cover="true" data-padding-pos="all" data-has-bg-color="true" data-bg-color="rgba(51,51,51,0.7)" data-bg-opacity="1" data-animation="" data-delay="0">
+
     <div class="vc_column-inner"><div class="column-image-bg-wrap column-bg-layer viewport-desktop" data-bg-pos="center center" data-bg-animation="none" data-bg-overlay="false"><div class="inner-wrap"><div class="column-image-bg" style=" background-image: url('https://snte.org.mx/seccion36/wp-content/uploads/sites/37/2020/01/fondo-registro.jpg'); "></div></div></div><div class="column-bg-overlay-wrap column-bg-layer" data-bg-animation="none"><div class="column-bg-overlay" style="opacity: 1; background-color: rgba(51,51,51,0.7);"></div></div>
     <div class="wpb_wrapper">
     <div class="wpb_raw_code wpb_content_element wpb_raw_html">
@@ -762,7 +763,7 @@
         
         
     <div class="form-container">
-      <h1 class="form-title">Formulario de atención</h1>
+      <h1 class="form-title">Creación de comunicados</h1>
             <form action="{{ route('comunicados.store') }}" method="post" enctype="multipart/form-data">
               @csrf
               <div class="form-group">
