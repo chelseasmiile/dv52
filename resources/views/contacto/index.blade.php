@@ -703,8 +703,8 @@ form button:hover {
   <div class="container">
   <div class="row">
   <div class="col span_3">
-  <a id="logo" href="http://localhost:8080/prb/index.html" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false">
-  <img class="stnd skip-lazy dark-version" width="1051" height="180" alt="Delegación DV-52 SNTE" src="img/ittolport.png"> </a>
+    <a id="logo" href="{!!route('inicio')!!}" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false">
+      <img class="stnd skip-lazy dark-version" width="1051" height="180" alt="Delegación DV-52 SNTE" src="{{ asset('images/portada.png') }}"> </a>
   </div>
   <div class="col span_9 col_last">
   <div class="nectar-mobile-only mobile-header"><div class="inner"></div></div>
@@ -738,10 +738,9 @@ form button:hover {
       </li>
       <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-32"><a href="{!!route('contacto.index')!!}"><span class="menu-title-text">Contacto</span></a></li>
       <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="https://snte.org.mx/registro.html"><span class="menu-title-text">Regístrate</span></a></li>
-      <li id="social-in-menu" class="button_social_group"><a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479"><span class="screen-reader-text">twitter</span><i class="fa fa-twitter" aria-hidden="true"></i> </a><a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479"><span class="screen-reader-text">facebook</span><i class="fa fa-facebook" aria-hidden="true"></i> </a><a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479"><span class="screen-reader-text">pinterest</span><i class="fa fa-pinterest" aria-hidden="true"></i> </a><a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479"><span class="screen-reader-text">youtube</span><i class="fa fa-youtube-play" aria-hidden="true"></i> </a></li> </ul>
-      <ul class="buttons sf-menu" data-user-set-ocm="off">
-      <li id="search-btn"><div><a href="#searchbox"><span class="icon-salient-search" aria-hidden="true"></span><span class="screen-reader-text">search</span></a></div> </li>
-      </ul>
+      <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479">
+        <img src="{{ asset('images/facebook.png') }}" alt="Facebook" style="width: 24px; height: 24px;">
+    </a>
   </nav>
   </div>
   </div>
