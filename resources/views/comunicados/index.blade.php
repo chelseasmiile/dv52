@@ -716,7 +716,31 @@
     </div>
     </div>
     <div><li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="{{ route('comunicados.create') }}"><span class="menu-title-text">Crear comunicado</span></a></li></div>
-    </div>
+    <div class="container">
+      <h1>Comunicados</h1>
+      
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>Título</th>
+                  <th>Fecha</th>
+                  <th>Acciones</th>
+              </tr>
+          </thead>
+          <tbody>
+              @foreach($comunicados as $comunicado)
+                  <tr>
+                      <td>{{ $comunicado->titulo }}</td>
+                      <td>{{ $comunicado->fecha }}</td>
+                      <td>
+                          <a href="{{ route('comunicados.download', $comunicado->id) }}" class="btn btn-sm btn-primary">Descargar PDF</a>
+                      </td>
+                  </tr>
+              @endforeach
+          </tbody>
+      </table>
+  </div>
+  </div>
     </div>
     </div>
     </div></div>
