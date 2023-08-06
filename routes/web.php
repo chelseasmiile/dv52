@@ -10,6 +10,7 @@ use App\Http\Controllers\VideoController;
 use App\Http\Controllers\SlidercreateController;
 use App\Http\Controllers\QuienessomosController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,7 +60,7 @@ Route::get('Legislacion', function () {
     return view('legislacion.index');
 })->name('legislacion');
 
-Route::resource('notas', NotaController::class)->except(['show','destroy']);
+Route::resource('notas', NotaController::class)->except(['show']);
 
 // Route::get('Notas', function () {
 //     return view('notas.index');

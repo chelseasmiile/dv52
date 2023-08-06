@@ -758,41 +758,42 @@
     <div class="wpb_wrapper">
     <div class="wpb_raw_code wpb_content_element wpb_raw_html">
     <div class="wpb_wrapper">
-        
-        
-        
-    <div class="form-container">
-      <h1 class="form-title">Creación de comunicados</h1>
-            <form action="{{ route('notas.store') }}" method="post" enctype="multipart/form-data">
-              @csrf
-              <div class="form-group">
-                  <label for="Titulo">Titulo:</label>
-                  <input type="text" name="titulo" id="Titulo" class="form-control">
-              </div>
-              <div class="form-group">
-                  <label for="texto_vista_previa">Texto vista previa:</label>
-                  <input type="text" name="texto_vista_previa" id="texto_vista_previa" class="form-control">
-              </div>
-              <div class="form-group">
-                  <label for="descripcion">Descripción:</label>
-                  <textarea name="descripcion" id="descripcion" class="form-control"></textarea>
-              </div>
-              <div class="form-group">
-                  <label for="fecha">Fecha:</label>
-                  <input type="date" name="fecha" id="fecha" class="form-control">
-              </div>
-              <div class="form-group">
-                  <label for="imagen_nota">Imagen:</label>
-                  <input type="file" name="imagen_nota" id="imagen_nota" class="form-control">
-              </div>
-              <button type="submit">Enviar</button>
-          </form>
+      <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Crear Nota</div>
+    
+                    <div class="card-body">
+                        <form action="{{ route('notas.store') }}" method="post" enctype="multipart/form-data">
+                            @csrf
+                            <div class="form-group">
+                                <label for="titulo">Título:</label>
+                                <input type="text" name="titulo" id="titulo" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="texto_vista_previa">Texto Vista Previa:</label>
+                                <input type="text" name="texto_vista_previa" id="texto_vista_previa" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="descripcion">Descripción:</label>
+                                <textarea name="descripcion" id="descripcion" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="fecha">Fecha:</label>
+                                <input type="date" name="fecha" id="fecha" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="imagen_nota">Imagen:</label>
+                                <input type="file" name="imagen_nota" id="imagen_nota" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Crear Nota</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        
-        
-        
-        
+    </div>
        <script src="https://services.cognitoforms.com/scripts/embed.js"></script>
     </div>
     </div>

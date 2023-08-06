@@ -3,31 +3,38 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Nota;
 
 class NotaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        return view('notas.index');
+        $notas = Nota::all();
+        return view('notas.index', compact('notas'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('notas.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'titulo' => 'required',
+            'texto_vista_previa' => 'required',
+            'descripcion' => 'required',
+            'fecha' => 'required|date',
+            'imagen_nota' => 'required|image|mimes:jpeg,png,jpg,gif',
+        ]);
+
+        $imagenNota = $request->file('imagen_nota')->store('notas_imagenes', 'public');
+
+        $nota = new Nota($data);
+        $nota->imagen_nota = $imagenNota;
+        $nota->save();
+
+        return redirect()->route('notas.index')->with('success', 'Nota creada exitosamente.');
     }
 
     /**
@@ -57,8 +64,10 @@ class NotaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        // Lógica para eliminar la nota
+        Nota::destroy($id);
+        return redirect()->route('notas.index')->with('success', 'Nota eliminada exitosamente.');
     }
 }

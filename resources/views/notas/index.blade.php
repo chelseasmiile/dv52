@@ -744,6 +744,44 @@
     </div>
     </div>
     <div><li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="{{ route('notas.create') }}"><span class="menu-title-text">Crear nota</span></a></li></div>
+    <div class="container">
+      <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Listado de Notas</div>
+    
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Título</th>
+                                    <th>Texto Vista Previa</th>
+                                    <th>Descripción</th>
+                                    <th>Fecha</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($notas as $nota)
+                                    <tr>
+                                        <td>{{ $nota->titulo }}</td>
+                                        <td>{{ $nota->texto_vista_previa }}</td>
+                                        <td>{{ $nota->descripcion }}</td>
+                                        <td>{{ $nota->fecha }}</td>
+                                        <td>
+                                            <a href="{{ asset('storage/' . $nota->imagen_nota) }}" class="btn btn-sm btn-primary" download>Descargar Imagen</a>
+                                            <!-- Agrega enlaces de editar y ver detalles si es necesario -->
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div></div>
     </div>
     </div>
