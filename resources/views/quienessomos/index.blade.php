@@ -770,7 +770,32 @@
     </div>
     </div>
     <div><li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="{{ route('quienessomos.create') }}"><span class="menu-title-text">Editar quienes somos</span></a></li></div>
-    </div></div>
+    <table class="table">
+      <thead>
+          <tr>
+              <th>Visión</th>
+              <th>Misión</th>
+              <th>Valores</th>
+              <th>Acciones</th>
+          </tr>
+      </thead>
+      <tbody>
+          @foreach($quienessomosList as $quienessomos)
+              <tr>
+                  <td>{{ $quienessomos->vision }}</td>
+                  <td>{{ $quienessomos->mision }}</td>
+                  <td>{{ $quienessomos->valores }}</td>
+                  <td>
+                      <a href="{{ asset('storage/' . $quienessomos->imagen_vision) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Visión</a>
+                      <a href="{{ asset('storage/' . $quienessomos->imagen_mision) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Misión</a>
+                      <a href="{{ asset('storage/' . $quienessomos->imagen_valores) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Valores</a>
+                  </td>
+              </tr>
+          @endforeach
+      </tbody>
+  </table>
+    </div>
+  </div>
     </div>
     </div>
     </div>

@@ -761,34 +761,38 @@
         
         
         
-    <div class="form-container">
-      <h1 class="form-title">Creación de comunicados</h1>
-            <form action="{{ route('comunicados.store') }}" method="post" enctype="multipart/form-data">
-              @csrf
-              <div class="form-group">
-                  <label for="Titulo">Titulo:</label>
-                  <input type="text" name="titulo" id="Titulo" class="form-control">
-              </div>
-              <div class="form-group">
-                  <label for="texto_vista_previa">Texto vista previa:</label>
-                  <input type="text" name="texto_vista_previa" id="texto_vista_previa" class="form-control">
-              </div>
-              <div class="form-group">
-                  <label for="descripcion">Descripción:</label>
-                  <textarea name="descripcion" id="descripcion" class="form-control"></textarea>
-              </div>
-              <div class="form-group">
-                  <label for="fecha">Fecha:</label>
-                  <input type="date" name="fecha" id="fecha" class="form-control">
-              </div>
-              <div class="form-group">
-                  <label for="archivo_pdf">PDF:</label>
-                  <input type="file" name="archivo_pdf" id="archivo_pdf" class="form-control">
-              </div>
-              <button type="submit">Enviar</button>
-          </form>
-        </div>
-        
+      <div class="form-container">
+        <h1 class="form-title">Creación de Quienes Somos</h1>
+        <form action="{{ route('quienessomos.store') }}" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="form-group">
+                <label for="vision">Visión:</label>
+                <input type="text" name="vision" id="vision" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="mision">Misión:</label>
+                <input type="text" name="mision" id="mision" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="valores">Valores:</label>
+                <input type="text" name="valores" id="valores" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="imagen_vision">Imagen Visión:</label>
+                <input type="file" name="imagen_vision" id="imagen_vision" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="imagen_mision">Imagen Misión:</label>
+                <input type="file" name="imagen_mision" id="imagen_mision" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="imagen_valores">Imagen Valores:</label>
+                <input type="file" name="imagen_valores" id="imagen_valores" class="form-control">
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    
         
         
         

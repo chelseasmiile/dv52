@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('quienessomos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('vision');
-            $table->string('mision');
-            $table->string('valores');
+            $table->string('vision', 1000);
+            $table->string('mision',1000);
+            $table->string('valores',1000);
             $table->binary('imagen_vision');
             $table->binary('imagen_mision');
             $table->binary('imagen_valores');

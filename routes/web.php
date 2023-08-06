@@ -65,7 +65,7 @@ Route::resource('notas', NotaController::class)->except(['show','destroy']);
 //     return view('notas.index');
 // })->name('notas');
 
-Route::resource('quienessomos', QuienessomosController::class)->except(['show','destroy']);
+Route::resource('quienessomos', QuienessomosController::class)->only(['index', 'create', 'store']);
 
 // Route::get('QuienesSomos', function () {
 //     return view('quienessomos.index');
