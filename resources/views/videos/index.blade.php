@@ -2,15 +2,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
-    <title>Videos - Sección 36 SNTE</title>
+    <title>Videos - DV-52 SNTE</title>
     <meta property="og:locale" content="es_MX">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Videos - Sección 36 SNTE">
-    <meta property="og:url" content="https://snte.org.mx/seccion36/videos/">
+    <meta property="og:title" content="Videos - DV-52 SNTE">
     <meta property="og:site_name" content="Sección 36 SNTE">
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="alternate" type="application/rss+xml" title="Sección 36 SNTE » Feed" href="https://snte.org.mx/seccion36/feed/">
-    <link rel="alternate" type="application/rss+xml" title="Sección 36 SNTE » RSS de los comentarios" href="https://snte.org.mx/seccion36/comments/feed/">
     <script type="text/javascript">
     window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/snte.org.mx\/seccion36\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2"}};
     /*! This file is auto-generated */
@@ -197,8 +193,8 @@
     <div class="container">
     <div class="row">
     <div class="col span_3">
-    <a id="logo" href="http://localhost:8080/prb/index.html" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false">
-    <img class="stnd skip-lazy dark-version" width="1051" height="180" alt="Delegación DV-52 SNTE" src="img/ittolport.png"> </a>
+      <a id="logo" href="{!!route('inicio')!!}" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false">
+        <img class="stnd skip-lazy dark-version" width="1051" height="180" alt="Delegación DV-52 SNTE" src="{{ asset('images/portada.png') }}"> </a>
     </div>
     <div class="col span_9 col_last">
     <div class="nectar-mobile-only mobile-header"><div class="inner"></div></div>
