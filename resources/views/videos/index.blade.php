@@ -3,20 +3,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
     <title>Videos - Sección 36 SNTE</title>
-    <link rel="canonical" href="https://snte.org.mx/seccion36/videos/">
     <meta property="og:locale" content="es_MX">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Videos - Sección 36 SNTE">
     <meta property="og:url" content="https://snte.org.mx/seccion36/videos/">
     <meta property="og:site_name" content="Sección 36 SNTE">
-    <meta property="article:publisher" content="https://www.facebook.com/Seccion36ValledeMexico?fref=ts">
-    <meta property="article:modified_time" content="2020-05-06T04:45:45+00:00">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@Seccion36Ofic">
-    <meta name="twitter:label1" content="Tiempo de lectura">
-    <meta name="twitter:data1" content="4 minutos">
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-6D58MTJW3T&amp;l=dataLayer&amp;cx=c"></script><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://snte.org.mx/seccion36/videos/","url":"https://snte.org.mx/seccion36/videos/","name":"Videos - Sección 36 SNTE","isPartOf":{"@id":"https://snte.org.mx/seccion36/#website"},"datePublished":"2020-01-01T18:05:25+00:00","dateModified":"2020-05-06T04:45:45+00:00","breadcrumb":{"@id":"https://snte.org.mx/seccion36/videos/#breadcrumb"},"inLanguage":"es-MX","potentialAction":[{"@type":"ReadAction","target":["https://snte.org.mx/seccion36/videos/"]}]},{"@type":"BreadcrumbList","@id":"https://snte.org.mx/seccion36/videos/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://snte.org.mx/seccion36/"},{"@type":"ListItem","position":2,"name":"Videos"}]},{"@type":"WebSite","@id":"https://snte.org.mx/seccion36/#website","url":"https://snte.org.mx/seccion36/","name":"Sección 36 SNTE","description":"","publisher":{"@id":"https://snte.org.mx/seccion36/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://snte.org.mx/seccion36/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"es-MX"},{"@type":"Organization","@id":"https://snte.org.mx/seccion36/#organization","name":"SNTE","url":"https://snte.org.mx/seccion36/","logo":{"@type":"ImageObject","inLanguage":"es-MX","@id":"https://snte.org.mx/seccion36/#/schema/logo/image/","url":"https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2020/04/18043803/snte_300.png","contentUrl":"https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2020/04/18043803/snte_300.png","width":300,"height":96,"caption":"SNTE"},"image":{"@id":"https://snte.org.mx/seccion36/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/Seccion36ValledeMexico?fref=ts","https://twitter.com/Seccion36Ofic","https://www.pinterest.es/seccion36/","https://www.youtube.com/channel/UC85Trk3vEzKw_cGDwfzF5Ug"]}]}</script>
-    
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="alternate" type="application/rss+xml" title="Sección 36 SNTE » Feed" href="https://snte.org.mx/seccion36/feed/">
     <link rel="alternate" type="application/rss+xml" title="Sección 36 SNTE » RSS de los comentarios" href="https://snte.org.mx/seccion36/comments/feed/">
@@ -57,326 +48,27 @@
     </style>
     <link rel="stylesheet" id="nectar-header-layout-centered-menu-under-logo-css" href="https://snte.org.mx/seccion36/wp-content/themes/salient/css/build/header/header-layout-centered-menu-under-logo.css?ver=15.0.8" type="text/css" media="all">
     <link rel="stylesheet" id="nectar-element-video-lightbox-css" href="https://snte.org.mx/seccion36/wp-content/themes/salient/css/build/elements/element-video-lightbox.css?ver=15.0.8" type="text/css" media="all">
-    <style id="nectar_default_font_open_sans-css" media="all">/* cyrillic-ext */
-    @font-face {
-      font-family: 'Open Sans';
+    <style id="redux-google-fonts-salient_redux-css" media="all">
+      /* cyrillic-ext */
+      @font-face {
+      font-family: 'Montserrat';
       font-style: normal;
-      font-weight: 300;
-      font-stretch: 100%;
+      font-weight: 400;
       font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2) format('woff2');
+      src: url('/fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw0aXpsog.woff2') format('woff2');
       unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
-    /* cyrillic */
-    @font-face {
+      }
+      
+      /* latin-ext */
+      @font-face {
       font-family: 'Open Sans';
       font-style: normal;
-      font-weight: 300;
-      font-stretch: 100%;
+      font-weight: 400;
+      font-stretch: normal;
       font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2) format('woff2');
-      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
-    /* greek-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 300;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2) format('woff2');
-      unicode-range: U+1F00-1FFF;
-    }
-    /* greek */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 300;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2) format('woff2');
-      unicode-range: U+0370-03FF;
-    }
-    /* hebrew */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 300;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2) format('woff2');
-      unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
-    }
-    /* vietnamese */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 300;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-    }
-    /* latin-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 300;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2) format('woff2');
+      src: url('/fonts.gstatic.com/s/opensans/v35/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4uaVIGxA.woff2') format('woff2');
       unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
-    /* latin */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 300;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-    /* cyrillic-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
-    /* cyrillic */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2) format('woff2');
-      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
-    /* greek-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2) format('woff2');
-      unicode-range: U+1F00-1FFF;
-    }
-    /* greek */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2) format('woff2');
-      unicode-range: U+0370-03FF;
-    }
-    /* hebrew */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2) format('woff2');
-      unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
-    }
-    /* vietnamese */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-    }
-    /* latin-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2) format('woff2');
-      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
-    /* latin */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-    /* cyrillic-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
-    /* cyrillic */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2) format('woff2');
-      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
-    /* greek-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2) format('woff2');
-      unicode-range: U+1F00-1FFF;
-    }
-    /* greek */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2) format('woff2');
-      unicode-range: U+0370-03FF;
-    }
-    /* hebrew */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2) format('woff2');
-      unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
-    }
-    /* vietnamese */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-    }
-    /* latin-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2) format('woff2');
-      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
-    /* latin */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-    /* cyrillic-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 700;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
-    /* cyrillic */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 700;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2) format('woff2');
-      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
-    /* greek-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 700;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2) format('woff2');
-      unicode-range: U+1F00-1FFF;
-    }
-    /* greek */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 700;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2) format('woff2');
-      unicode-range: U+0370-03FF;
-    }
-    /* hebrew */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 700;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2) format('woff2');
-      unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
-    }
-    /* vietnamese */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 700;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-    }
-    /* latin-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 700;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2) format('woff2');
-      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
-    /* latin */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 700;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
+      }
     </style>
     <link rel="stylesheet" id="responsive-css" href="https://snte.org.mx/seccion36/wp-content/themes/salient/css/build/responsive.css?ver=15.0.8" type="text/css" media="all">
     <link rel="stylesheet" id="skin-material-css" href="https://snte.org.mx/seccion36/wp-content/themes/salient/css/build/skin-material.css?ver=15.0.8" type="text/css" media="all">
@@ -426,132 +118,6 @@
     
     #page-header-bg[data-post-hs="default_minimal"] .inner-wrap > a {
         display: none !important;
-    }
-    </style>
-    <style id="redux-google-fonts-salient_redux-css" media="all">/* cyrillic-ext */
-    @font-face {
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw0aXpsog.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
-    /* cyrillic */
-    @font-face {
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw9aXpsog.woff2) format('woff2');
-      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
-    /* vietnamese */
-    @font-face {
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw2aXpsog.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-    }
-    /* latin-ext */
-    @font-face {
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw3aXpsog.woff2) format('woff2');
-      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
-    /* latin */
-    @font-face {
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-    /* cyrillic-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4taVIGxA.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
-    /* cyrillic */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4kaVIGxA.woff2) format('woff2');
-      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
-    /* greek-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4saVIGxA.woff2) format('woff2');
-      unicode-range: U+1F00-1FFF;
-    }
-    /* greek */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4jaVIGxA.woff2) format('woff2');
-      unicode-range: U+0370-03FF;
-    }
-    /* hebrew */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4iaVIGxA.woff2) format('woff2');
-      unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
-    }
-    /* vietnamese */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4vaVIGxA.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-    }
-    /* latin-ext */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4uaVIGxA.woff2) format('woff2');
-      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
-    /* latin */
-    @font-face {
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-stretch: 100%;
-      font-display: swap;
-      src: url(/fonts.gstatic.com/s/opensans/v35/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
     </style>
     <script type="text/javascript" src="https://snte.org.mx/seccion36/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>
@@ -666,10 +232,9 @@
         </li>
         <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-32"><a href="{!!route('contacto.index')!!}"><span class="menu-title-text">Contacto</span></a></li>
         <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="https://snte.org.mx/registro.html"><span class="menu-title-text">Regístrate</span></a></li>
-        <li id="social-in-menu" class="button_social_group"><a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479"><span class="screen-reader-text">twitter</span><i class="fa fa-twitter" aria-hidden="true"></i> </a><a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479"><span class="screen-reader-text">facebook</span><i class="fa fa-facebook" aria-hidden="true"></i> </a><a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479"><span class="screen-reader-text">pinterest</span><i class="fa fa-pinterest" aria-hidden="true"></i> </a><a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479"><span class="screen-reader-text">youtube</span><i class="fa fa-youtube-play" aria-hidden="true"></i> </a></li> </ul>
-        <ul class="buttons sf-menu" data-user-set-ocm="off">
-        <li id="search-btn"><div><a href="#searchbox"><span class="icon-salient-search" aria-hidden="true"></span><span class="screen-reader-text">search</span></a></div> </li>
-        </ul>
+        <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479">
+          <img src="{{ asset('images/facebook.png') }}" alt="Facebook" style="width: 24px; height: 24px;">
+      </a>
     </nav>
     </div>
     </div>

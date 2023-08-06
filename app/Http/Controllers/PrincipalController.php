@@ -3,33 +3,34 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Principal;
 
-class SildercreateController extends Controller
+class PrincipalController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        return view('principal.index');
+        $sliders = Principal::all();
+        return view('principal.index', compact('sliders'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('principal.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
-    }
+        $requestData = $request->except('_token');
 
+        if ($request->hasFile('imagen')) {
+            $imagePath = $request->file('imagen')->store('imagenes_sliders', 'public');
+            $requestData['imagen'] = $imagePath;
+        }
+
+        Principal::create($requestData);
+
+        return redirect()->route('principal.index')->with('success', 'Slider creado exitosamente.');
+    }
     /**
      * Display the specified resource.
      */

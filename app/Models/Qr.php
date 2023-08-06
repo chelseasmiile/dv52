@@ -8,13 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Qr extends Model
 {
     use HasFactory;
+
     protected $table = 'generador_qr';
-    public $incrementing = true;
-    public $timestamps = true;
 
     protected $fillable = [
-        'identificador', 'titulo', 'fecha', 'descripcion', 'participantes', 'imagen_qr'
+        'identificador',
+        'titulo',
+        'fecha',
+        'descripcion',
+        'participantes',
+        'imagen_qr',
+        'galeria_id'
     ];
 
-    // Definir relaciones con otros modelos si es necesario
+    public function galeria()
+    {
+        return $this->belongsTo(Galeria::class);
+    }
 }

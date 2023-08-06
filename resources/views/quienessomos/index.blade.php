@@ -645,7 +645,7 @@
     <nav>
       <ul class="sf-menu">
         <li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom nectar-regular-menu-item menu-item-41"><a href="https://snte.org.mx/"><span class="menu-title-text">SNTE Nacional</span></a></li>
-        <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-42 current_page_item nectar-regular-menu-item menu-item-44"><a href="{!!route('inicio')!!}" aria-current="page"><span class="menu-title-text">Inicio</span></a></li>
+        <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-42 current_page_item nectar-regular-menu-item menu-item-44"><a href="{!!route('principal.index')!!}" aria-current="page"><span class="menu-title-text">Inicio</span></a></li>
         <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nectar-regular-menu-item menu-item-27"><a href="#"><span class="menu-title-text">Sección Sindical</span></a>
         <ul class="sub-menu">
         <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-28"><a href="{!!route('quienessomos.index')!!}"><span class="menu-title-text">Quiénes somos</span></a></li>

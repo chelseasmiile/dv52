@@ -2,10 +2,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   
-  <title>Creación de Videos - DV-52 SNTE</title>
+  <title>Creación de carrete - DV-52 SNTE</title>
   <meta property="og:locale" content="es_MX">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Creación de Videos - DV-52 SNTE">
+  <meta property="og:title" content="Creación de carrete - DV-52 SNTE">
   <meta property="og:site_name" content="DV-52 SNTE">
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap">
@@ -314,30 +314,27 @@ form button:hover {
       
       
   <div class="form-container">
-    <h1 class="form-title">Creación de videos</h1>
-    <form action="{{ route('videos.store') }}" method="post" enctype="multipart/form-data">
+    <h1 class="form-title">Crear nueva imagen para el carrete</h1>
+    <form action="{{ route('principal.store') }}" method="post" enctype="multipart/form-data">
       @csrf
       <div class="form-group">
-          <label for="titulo">Título:</label>
-          <input type="text" name="titulo" id="titulo" class="form-control">
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="nombre" id="nombre" class="form-control">
       </div>
       <div class="form-group">
-          <label for="vista_previa_video">Vista Previa Video:</label>
-          <input type="text" name="vista_previa_video" id="vista_previa_video" class="form-control">
+          <label for="fecha">Fecha:</label>
+          <input type="date" name="fecha" id="fecha" class="form-control">
       </div>
       <div class="form-group">
-          <label for="descripcion">Descripción:</label>
-          <textarea name="descripcion" id="descripcion" class="form-control" rows="4"></textarea>
+          <label for="texto_vista_previa">Texto Vista Previa:</label>
+          <input type="text" name="texto_vista_previa" id="texto_vista_previa" class="form-control">
       </div>
       <div class="form-group">
-          <label for="ruta_video">Video:</label>
-          <input type="file" name="ruta_video" id="ruta_video" class="form-control">
+          <label for="imagen">Imagen:</label>
+          <input type="file" name="imagen" id="imagen" class="form-control">
       </div>
-      <button type="submit" class="btn btn-primary">Crear Video</button>
+      <button type="submit" class="btn btn-primary">Crear Slider</button>
   </form>
-
-
-
       </div>
       
       

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('titulo');
             $table->string('vista_previa_video');
             $table->text('descripcion');
+            $table->string('ruta_video'); // Nuevo campo para la ruta del video
             $table->timestamps();
         });
     }

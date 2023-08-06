@@ -16,5 +16,10 @@ class Galeria extends Model
         'titulo', 'texto_vista_previa', 'descripcion', 'fecha', 'imagen_galeria'
     ];
 
+    public function generadoresQr()
+{
+    return $this->belongsToMany(GeneradorQr::class);
+}
+
     // Definir relaciones con otros modelos si es necesario
 }

@@ -3,31 +3,45 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Qr;
 
 class QrController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        return view('qr.index');
+        $qrs = Qr::all();
+        return view('servicios.index', compact('servicios'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        return view('qr.create');
+        return view('servicios.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'identificador' => 'required|unique:generador_qr',
+            'titulo' => 'required',
+            'fecha' => 'required',
+            'descripcion' => 'required',
+            'participantes' => 'required',
+            'imagen_qr' => 'required|image|mimes:jpeg,png,jpg,gif',
+        ]);
+
+        $imageName = time() . '.' . $request->imagen_qr->extension();
+        $request->imagen_qr->storeAs('imagenes_qr', $imageName, 'public');
+
+        $qr = new Qr();
+        $qr->identificador = $validatedData['identificador'];
+        $qr->titulo = $validatedData['titulo'];
+        $qr->fecha = $validatedData['fecha'];
+        $qr->descripcion = $validatedData['descripcion'];
+        $qr->participantes = $validatedData['participantes'];
+        $qr->imagen_qr = $imageName;
+        $qr->save();
+
+        return redirect()->route('qrs.index')->with('success', 'Código QR creado exitosamente.');
     }
 
     /**

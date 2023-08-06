@@ -26,9 +26,19 @@ class VideoController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        //
+{
+    $requestData = $request->except('_token');
+
+    if ($request->hasFile('ruta_video')) {
+        $videoPath = $request->file('ruta_video')->store('videos', 'public');
+        $requestData['ruta_video'] = $videoPath;
     }
+
+    Video::create($requestData);
+
+    return redirect()->route('videos.index')->with('success', 'Video creado exitosamente.');
+}
+
 
     /**
      * Display the specified resource.
