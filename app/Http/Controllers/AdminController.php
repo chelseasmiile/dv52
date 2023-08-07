@@ -61,4 +61,27 @@ class AdminController extends Controller
     {
         //
     }
+
+    public function createAdmin(Request $request)
+    {
+        // Validación de los datos del formulario
+        $request->validate([
+            'nombre' => 'required|string|max:255',
+            'correo_electronico' => 'required|email|unique:administradores',
+            'contrasena' => 'required|string|min:8',
+        ]);
+
+        // Crear una instancia del modelo Admin y guardar los datos
+        $admin = new Admin([
+            'nombre' => $request->input('nombre'),
+            'correo_electronico' => $request->input('correo_electronico'),
+            'contrasena' => bcrypt($request->input('contrasena')),
+        ]);
+
+        $admin->save();
+
+        // ... (Otras operaciones si es necesario, como asignar roles)
+
+        return redirect()->route('admin.index')->with('success', 'Administrador creado exitosamente');
+    }
 }

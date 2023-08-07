@@ -27,10 +27,31 @@ Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
+Route::post('register', [RegisterController::class, 'createUser'])->name('register');
+
 
 
 Route::resource('principal', PrincipalController::class)->except(['show']);
-Route::get('/', [PrincipalController::class, 'index'])->name('inicio');
+
+Route::get('/', function () {
+    if (Auth::check()) {
+        return redirect()->route('principal.index');
+    } else {
+        return view('principal.index-user');
+    }
+})->name('inicio');
+
+// Rutas de autenticación (login, registro, recuperación de contraseña, etc.)
+Auth::routes();
+
+// Rutas protegidas que requieren autenticación
+Route::middleware(['auth'])->group(function () {
+    // Rutas para administradores
+    Route::resource('principal', PrincipalController::class)->except(['show']);
+    Route::resource('comunicados', ComunicadoController::class)->except(['show']);
+    
+    // Otras rutas para administradores...
+});
 
 
 Route::get('comunicados', [ComunicadoController::class, 'index'])->name('comunicados.index');

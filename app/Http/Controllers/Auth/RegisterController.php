@@ -4,12 +4,15 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use App\Models\User;
+use App\Models\Admin;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Controllers\AdminController;
+use Illuminate\Http\Request;
+use App\Models\Role;
 
-class RegisterController extends Controller
+class RegisterController extends AdminController
 {
     /*
     |--------------------------------------------------------------------------
@@ -24,22 +27,53 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
-    /**
-     * Where to redirect users after registration.
-     *
-     * @var string
-     */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // ...
 
     /**
-     * Create a new controller instance.
+     * Create a new user instance after a valid registration.
      *
-     * @return void
+     * @param  array  $data
+     * @return \App\Models\User  // Cambia esto al modelo correcto si es diferente
      */
-    public function __construct()
+    public function createUser(array $data)
     {
-        $this->middleware('guest');
-    }
+        $user = User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
+
+
+    $user->assignRole('administrador'); // Asignar el rol de administrador
+
+    return redirect()->route('login')->with('status', '¡Registro exitoso! Por favor, inicia sesión.');
+}
+
+
+    public function store(Request $request)
+{
+    // Validar los datos del formulario de registro
+    $request->validate([
+        'nombre' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:administradores',
+        'password' => 'required|string|min:8|confirmed',
+    ]);
+
+    // Obtener los datos del formulario
+    $data = $request->all();
+
+    // Crear el usuario utilizando el método create()
+    $user = Admin::create([
+        'nombre' => $data['nombre'],
+        'correo_electronico' => $data['email'],
+        'contrasena' => Hash::make($data['password']),
+    ]);
+
+    // Asignar el rol de administrador
+    $user->roles()->attach(Role::where('nombre_del_rol', 'administrador')->first());
+
+    return redirect()->route('principal.index')->with('success', 'Administrador creado exitosamente.');
+}
 
     /**
      * Get a validator for an incoming registration request.
@@ -62,12 +96,32 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
-    }
+
+public function register(Request $request)
+{
+    // Validar los datos del formulario de registro
+    $request->validate([
+        'nombre' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:administradores',
+        'password' => 'required|string|min:8|confirmed',
+    ]);
+
+    // Obtener los datos del formulario
+    $data = $request->all();
+
+    // Crear el usuario utilizando el método create()
+    $user = Admin::create([
+        'nombre' => $data['nombre'],
+        'correo_electronico' => $data['email'],
+        'contrasena' => Hash::make($data['password']),
+    ]);
+
+    // Asignar el rol de administrador
+    $user->roles()->attach(Role::where('nombre_del_rol', 'administrador')->first());
+
+    return $user;
+}
+
+
+
 }

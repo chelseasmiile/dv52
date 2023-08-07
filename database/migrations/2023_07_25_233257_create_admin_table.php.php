@@ -10,16 +10,16 @@ return new class extends Migration
      * Run the migrations.
      */
    
-    public function up()
-    {
-        Schema::create('administradores', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('nombre');
-            $table->string('correo_electronico')->unique();
-            $table->string('contrasena');
-            $table->timestamps();
-        });
-    }
+     public function up()
+     {
+         Schema::create('administradores', function (Blueprint $table) {
+             $table->bigIncrements('id');
+             $table->string('nombre');
+             $table->string('email')->unique(); // Cambia aquí
+             $table->string('contrasena');
+             $table->timestamps();
+         });
+     }
 
     public function down()
     {
