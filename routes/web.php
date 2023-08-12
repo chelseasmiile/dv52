@@ -39,6 +39,11 @@ Route::resource('comunicados', ComunicadoController::class)->except(['show','des
 Route::get('comunicados/{id}/download', [ComunicadoController::class, 'download'])->name('comunicados.download');
 
 
+Route::resource('notas', NotaController::class);
+Route::get('notas/{id}/download', [NotaController::class, 'download'])->name('notas.download');
+
+
+
 // Route::get('Comunicados', function () {
 //     return view('comunicados.index');
 // })->name('comunicados');

@@ -744,7 +744,30 @@
     </div>
     </div>
     <div><li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="{{ route('notas.create') }}"><span class="menu-title-text">Crear nota</span></a></li></div>
-    </div></div>
+  
+    <table class="table">
+      <thead>
+          <tr>
+              <th>Título</th>
+              <th>Fecha</th>
+              <th>Acciones</th>
+          </tr>
+      </thead>
+      <tbody>
+          @foreach($notas as $nota)
+              <tr>
+                  <td>{{ $nota->titulo }}</td>
+                  <td>{{ $nota->fecha }}</td>
+                  <td>
+                      <!-- Agrega las acciones que necesitas para las notas, como descargar archivos -->
+                      <a href="{{ route('notas.download', $nota->id) }}" class="btn btn-sm btn-primary">Descargar PDF</a>
+                  </td>
+              </tr>
+          @endforeach
+      </tbody>
+  </table>
+  
+  </div></div>
     </div>
     </div>
     </div>
