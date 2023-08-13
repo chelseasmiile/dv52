@@ -7,7 +7,7 @@ use App\Http\Controllers\ComunicadoController;
 use App\Http\Controllers\GaleriaController;
 use App\Http\Controllers\NotaController;
 use App\Http\Controllers\VideoController;
-use App\Http\Controllers\SlidercreateController;
+use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\QuienessomosController;
 
 /*
@@ -28,7 +28,11 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 
 
-Route::resource('inicio', SlidercreateController::class)->except(['show','destroy']);
+Route::resource('inicio', PrincipalController::class)->except(['show','destroy']);
+
+Route::get('/principal/create', [PrincipalController::class, 'create'])->name('principal.create');
+
+
 
 Route::get('/', function () {
      return view('principal.index');
@@ -41,7 +45,6 @@ Route::get('comunicados/{id}/download', [ComunicadoController::class, 'download'
 
 Route::resource('notas', NotaController::class);
 Route::get('notas/{id}/download', [NotaController::class, 'download'])->name('notas.download');
-
 
 
 // Route::get('Comunicados', function () {

@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('slidercreate', function (Blueprint $table) {
+        Schema::create('principal', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre');
+            $table->string('titulo');
             $table->dateTime('fecha');
             $table->text('texto_vista_previa');
             $table->binary('imagen');
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('slidercreate');
+        Schema::dropIfExists('principal');
     }
 };

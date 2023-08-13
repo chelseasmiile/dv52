@@ -759,6 +759,17 @@ var say_what_data = {"replacements":[]};
 </div>
 </div>
 </div></div>
+
+<div>
+  <li class="menu-item">
+      <a href="{{ route('principal.create') }}">
+          <span class="menu-title-text">Crear Slider</span>
+      </a>
+  </li>
+</div>
+
+
+
 <div id="fws_64723e90b2c3a" data-column-margin="default" data-midnight="dark" class="wpb_row vc_row-fluid vc_row full-width-section" style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap" data-bg-animation="none" data-bg-animation-delay="" data-bg-overlay="false"><div class="inner-wrap row-bg-layer"><div class="row-bg viewport-desktop" style=""></div></div></div><div class="row_col_wrap_12 col span_12 dark left">
 <div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone " data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0">
 <div class="vc_column-inner">
