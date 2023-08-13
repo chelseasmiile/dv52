@@ -376,6 +376,17 @@
       src: url(/fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2) format('woff2');
       unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
+
+
+    .post-content {
+    color: white;
+    }
+
+    .post-header h3.title,
+.note-preview {
+    color: white; /* Cambia esto al color que desees */
+}
+
     </style>
     <link rel="stylesheet" id="nectar-blog-auto-masonry-meta-overlaid-spaced-css" href="https://snte.org.mx/seccion36/wp-content/themes/salient/css/build/blog/auto-masonry-meta-overlaid-spaced.css?ver=15.0.8" type="text/css" media="all">
     <link rel="stylesheet" id="responsive-css" href="https://snte.org.mx/seccion36/wp-content/themes/salient/css/build/responsive.css?ver=15.0.8" type="text/css" media="all">
@@ -696,6 +707,60 @@
     </div>
     </div>
     </div></div>
+
+
+    @if(session('ultimaNota'))
+    <article id="post-{{ session('ultimaNota')->id }}" class="masonry-blog-item pop-up-note">
+        <div class="inner-wrap">
+            <div class="post-content">
+                <div class="content-inner">
+                    <a class="entire-meta-link" aria-label="{{ session('ultimaNota')->titulo }}"></a>
+                    <span class="post-featured-img">
+                        <img width="800" height="800" src="{{ asset('storage/' . session('ultimaNota')->imagen_nota) }}" class="attachment-medium_featured size-medium_featured skip-lazy wp-post-image" alt="{{ session('ultimaNota')->titulo }}" decoding="async" loading="lazy" title="" sizes="(min-width: 690px) 50vw, 100vw">
+                    </span>
+                    <div class="article-content-wrap">
+                        <span class="meta-category"><a class="notass36" href="https://snte.org.mx/seccion36/category/notass36/">NotasS36</a></span>
+                        <div class="post-header">
+                            <h3 class="title">{{ session('ultimaNota')->titulo }}</h3>
+                        </div>
+                        <div class="note-preview">{{ session('ultimaNota')->texto_vista_previa }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+@endif
+
+<div class="row">
+    <div class="post-area col span_12 col_last masonry auto_meta_overlaid_spaced  " data-ams="16px" data-remove-post-date="" data-remove-post-author="" data-remove-post-comment-number="" data-remove-post-nectar-love="" style="margin-bottom: 0px;">
+        <div class="posts-container" data-load-animation="none">
+            @foreach($notas as $nota)
+                <article id="post-{{ $nota->id }}" class="masonry-blog-item post-{{ $nota->id }} post type-post status-publish format-standard has-post-thumbnail category-notass36">
+                    <div class="inner-wrap">
+                        <div class="post-content">
+                            <div class="content-inner">
+                                <a class="entire-meta-link" aria-label="{{ $nota->titulo }}"></a>
+                                <span class="post-featured-img">
+                                    <img width="800" height="800" src="{{ asset('storage/' . $nota->imagen_nota) }}" class="attachment-medium_featured size-medium_featured skip-lazy wp-post-image" alt="{{ $nota->titulo }}" decoding="async" title="" sizes="(min-width: 690px) 50vw, 100vw">
+                                </span>
+                                <div class="article-content-wrap">
+                                    <span class="meta-category"><a class="notass36" href="https://snte.org.mx/seccion36/category/notass36/">NotasS36</a></span>
+                                    <div class="post-header">
+                                        <h3 class="title">{{ $nota->titulo }}</h3>
+                                    </div>
+                                    <div class="note-preview">{{ $nota->texto_vista_previa }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            @endforeach
+        </div>
+    </div>
+</div>
+
+
+
     <div class="row">
     <div class="post-area col  span_12 col_last masonry auto_meta_overlaid_spaced  infinite_scroll " data-ams="16px" data-remove-post-date="" data-remove-post-author="" data-remove-post-comment-number="" data-remove-post-nectar-love="" style="margin-bottom: 0px;"> <div class="posts-container" data-load-animation="none">
     

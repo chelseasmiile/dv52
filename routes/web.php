@@ -21,12 +21,6 @@ use App\Http\Controllers\QuienessomosController;
 |
 */
 
-// Rutas para el inicio de sesión
-Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('login', [LoginController::class, 'login']);
-Route::post('logout', [LoginController::class, 'logout'])->name('logout');
-
-
 
 Route::resource('inicio', PrincipalController::class)->except(['show','destroy']);
 
@@ -45,6 +39,7 @@ Route::get('comunicados/{id}/download', [ComunicadoController::class, 'download'
 
 Route::resource('notas', NotaController::class);
 Route::get('notas/{id}/download', [NotaController::class, 'download'])->name('notas.download');
+Route::resource('notas', NotaController::class)->except(['show','destroy']);
 
 
 // Route::get('Comunicados', function () {
@@ -67,7 +62,7 @@ Route::get('Legislacion', function () {
     return view('legislacion.index');
 })->name('legislacion');
 
-Route::resource('notas', NotaController::class)->except(['show','destroy']);
+
 
 // Route::get('Notas', function () {
 //     return view('notas.index');

@@ -35,7 +35,7 @@ class NotaController extends Controller
         'texto_vista_previa' => 'required',
         'descripcion' => 'required',
         'fecha' => 'required|date',
-        'imagen_nota' => 'required|image', // Asegúrate de que el campo sea de tipo imagen
+        'imagen_nota' => 'required|image',
     ]);
 
     if ($request->hasFile('imagen_nota')) {
@@ -45,8 +45,11 @@ class NotaController extends Controller
 
     Nota::create($data);
 
-    return redirect()->route('notas.index')->with('success', 'Nota creada exitosamente.');
+    $ultimaNota = Nota::latest()->first();
+
+    return redirect()->route('notas.index')->with('success', 'Nota creada exitosamente.')->with('ultimaNota', $ultimaNota);
 }
+
 
     /**
      * Display the specified resource.
