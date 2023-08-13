@@ -39,7 +39,11 @@ Route::get('comunicados/{id}/download', [ComunicadoController::class, 'download'
 
 Route::resource('notas', NotaController::class);
 Route::get('notas/{id}/download', [NotaController::class, 'download'])->name('notas.download');
-Route::resource('notas', NotaController::class)->except(['show','destroy']);
+Route::get('/notas', [NotaController::class, 'index'])->name('notas.index');
+Route::put('notas/{id}', [NotaController::class, 'update'])->name('notas.update');
+Route::get('/notas/create', [NotaController::class, 'create'])->name('notas.create'); // Agregar esta línea
+
+
 
 
 // Route::get('Comunicados', function () {

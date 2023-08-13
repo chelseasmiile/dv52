@@ -10,11 +10,13 @@ class NotaController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
 {
-    $notas = Nota::all(); // Obtén todas las notas desde la base de datos
-    
-    return view('notas.index', compact('notas')); // Pasa las notas a la vista
+    $orden = $request->input('orden', 'asc'); // Obtener el valor del filtro de orden
+
+    $notas = Nota::orderBy('created_at', $orden)->get(); // Ordenar las notas por fecha
+
+    return view('notas.index', compact('notas', 'orden')); // Pasar las notas y el orden a la vista
 }
 
     /**
@@ -63,25 +65,54 @@ class NotaController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
-    {
-        //
-    }
+{
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+    $nota = Nota::findOrFail($id);
+    return view('notas.edit', compact('nota'));
+}
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+public function update(Request $request, string $id)
+{
+    try {
+        $nota = Nota::findOrFail($id);
+
+        $request->validate([
+            'titulo' => 'required',
+            'texto_vista_previa' => 'required',
+            'descripcion' => 'required',
+            'fecha' => 'required',
+            'imagen_nota' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        if ($request->hasFile('imagen_nota')) {
+            $imagePath = $request->file('imagen_nota')->store('imagenes_notas', 'public');
+            $nota->imagen_nota = $imagePath;
+        }
+
+        // Actualizar los campos individualmente
+        $nota->titulo = $request->titulo;
+        $nota->texto_vista_previa = $request->texto_vista_previa;
+        $nota->descripcion = $request->descripcion;
+        $nota->fecha = $request->fecha;
+
+        $nota->save();
+
+        return redirect()->route('notas.index')->with('success', 'Nota actualizada exitosamente');
+    } catch (Exception $e) {
+        dd($e->getMessage()); // Si hay algún error inesperado, muestra el mensaje de excepción
     }
+}
+
+public function destroy(string $id)
+{
+    $nota = Nota::findOrFail($id); // Obtener la nota a eliminar
+
+    // Puedes hacer algún proceso adicional antes de eliminar la nota si es necesario
+
+    $nota->delete();
+
+    return redirect()->route('notas.index')->with('success', 'Nota eliminada exitosamente');
+}
 
     public function download($id)
 {

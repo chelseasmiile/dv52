@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('texto_vista_previa');
             $table->text('descripcion');
             $table->dateTime('fecha');
-            $table->binary('imagen_nota');
+            $table->string('imagen_nota');
             $table->timestamps();
         });
     }
