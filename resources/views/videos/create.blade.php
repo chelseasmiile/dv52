@@ -761,33 +761,29 @@
         
         
         
-    <div class="form-container">
-      <h1 class="form-title">Creación de comunicados</h1>
-            <form action="{{ route('comunicados.store') }}" method="post" enctype="multipart/form-data">
-              @csrf
-              <div class="form-group">
-                  <label for="Titulo">Titulo:</label>
-                  <input type="text" name="titulo" id="Titulo" class="form-control">
-              </div>
-              <div class="form-group">
-                  <label for="texto_vista_previa">Texto vista previa:</label>
-                  <input type="text" name="texto_vista_previa" id="texto_vista_previa" class="form-control">
-              </div>
-              <div class="form-group">
-                  <label for="descripcion">Descripción:</label>
-                  <textarea name="descripcion" id="descripcion" class="form-control"></textarea>
-              </div>
-              <div class="form-group">
-                  <label for="fecha">Fecha:</label>
-                  <input type="date" name="fecha" id="fecha" class="form-control">
-              </div>
-              <div class="form-group">
-                  <label for="archivo_pdf">PDF:</label>
-                  <input type="file" name="archivo_pdf" id="archivo_pdf" class="form-control">
-              </div>
-              <button type="submit">Enviar</button>
-          </form>
-        </div>
+      <div class="form-container">
+        <h1 class="form-title">Creación de videos</h1>
+        <form action="{{ route('videos.store') }}" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="form-group">
+                <label for="titulo">Título:</label>
+                <input type="text" name="titulo" id="titulo" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="youtube_video_id">ID del video de YouTube (solo el ID, no la URL completa):</label>
+                <input type="text" name="youtube_video_id" id="youtube_video_id" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="miniatura">Miniatura:</label>
+                <input type="file" name="miniatura" id="miniatura" class="form-control" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea name="descripcion" id="descripcion" class="form-control" required></textarea>
+            </div>
+            <button type="submit" onclick="console.log('Submit button pressed')">Enviar</button>
+        </form>
+    </div>
         
         
         

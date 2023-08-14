@@ -87,7 +87,7 @@ Route::get('Servicios', function () {
     return view('servicios.index');
 })->name('servicios');
 
-Route::resource('videos', VideoController::class)->except(['show','destroy']);
+Route::resource('videos', VideoController::class);
 
 // Route::get('Videos', function () {
 //     return view('videos.index');
