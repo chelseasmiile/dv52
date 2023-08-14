@@ -759,41 +759,41 @@
     <div class="wpb_raw_code wpb_content_element wpb_raw_html">
     <div class="wpb_wrapper">
         
-        
-        
-      <div class="container">
-        <div class="form-container">
-            <h1 class="form-title">Creación de comunicados</h1>
-            <form action="{{ route('comunicados.store') }}" method="post" enctype="multipart/form-data">
-                @csrf
-                <div class="form-group">
-                    <label for="titulo">Título:</label>
-                    <input type="text" name="titulo" id="titulo" class="form-control">
+        <div class="container">
+            <div class="form-container">
+                <h1 class="form-title">Edición de comunicado</h1>
+                <form action="{{ route('comunicados.update', $comunicado->id) }}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                        <div class="form-group">
+                            <label for="titulo">Título:</label>
+                            <input type="text" name="titulo" id="titulo" class="form-control" value="{{ $comunicado->titulo }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="texto_vista_previa">Texto vista previa:</label>
+                            <input type="text" name="texto_vista_previa" id="texto_vista_previa" class="form-control" value="{{ $comunicado->texto_vista_previa }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcion">Descripción:</label>
+                            <textarea name="descripcion" id="descripcion" class="form-control">{{ $comunicado->descripcion }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha">Fecha:</label>
+                            <input type="date" name="fecha" id="fecha" class="form-control" value="{{ $comunicado->fecha }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="archivo_pdf">PDF:</label>
+                            <input type="file" name="archivo_pdf" id="archivo_pdf" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="imagen_comunicados">Imagen:</label>
+                            <input type="file" name="imagen_comunicados" id="imagen_comunicados" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Actualizar</button>
+                        <a href="{{ route('comunicados.index') }}" class="btn btn-secondary">Cancelar</a>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="texto_vista_previa">Texto vista previa:</label>
-                    <input type="text" name="texto_vista_previa" id="texto_vista_previa" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="descripcion">Descripción:</label>
-                    <textarea name="descripcion" id="descripcion" class="form-control"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="fecha">Fecha:</label>
-                    <input type="date" name="fecha" id="fecha" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="archivo_pdf">PDF:</label>
-                    <input type="file" name="archivo_pdf" id="archivo_pdf" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="imagen_comunicados">Imagen:</label>
-                    <input type="file" name="imagen_comunicados" id="imagen_comunicados" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-        </div>
-    </div>
+            </div>
         
         
        <script src="https://services.cognitoforms.com/scripts/embed.js"></script>

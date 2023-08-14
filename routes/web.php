@@ -35,6 +35,11 @@ Route::get('/', function () {
 Route::get('comunicados', [ComunicadoController::class, 'index'])->name('comunicados.index');
 Route::resource('comunicados', ComunicadoController::class)->except(['show','destroy']);
 Route::get('comunicados/{id}/download', [ComunicadoController::class, 'download'])->name('comunicados.download');
+Route::get('comunicados/{id}', [ComunicadoController::class, 'show'])->name('comunicados.show');
+Route::get('comunicados/create', [ComunicadoController::class, 'create'])->name('comunicados.create');
+Route::resource('comunicados', ComunicadoController::class)->except(['show']);
+
+
 
 
 Route::resource('notas', NotaController::class);

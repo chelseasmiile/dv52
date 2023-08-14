@@ -694,9 +694,45 @@
     </div>
     </div>
     </div></div>
+    <div class="row" style="text-align: left; margin-top: 10px;">
+      <form action="{{ route('comunicados.index') }}" method="get" style="display: inline-block;">
+          <label for="orden" style="font-size: 14px; margin-right: 5px;">Ordenar por fecha:</label>
+          <select name="orden" id="orden" style="font-size: 14px;">
+              <option value="asc" @if($orden === 'asc') selected @endif>Ascendente</option>
+              <option value="desc" @if($orden === 'desc') selected @endif>Descendente</option>
+          </select>
+          <button type="submit" style="font-size: 14px;">Filtrar</button>
+      </form>
+  </div>
     <div class="row">
     <div class="post-area col  span_12 col_last masonry auto_meta_overlaid_spaced  infinite_scroll " data-ams="16px" data-remove-post-date="" data-remove-post-author="" data-remove-post-comment-number="" data-remove-post-nectar-love=""> <div class="posts-container" data-load-animation="none">
-    <article id="post-2449" class=" masonry-blog-item post-2449 post type-post status-publish format-standard has-post-thumbnail category-comunicadoss36 category-notass36">
+    
+
+
+      @foreach($comunicados as $comunicado)
+      <article class="masonry-blog-item post-{{ $comunicado->id }} post type-post status-publish format-standard has-post-thumbnail category-comunicadoss36 category-notass36">
+        <a href="{{ route('comunicados.download', $comunicado->id) }}" aria-label="{{ $comunicado->titulo }}">
+            <div class="inner-wrap">
+                <div class="post-content">
+            <div class="content-inner">
+                <a class="entire-meta-link" href="{{ route('comunicados.show', $comunicado->id) }}" aria-label="{{ $comunicado->titulo }}"></a>
+                <span class="post-featured-img"><img width="800" height="720" src="{{ asset('storage/' . $comunicado->imagen_comunicados) }}" class="attachment-medium_featured size-medium_featured skip-lazy wp-post-image" alt="" decoding="async" title="" sizes="(min-width: 690px) 50vw, 100vw"></span>
+                <div class="article-content-wrap">
+                    <span class="meta-category">
+                        <a class="comunicadoss36" href="{{ route('comunicados.index') }}">comunicadoss36</a>
+                        <a class="notass36" href="{{ route('notas.index') }}">NotasS36</a>
+                    </span>
+                    <div class="post-header">
+                        <h3 class="title"><a href="{{ route('comunicados.show', $comunicado->id) }}">{{ $comunicado->titulo }}</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+@endforeach
+    
+      <article id="post-2449" class=" masonry-blog-item post-2449 post type-post status-publish format-standard has-post-thumbnail category-comunicadoss36 category-notass36">
     <div class="inner-wrap">
     <div class="post-content">
     <div class="content-inner">
@@ -717,9 +753,10 @@
     </div>
     <div><li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="{{ route('comunicados.create') }}"><span class="menu-title-text">Crear comunicado</span></a></li></div>
     <div class="container">
-      <h1>Comunicados</h1>
+      <div class="container">
+        <h1>Comunicados</h1>
       
-      <table class="table">
+        <table class="table">
           <thead>
               <tr>
                   <th>Título</th>
@@ -731,14 +768,21 @@
               @foreach($comunicados as $comunicado)
                   <tr>
                       <td>{{ $comunicado->titulo }}</td>
-                      <td>{{ $comunicado->fecha }}</td>
+                      <td>{{ $comunicado->created_at }}</td>
                       <td>
                           <a href="{{ route('comunicados.download', $comunicado->id) }}" class="btn btn-sm btn-primary">Descargar PDF</a>
+                          <a href="{{ route('comunicados.edit', $comunicado->id) }}" class="btn btn-sm btn-warning">Editar</a>
+                          <form action="{{ route('comunicados.destroy', $comunicado->id) }}" method="POST" style="display: inline-block;">
+                              @csrf
+                              @method('DELETE')
+                              <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de eliminar este comunicado?')">Eliminar</button>
+                          </form>
                       </td>
                   </tr>
               @endforeach
           </tbody>
       </table>
+    </div>
   </div>
   </div>
     </div>

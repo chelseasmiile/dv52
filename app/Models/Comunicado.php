@@ -8,12 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Comunicado extends Model
 {
     use HasFactory;
+    
     protected $table = 'comunicados';
-    public $incrementing = true;
+    protected $primaryKey = 'id';
     public $timestamps = true;
 
     protected $fillable = [
-        'titulo', 'texto_vista_previa', 'descripcion', 'fecha', 'archivo_pdf'
+        'titulo', 'texto_vista_previa', 'descripcion', 'fecha', 'archivo_pdf', 'imagen_comunicados'
     ];
 
     // Definir relaciones con otros modelos si es necesario

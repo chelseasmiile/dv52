@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('texto_vista_previa');
             $table->text('descripcion');
             $table->dateTime('fecha');
+            $table->string('imagen_comunicados'); // Campo para la ruta de la imagen
             $table->binary('archivo_pdf');
             $table->timestamps();
         });
@@ -27,3 +28,4 @@ return new class extends Migration
         Schema::dropIfExists('comunicados');
     }
 };
+
