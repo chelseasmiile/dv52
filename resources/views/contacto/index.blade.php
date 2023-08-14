@@ -624,7 +624,6 @@ form button:hover {
     background-color: #2980b9;
 }
 
-  
   </style>
   <script type="text/javascript" src="https://snte.org.mx/seccion36/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>
   <script type="text/javascript" src="https://snte.org.mx/seccion36/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11" id="regenerator-runtime-js"></script>
@@ -759,35 +758,44 @@ form button:hover {
   <div class="wpb_wrapper">
       
       
-      
-  <div class="form-container">
-    <h1 class="form-title">Formulario de atención</h1>
-          <form action="{{ route('contacto.store') }}" method="post">
-            @csrf
-            <div class="form-group">
-                <label for="Nombre">Nombre:</label>
-                <input type="text" name="Nombre" id="nombre" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="Seccion">Sección:</label>
-                <input type="text" name="Seccion" id="seccion" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="Mensaje">Mensaje:</label>
-                <textarea name="Mensaje" id="mensaje" class="form-control"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="Correo">Correo electrónico:</label>
-                <input type="email" name="Correo" id="correo" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="Telefono">Teléfono:</label>
-                <input type="tel" name="Telefono" id="telefono" class="form-control">
-            </div>
-            <button type="submit">Enviar</button>
-        </form>
-      </div>
-      
+    <div class="form-container">
+      <h1 class="form-title">Formulario de atención</h1>
+      <form action="{{ route('contacto.store') }}" method="post">
+          @csrf
+          <div class="form-group">
+              <label for="Nombre">Nombre:</label>
+              <input type="text" name="Nombre" id="nombre" class="form-control">
+          </div>
+          <div class="form-group">
+              <label for="Seccion">Sección:</label>
+              <select name="Seccion" id="seccion" class="form-control">
+                  <option value="Sección 1">Sección 1</option>
+                  <option value="Sección 2">Sección 2</option>
+                  <option value="Sección 3">Sección 3</option>
+                  <!-- Agrega más opciones según sea necesario -->
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="Mensaje">Mensaje:</label>
+              <textarea name="Mensaje" id="mensaje" class="form-control"></textarea>
+          </div>
+          <div class="form-group">
+              <label for="Correo">Correo electrónico:</label>
+              <input type="email" name="Correo" id="correo" class="form-control">
+          </div>
+          <div class="form-group">
+              <label for="Telefono">Teléfono:</label>
+              <input type="tel" name="Telefono" id="telefono" class="form-control">
+          </div>
+          <button type="submit">Enviar</button>
+      </form>
+  </div>
+  <style>
+      /* Estilo para las opciones seleccionadas en el select */
+      select#seccion option:checked {
+          color: white;
+      }
+  </style>
       
       
       

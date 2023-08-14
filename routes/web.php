@@ -77,7 +77,7 @@ Route::get('Legislacion', function () {
 //     return view('notas.index');
 // })->name('notas');
 
-Route::resource('quienessomos', QuienessomosController::class)->only(['index', 'create', 'store']);
+Route::resource('quienessomos', QuienessomosController::class)->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
 
 // Route::get('QuienesSomos', function () {
 //     return view('quienessomos.index');
