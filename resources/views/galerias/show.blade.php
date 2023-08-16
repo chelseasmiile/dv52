@@ -701,14 +701,7 @@ var nectar_theme_info = {"using_salient":"true"};
         </ul>
         </li>
         <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-31"><a href="{!!route('servicios')!!}"><span class="menu-title-text">Servicios</span></a></li>
-        <li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nectar-regular-menu-item menu-item-36"><a href="#"><span class="menu-title-text">Multimedia</span></a>
-        <ul class="sub-menu">
-        <li id="menu-item-2454" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-2454"><a href="{!!route('comunicados.index')!!}"><span class="menu-title-text">Comunicados</span></a></li>
-        <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-34"><a href="{!!route('notas.index')!!}"><span class="menu-title-text">Notas</span></a></li>
-        <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-35"><a href="{!!route('videos.index')!!}"><span class="menu-title-text">Videos</span></a></li>
-        <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-33"><a href="{!!route('galerias.index')!!}"><span class="menu-title-text">Galerías</span></a></li>
-        <li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom nectar-regular-menu-item menu-item-37"><a href="https://www.maestrotvsnte.mx/"><span class="menu-title-text">Maestro TV</span></a></li>
-        </ul>
+        <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-31"><a href="{!!route('galerias.index')!!}"><span class="menu-title-text">Galerias</span></a></li>
         </li>
         <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-32"><a href="{!!route('contacto.index')!!}"><span class="menu-title-text">Contacto</span></a></li>
         <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="https://snte.org.mx/registro.html"><span class="menu-title-text">Regístrate</span></a></li>
@@ -733,7 +726,7 @@ var nectar_theme_info = {"using_salient":"true"};
                 <div class="row">
                     <div class="col span_6 section-title blog-title" data-remove-post-date="0" data-remove-post-author="0" data-remove-post-comment-number="0">
                         <div class="inner-wrap">
-                            <h1 class="entry-title">{{ $galeria->titulo }}</h1>
+                            <h1 class="entry-title">{{ $galeria->descripcion }}</h1>
                         </div>
                     </div>
                 </div>
@@ -810,16 +803,6 @@ var nectar_theme_info = {"using_salient":"true"};
 </div>
 </div>
 </article>
-<div id="author-bio" class="" data-has-tags="false">
-<div class="span_12">
-<img alt="sergio" src="https://secure.gravatar.com/avatar/d54d5b423a361be44b293038f31f566e?s=80&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/d54d5b423a361be44b293038f31f566e?s=160&amp;d=mm&amp;r=g 2x" class="avatar avatar-80 photo" height="80" width="80" loading="lazy" decoding="async"> <div id="author-info">
-<h3 class="nectar-link-underline-effect"><span></span>
-<a href="https://snte.org.mx/seccion36/author/sergio/">sergio</a> </h3>
-<p></p>
-</div>
-<div class="clear"></div>
-</div>
-</div>
 </div>
 </div>
 
@@ -830,10 +813,7 @@ var nectar_theme_info = {"using_salient":"true"};
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addImageModalLabel">Añadir Nueva Imagen</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+
             </div>
             <div class="modal-body">
                 <!-- Formulario para cargar imagen -->
