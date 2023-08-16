@@ -804,6 +804,20 @@ var nectar_theme_info = {"using_salient":"true"};
 </div>
 </article>
 </div>
+
+{{-- <h2>Generadores QR:</h2>
+<ul>
+    @foreach($generadoresQR as $qr)
+        <li>
+            Identificador: {{ $qr->identificador }}
+            Título: {{ $qr->titulo }}
+            Fecha: {{ $qr->fecha }}
+            Descripción: {{ $qr->descripcion }}
+            Participantes: {{ $qr->participantes }}
+        </li>
+    @endforeach
+</ul> --}}
+
 </div>
 
 <a href="#" data-toggle="modal" data-target="#addImageModal" class="add-image-button">Añadir Nueva Imagen</a>
@@ -827,6 +841,10 @@ var nectar_theme_info = {"using_salient":"true"};
         </div>
     </div>
 </div>
+
+<a href="{{ route('servicios.create', ['galeria' => $galeria->id]) }}" class="btn btn-primary">
+  Crear Información para QR
+</a>
 
 
 

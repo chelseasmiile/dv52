@@ -21,6 +21,11 @@ class Galeria extends Model
     return $this->hasMany(ImagenGaleria::class);
 }
 
+public function qr()
+    {
+        return $this->hasOne(Qr::class);
+    }
+
 
     // Definir relaciones con otros modelos si es necesario
 }

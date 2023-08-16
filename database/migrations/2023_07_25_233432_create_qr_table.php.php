@@ -13,13 +13,15 @@ return new class extends Migration
     {
         Schema::create('generador_qr', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('identificador')->unique();
+            $table->string('identificador');
             $table->string('titulo');
             $table->dateTime('fecha');
             $table->text('descripcion');
             $table->string('participantes');
-            $table->binary('imagen_qr');
+            $table->unsignedBigInteger('galeria_id'); // Agrega esta línea para crear la columna
             $table->timestamps();
+
+            $table->foreign('galeria_id')->references('id')->on('galeria')->onDelete('cascade');
         });
     }
 

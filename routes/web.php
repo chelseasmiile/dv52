@@ -10,6 +10,7 @@ use App\Http\Controllers\VideoController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\QuienessomosController;
 use App\Http\Controllers\ImagenGaleriaController;
+use App\Http\Controllers\QrController;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,6 +74,14 @@ Route::post('/galerias/{galeria}/add-image', [GaleriaController::class, 'addImag
 
 
 Route::post('/galerias/{galeriaId}/add-image', [ImagenGaleriaController::class, 'store'])->name('imagenes_galeria.store');
+
+
+Route::get('servicios/create', 'QrController@create')->name('servicios.create');
+Route::post('qrs', 'QrController@store')->name('qrs.store');
+Route::get('servicios/create', [QrController::class, 'create'])->name('servicios.create');
+Route::post('qrs', [QrController::class, 'store'])->name('qrs.store');
+Route::get('servicios/create/{galeria}', [QrController::class, 'create'])->name('servicios.create');
+Route::get('qrs/create/{galeria}', [QrController::class, 'create'])->name('qrs.create');
 
 
 Route::post('/upload-image', 'ImagenGaleriaController@store')->name('upload.image');

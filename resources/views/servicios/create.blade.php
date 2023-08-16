@@ -761,34 +761,36 @@
         
         
         
-    <div class="form-container">
-      <h1 class="form-title">Creación de comunicados</h1>
-            <form action="{{ route('comunicados.store') }}" method="post" enctype="multipart/form-data">
-              @csrf
-              <div class="form-group">
-                  <label for="Titulo">Titulo:</label>
-                  <input type="text" name="titulo" id="Titulo" class="form-control">
-              </div>
-              <div class="form-group">
-                  <label for="texto_vista_previa">Texto vista previa:</label>
-                  <input type="text" name="texto_vista_previa" id="texto_vista_previa" class="form-control">
-              </div>
-              <div class="form-group">
-                  <label for="descripcion">Descripción:</label>
-                  <textarea name="descripcion" id="descripcion" class="form-control"></textarea>
-              </div>
-              <div class="form-group">
-                  <label for="fecha">Fecha:</label>
-                  <input type="date" name="fecha" id="fecha" class="form-control">
-              </div>
-              <div class="form-group">
-                  <label for="archivo_pdf">PDF:</label>
-                  <input type="file" name="archivo_pdf" id="archivo_pdf" class="form-control">
-              </div>
-              <button type="submit">Enviar</button>
-          </form>
+      <div class="form-container">
+        <h1 class="form-title">Información adicional</h1>
+        <form action="{{ route('qrs.store') }}" method="post">
+          @csrf
+        <div class="form-group">
+            <label for="identificador">Identificador:</label>
+            <input type="text" name="identificador" id="identificador" class="form-control">
         </div>
-        
+        <div class="form-group">
+            <label for="titulo">Título:</label>
+            <input type="text" name="titulo" id="titulo" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="fecha">Fecha:</label>
+            <input type="date" name="fecha" id="fecha" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+            <textarea name="descripcion" id="descripcion" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="participantes">Participantes:</label>
+            <input type="text" name="participantes" id="participantes" class="form-control">
+        </div>
+        <input type="hidden" name="galeria_id" value="{{ $galeria->id }}">
+
+
+          <button type="submit">Cargar información de galeria</button>
+      </form>
+    </div>
         
         
         
