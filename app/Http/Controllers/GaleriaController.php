@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Galeria;
 use Illuminate\Support\Facades\Storage;
+use App\Models\ImagenGaleria;
 
 
 class GaleriaController extends Controller
@@ -53,10 +54,12 @@ class GaleriaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Galeria $galeria)
-{
-    return view('galerias.show', compact('galeria'));
-}
+    public function show($id)
+    {
+        $galeria = Galeria::findOrFail($id);
+       // dd($galeria->imagenes); // Verifica si las imágenes están siendo cargadas correctamente
+        return view('galerias.show', compact('galeria'));
+    }
     /**
      * Show the form for editing the specified resource.
      */
@@ -113,4 +116,29 @@ class GaleriaController extends Controller
     
         return response()->download(storage_path('app/public/' . $imagePath));
     }
+
+    public function addImage(Request $request, $id)
+    {
+        // Validaciones y procesamiento de la imagen
+
+        $galeria = Galeria::findOrFail($id);
+
+        // Imprimir para depuración
+        dd('Iniciando proceso de añadir imagen');
+
+        $imagenPath = $request->file('imagen')->store('imagenes_galeria_add', 'public');
+
+        // Imprimir para depuración
+        dd('Imagen subida correctamente');
+
+        $imagen = new ImagenGaleria(['imagen' => $imagenPath]);
+        $galeria->imagenes()->save($imagen);
+
+        // Imprimir para depuración
+        dd('Imagen guardada en la base de datos');
+
+        return redirect()->route('galerias.show', $galeria)->with('success', 'Imagen agregada exitosamente.');
+    }
+
+
 }

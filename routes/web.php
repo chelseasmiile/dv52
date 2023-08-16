@@ -9,6 +9,7 @@ use App\Http\Controllers\NotaController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\QuienessomosController;
+use App\Http\Controllers\ImagenGaleriaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +67,16 @@ Route::get('/galerias/{id}/edit', [GaleriaController::class, 'edit'])->name('gal
 Route::delete('/galerias/{id}', [GaleriaController::class, 'destroy'])->name('galerias.destroy');
 Route::get('/galerias/{id}/download', [GaleriaController::class, 'download'])->name('galerias.download');
 Route::get('galerias/{galeria}', [GaleriaController::class, 'show'])->name('galerias.show');
+
+
+Route::post('/galerias/{galeria}/add-image', [GaleriaController::class, 'addImage'])->name('galerias.addImage');
+
+
+Route::post('/galerias/{galeriaId}/add-image', [ImagenGaleriaController::class, 'store'])->name('imagenes_galeria.store');
+
+
+Route::post('/upload-image', 'ImagenGaleriaController@store')->name('upload.image');
+Route::post('/upload-image', [ImagenGaleriaController::class, 'store'])->name('upload.image');
 
 // Route::get('Galerias', function () {
 //     return view('galerias.index');

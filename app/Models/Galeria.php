@@ -16,5 +16,11 @@ class Galeria extends Model
         'titulo', 'texto_vista_previa', 'descripcion', 'fecha', 'imagen_galeria'
     ];
 
+    public function imagenes()
+{
+    return $this->hasMany(ImagenGaleria::class);
+}
+
+
     // Definir relaciones con otros modelos si es necesario
 }
