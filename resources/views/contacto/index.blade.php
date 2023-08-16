@@ -767,14 +767,14 @@ form button:hover {
               <input type="text" name="Nombre" id="nombre" class="form-control">
           </div>
           <div class="form-group">
-              <label for="Seccion">Sección:</label>
-              <select name="Seccion" id="seccion" class="form-control">
-                  <option value="Sección 1">Sección 1</option>
-                  <option value="Sección 2">Sección 2</option>
-                  <option value="Sección 3">Sección 3</option>
-                  <!-- Agrega más opciones según sea necesario -->
-              </select>
-          </div>
+            <label for="Seccion">Sección:</label>
+            <select name="Seccion" id="seccion" class="form-control">
+                <option value="Sección 1">Sección 1</option>
+                <option value="Sección 2" selected>Sección 2</option> <!-- Esta opción estará seleccionada por defecto -->
+                <option value="Sección 3">Sección 3</option>
+                <!-- Agrega más opciones según sea necesario -->
+            </select>
+        </div>
           <div class="form-group">
               <label for="Mensaje">Mensaje:</label>
               <textarea name="Mensaje" id="mensaje" class="form-control"></textarea>

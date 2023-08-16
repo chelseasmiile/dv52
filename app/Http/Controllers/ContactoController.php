@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Mensaje;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactoMail; 
 
 class ContactoController extends Controller
 {
@@ -29,13 +31,13 @@ class ContactoController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
         if (Mensaje::create($request->all())) {
-            
-        }else
-        {
-           
+            // Send the email
+            Mail::to('troughthefireandflames@gmail.com')->send(new ContactoMail($request->all()));
+        } else {
+            // Handle error if needed
         }
+
         return redirect()->route('inicio');
     }
 

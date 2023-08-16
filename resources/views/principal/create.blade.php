@@ -769,9 +769,9 @@
                 <input type="text" name="titulo" id="titulo" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="fecha">Fecha:</label>
-                <input type="datetime-local" name="fecha" id="fecha" class="form-control" required>
-            </div>
+              <label for="fecha">Fecha:</label>
+              <input type="date" name="fecha" id="fecha" class="form-control">
+          </div>
             <div class="form-group">
                 <label for="texto_vista_previa">Texto Vista Previa:</label>
                 <textarea name="texto_vista_previa" id="texto_vista_previa" class="form-control" rows="3" required></textarea>

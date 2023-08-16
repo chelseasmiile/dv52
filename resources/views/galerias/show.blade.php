@@ -805,6 +805,7 @@ var nectar_theme_info = {"using_salient":"true"};
 </article>
 </div>
 
+
 {{-- <h2>Generadores QR:</h2>
 <ul>
     @foreach($generadoresQR as $qr)

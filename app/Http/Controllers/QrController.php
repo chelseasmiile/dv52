@@ -10,11 +10,15 @@ class QrController extends Controller
 {
     // Mostrar el formulario de creación
     public function create($galeria)
-    {
-        $galeria = Galeria::findOrFail($galeria);
-        $galerias = Galeria::all(); // Agrega esta línea para definir $galerias
-        return view('servicios.create', compact('galerias', 'galeria'));
-    }
+{
+    $galeria = Galeria::findOrFail($galeria);
+    $galerias = Galeria::all();
+    $generadoresQR = Qr::all();
+
+    //dd($generadoresQR); // Agrega esta línea para verificar si se obtienen los generadores QR
+
+    return view('servicios.create', compact('galerias', 'galeria', 'generadoresQR'));
+}
 
 
     // Almacenar un nuevo generador QR
