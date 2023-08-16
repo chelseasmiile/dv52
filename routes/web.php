@@ -61,7 +61,11 @@ Route::resource('contacto', ContactoController::class)->except(['show','destroy'
 //     return view('contacto.index');
 // })->name('contacto');
 
-Route::resource('galerias', GaleriaController::class)->except(['show','destroy']);
+Route::resource('galerias', GaleriaController::class);
+Route::get('/galerias/{id}/edit', [GaleriaController::class, 'edit'])->name('galerias.edit');
+Route::delete('/galerias/{id}', [GaleriaController::class, 'destroy'])->name('galerias.destroy');
+Route::get('/galerias/{id}/download', [GaleriaController::class, 'download'])->name('galerias.download');
+Route::get('galerias/{galeria}', [GaleriaController::class, 'show'])->name('galerias.show');
 
 // Route::get('Galerias', function () {
 //     return view('galerias.index');
