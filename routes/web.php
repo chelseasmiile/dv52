@@ -10,7 +10,6 @@ use App\Http\Controllers\VideoController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\QuienessomosController;
 use App\Http\Controllers\ImagenGaleriaController;
-use App\Http\Controllers\QrController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,34 +23,17 @@ use App\Http\Controllers\QrController;
 */
 
 
-Route::redirect('/', '/principal'); // Redirecciona la raíz a /principal
+Route::resource('/', PrincipalController::class)->except(['show','destroy']);
 
-Route::resource('principal', PrincipalController::class)->except(['show']);
+Route::get('/principal/create', [PrincipalController::class, 'create'])->name('principal.create');
 
-Route::resource('inicio', PrincipalController::class)->except(['show','destroy']);
-
-// Route::get('/principal/create', [PrincipalController::class, 'create'])->name('principal.create');
-// Route::get('/principal', [PrincipalController::class, 'index'])->name('principal.index');
- Route::post('/sliders/{id}/asignar', 'PrincipalController@asignar')->name('asignar.slider');
-// Route::resource('principal', PrincipalController::class)->except(['show']);
+Route::get('/principal', [PrincipalController::class, 'index'])->name('inicio');
 
 
 
-// Route::get('/principales', 'PrincipalController@index')->name('principal.index');
-// Route::get('/principal/create', 'PrincipalController@create')->name('principal.create');
-// Route::post('/principal', 'PrincipalController@store')->name('principal.store');
-// Route::get('/principal/{id}/edit', 'PrincipalController@edit')->name('principal.edit');
-// Route::put('/principal/{id}', 'PrincipalController@update')->name('principal.update');
-// Route::delete('/principal/{id}', 'PrincipalController@destroy')->name('principal.destroy');
-// Route::post('/principal/{id}/asignar', 'PrincipalController@asignar')->name('principal.asignar');
-
-
-
-
-
-Route::get('/', function () {
-     return view('principal.index');
- })->name('inicio');
+// Route::get('/', function () {
+//      return view('principal.index');
+//  })->name('inicio');
 
 Route::get('comunicados', [ComunicadoController::class, 'index'])->name('comunicados.index');
 Route::resource('comunicados', ComunicadoController::class)->except(['show','destroy']);
@@ -69,9 +51,14 @@ Route::get('/notas', [NotaController::class, 'index'])->name('notas.index');
 Route::put('notas/{id}', [NotaController::class, 'update'])->name('notas.update');
 Route::get('/notas/create', [NotaController::class, 'create'])->name('notas.create'); // Agregar esta línea
 
-Route::get('/inicio', 'App\Http\Controllers\PrincipalController@show')->name('inicio.show');
 
-
+Route::get('galerias/{galeria}', [GaleriaController::class, 'show'])->name('galerias.show');
+Route::get('servicios/create', 'QrController@create')->name('servicios.create');
+Route::post('qrs', 'QrController@store')->name('qrs.store');
+Route::get('servicios/create', [QrController::class, 'create'])->name('servicios.create');
+Route::post('qrs', [QrController::class, 'store'])->name('qrs.store');
+Route::get('servicios/create/{galeria}', [QrController::class, 'create'])->name('servicios.create');
+Route::get('qrs/create/{galeria}', [QrController::class, 'create'])->name('qrs.create');
 
 
 
@@ -86,11 +73,12 @@ Route::resource('contacto', ContactoController::class)->except(['show','destroy'
 //     return view('contacto.index');
 // })->name('contacto');
 
+Route::get('galerias/{galeria}', [GaleriaController::class, 'show'])->name('galerias.show');
 Route::resource('galerias', GaleriaController::class);
 Route::get('/galerias/{id}/edit', [GaleriaController::class, 'edit'])->name('galerias.edit');
 Route::delete('/galerias/{id}', [GaleriaController::class, 'destroy'])->name('galerias.destroy');
 Route::get('/galerias/{id}/download', [GaleriaController::class, 'download'])->name('galerias.download');
-Route::get('galerias/{galeria}', [GaleriaController::class, 'show'])->name('galerias.show');
+
 
 
 Route::post('/galerias/{galeria}/add-image', [GaleriaController::class, 'addImage'])->name('galerias.addImage');
@@ -98,13 +86,6 @@ Route::post('/galerias/{galeria}/add-image', [GaleriaController::class, 'addImag
 
 Route::post('/galerias/{galeriaId}/add-image', [ImagenGaleriaController::class, 'store'])->name('imagenes_galeria.store');
 
-
-Route::get('servicios/create', 'QrController@create')->name('servicios.create');
-Route::post('qrs', 'QrController@store')->name('qrs.store');
-Route::get('servicios/create', [QrController::class, 'create'])->name('servicios.create');
-Route::post('qrs', [QrController::class, 'store'])->name('qrs.store');
-Route::get('servicios/create/{galeria}', [QrController::class, 'create'])->name('servicios.create');
-Route::get('qrs/create/{galeria}', [QrController::class, 'create'])->name('qrs.create');
 
 
 Route::post('/upload-image', 'ImagenGaleriaController@store')->name('upload.image');

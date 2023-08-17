@@ -722,7 +722,8 @@ var say_what_data = {"replacements":[]};
 <div class="vc_column-inner">
 <div class="wpb_wrapper">
 <div class="nectar-recent-posts-slider" data-height="600" data-animate-in-effect="none" data-remove-post-date="" data-remove-post-author="" data-remove-post-comment-number="" data-remove-post-nectar-love=""><div class="nectar-recent-posts-slider-inner generate-markup">
-    @foreach($collection as $item)
+   
+  @foreach($collection as $item)
     <div class="nectar-recent-post-slide  post-ref-0">
         <div class="nectar-recent-post-bg"
             style="background-image: url('{{ asset('storage/' . $item->imagen_s1) }}'); ">
