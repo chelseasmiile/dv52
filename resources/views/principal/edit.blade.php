@@ -760,37 +760,38 @@
     <div class="wpb_raw_code wpb_content_element wpb_raw_html">
     <div class="wpb_wrapper">
       
-      <<div class="form-container">
-        <h1 class="form-title">Creación de Quienes Somos</h1>
-        <form action="{{ route('principal.store') }}" method="post" enctype="multipart/form-data">
-            @csrf
-            <div class="form-group">
-              <label for="slider1">Slider 1:</label>
-              <input type="text" name="slider1" id="slider1" class="form-control">
-          </div>
-          <div class="form-group">
-              <label for="slider2">Slider 2:</label>
-              <input type="text" name="slider2" id="slider2" class="form-control">
-          </div>
-          <div class="form-group">
-              <label for="slider3">Slider 3:</label>
-              <input type="text" name="slider3" id="slider3" class="form-control">
-          </div>
-          <div class="form-group">
-              <label for="imagen_s1">Imagen Slider 1:</label>
-              <input type="file" name="imagen_s1" id="imagen_s1" class="form-control">
-          </div>
-          <div class="form-group">
-              <label for="imagen_s2">Imagen Slider 2:</label>
-              <input type="file" name="imagen_s2" id="imagen_s2" class="form-control">
-          </div>
-          <div class="form-group">
-              <label for="imagen_s3">Imagen Slider 3:</label>
-              <input type="file" name="imagen_s3" id="imagen_s3" class="form-control">
-          </div>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
+        <div class="form-container">
+            <h1 class="form-title">Editar Información de Quienes Somos</h1>
+            <form action="{{ route('principal.update', $quienessomos->id) }}" method="post" enctype="multipart/form-data">
+                @csrf
+                @method('PUT')
+                <div class="form-group">
+                    <label for="vision">Visión:</label>
+                    <input type="text" name="slider1" id="slider1" class="form-control" value="{{ $quienessomos->vslider1 }}">
+                </div>
+                <div class="form-group">
+                    <label for="mision">Misión:</label>
+                    <input type="text" name="slider2" id="slider1" class="form-control" value="{{ $quienessomos->slider2}}">
+                </div>
+                <div class="form-group">
+                    <label for="valores">Valores:</label>
+                    <input type="text" name="slider3" id="slider1" class="form-control" value="{{ $quienessomos->slider3 }}">
+                </div>
+                <div class="form-group">
+                    <label for="imagen_vision">Imagen Visión:</label>
+                    <input type="file" name="imagen_s1" id="imagen_s1" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="imagen_mision">Imagen Misión:</label>
+                    <input type="file" name="imagen_s2" id="imagen_s2" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="imagen_valores">Imagen Valores:</label>
+                    <input type="file" name="imagen_s3" id="imagen_s3" class="form-control">
+                </div>
+                <button type="submit">Actualizar</button>
+            </form>
+        </div>
 
 
 

@@ -11,44 +11,53 @@ class PrincipalController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-{
-    $sliders = Principal::all();
-    
-    return view('principal.index', compact('sliders'));
-}
+    {
+        $collection = Principal::all();
+        //dd($collection); // Debugging line
+        return view('principal.index', compact('collection'));
+    }
 
     public function create()
     {
+        //dd('create method'); // Debugging line
         return view('principal.create');
     }
 
     public function store(Request $request)
     {
-        // Validar y almacenar los datos del formulario
+        //dd('store method');
         $data = $request->validate([
-            'titulo' => 'required',
-            'fecha' => 'required|date',
-            'texto_vista_previa' => 'required',
-            'imagen' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Asegúrate de ajustar las validaciones según tus necesidades
+            'slider1' => 'required',
+            'slider2' => 'required',
+            'slider3' => 'required',
+            'imagen_s1' => 'required|image|mimes:jpeg,png,jpg,gif',
+            'imagen_s2' => 'required|image|mimes:jpeg,png,jpg,gif',
+            'imagen_s3' => 'required|image|mimes:jpeg,png,jpg,gif',
         ]);
-
-        if ($request->hasFile('imagen')) {
-            $imagePath = $request->file('imagen')->store('public/images');
-            $data['imagen'] = $imagePath;
-        }
-
-        Principal::create($data);
-
-        return redirect()->route('inicio.index')->with('success', 'Slider creado exitosamente.');
+        //dd('store method');
+        $imagens1 = $request->file('imagen_s1')->store('quienessomos_imagenes/s1', 'public');
+        $imagens2 = $request->file('imagen_s2')->store('quienessomos_imagenes/s2', 'public');
+        $imagens3 = $request->file('imagen_s3')->store('quienessomos_imagenes/s3', 'public');
+    
+        //dd('store method');
+        $collection = new Principal($data);
+        $collection->imagen_s1 = $imagens1;
+        $collection->imagen_s2 = $imagens2;
+        $collection->imagen_s3 = $imagens3;
+        $collection->save();
+        //dd('store method');
+    
+        return redirect()->route('principal.index')->with('success', 'Información de Quienes Somos creada exitosamente.');
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit(string $id)
     {
-        $slider = Principal::findOrFail($id);
-        return view('inicio.edit', compact('slider'));
+        $collection = Principal::findOrFail($id);
+        dd($collection); // Debugging line
+        return view('principal.edit', compact('collection'));
     }
 
     /**
@@ -56,28 +65,56 @@ class PrincipalController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // Validar los datos del formulario
+        dd('update method'); 
         $data = $request->validate([
-            'titulo' => 'required',
-            'descripcion' => 'required',
-            // Agregar más validaciones si es necesario
-        ]);
+        'slider1' => 'required',
+        'slider2' => 'required',
+        'slider3' => 'required',
+        'imagen_s1' => 'required|image|mimes:jpeg,png,jpg,gif',
+        'imagen_s2' => 'required|image|mimes:jpeg,png,jpg,gif',
+        'imagen_s3' => 'required|image|mimes:jpeg,png,jpg,gif',
+    ]);
 
-        // Actualizar el slider en la base de datos
-        $slider = Principal::findOrFail($id);
-        $slider->update($data);
-
-        return redirect()->route('inicio.index')->with('success', 'Slider actualizado exitosamente.');
+    if ($request->hasFile('imagen_s1')) {
+        $imagens1 = $request->file('imagen_s1')->store('slider_imagenes', 'public');
+        $data['imagen_s1'] = $imagens1;
     }
+
+    if ($request->hasFile('imagen_s2')) {
+        $imagens2 = $request->file('imagen_s2')->store('slider_imagenes', 'public');
+        $data['imagen_s2'] = $imagens2;
+    }
+
+    if ($request->hasFile('imagen_s3')) {
+        $imagens3 = $request->file('imagen_s3')->store('slider_imagenes', 'public');
+        $data['imagen_s3'] = $imagens3;
+    }
+
+    $collection = Principal::findOrFail($id);
+
+
+    return redirect()->route('principal.index')->with('success', 'Información de Quienes Somos actualizada exitosamente.');
+}
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy(string $id)
     {
-        $slider = Principal::findOrFail($id);
-        $slider->delete();
+        dd('destroy method');
+        $collection = Principal::findOrFail($id);
+        $collection->delete();
 
-        return redirect()->route('inicio.index')->with('success', 'Slider eliminado exitosamente.');
+        return redirect()->route('principal.index')->with('success', 'Información de Quienes Somos eliminada exitosamente.');
     }
+
+    public function show(string $id)
+    {
+        $collection = Principal::findOrFail($id);
+        dd($collection); // Debugging line
+        return view('principal.show', compact('collection'));
+    }
+
+
+
 }

@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('principal', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('titulo');
-            $table->dateTime('fecha');
-            $table->text('texto_vista_previa');
-            $table->binary('imagen');
+            $table->string('slider1', 1000);
+            $table->string('slider2',1000);
+            $table->string('slider3',1000);
+            $table->binary('imagen_s1');
+            $table->binary('imagen_s2');
+            $table->binary('imagen_s3');
             $table->timestamps();
         });
     }

@@ -572,6 +572,9 @@ html body[data-header-resize="1"] .container-wrap, html body[data-header-format=
         background-color: #0056b3;
     }
 
+    .white-text {
+    color: white;
+}
 </style>
 <script type='text/javascript' src='https://snte.org.mx/seccion36/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js'></script>
 <script type='text/javascript' src='https://snte.org.mx/seccion36/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js'></script>
@@ -719,27 +722,48 @@ var say_what_data = {"replacements":[]};
 <div class="vc_column-inner">
 <div class="wpb_wrapper">
 <div class="nectar-recent-posts-slider" data-height="600" data-animate-in-effect="none" data-remove-post-date="" data-remove-post-author="" data-remove-post-comment-number="" data-remove-post-nectar-love=""><div class="nectar-recent-posts-slider-inner generate-markup">
-<div class="nectar-recent-post-slide  post-ref-0">
-<div class="nectar-recent-post-bg" style="background-image: url('img/img1.jpg'); margin-left: -122px; transform: translateX(1px);"> </div>
-<div class="recent-post-container container"><div class="inner-wrap"><span class="strong"><a class="notass36" href="https://snte.org.mx/seccion36/category/notass36/"><span class="notass36">NotasS36</span></a></span>
-<h2 class="post-ref-0"><a href=" https://snte.org.mx/seccion36/seccion-36-hace-garante-el-derecho-a-la-seguridad-en-el-empleo-con-la-entrega-de-nombramientos-de-basificacion-a-docentes-personal-de-apoyo-y-directores-de-escuela-del-valle-de-mexico/" class="full-slide-link"> Asisten a la Segunda Reunión Nacional de La Sección 61 Tecnologicos. En donde se llevará la Jornada Nacional de Comunicación de Repuesta al Pliego Nacional de Demandas 2023 </a></h2>
-</div>
-</div>
-</div>
-<div class="nectar-recent-post-slide  post-ref-1">
-<div class="nectar-recent-post-bg" style="background-image: url('img/img2.jpg'); margin-left: -122px; transform: translateX(1px);">
-</div><div class="recent-post-container container"><div class="inner-wrap"><span class="strong"><a class="notass36" href="https://snte.org.mx/seccion36/category/notass36/"><span class="notass36">NotasS36</span></a></span>
-<h2 class="post-ref-1"><a href=" https://snte.org.mx/seccion36/seccion-36-emprende-en-el-valle-de-mexico-la-puesta-en-marcha-de-la-5ta-consulta-nacional-para-la-integracion-del-pliego-nacional-de-demandas-2023/" class="full-slide-link"> El pasado 14 de junio del 2023 fue un día histórico para el Instituto Tecnológico de Toluca ya que se contó con la presencia del Mtro. Ramón Jiménez López, Director General del Tecnológico Nacional de México en el marco del “Foro Nacional del Agua” donde se presentó la Agenda Estratégica del TecNM "Agua Limpia y Saneamiento" versión 2.0 </a></h2>
-</div>
-</div>
-</div>
-<div class="nectar-recent-post-slide  post-ref-2">
-<div class="nectar-recent-post-bg" style="background-image: url('img/img3.jpg'); margin-left: -122px; transform: translateX(1px);"> </div>
-<div class="recent-post-container container"><div class="inner-wrap"><span class="strong"><a class="notass36" href="https://snte.org.mx/seccion36/category/notass36/"><span class="notass36">NotasS36</span></a></span>
-<h2 class="post-ref-2"><a href=" https://snte.org.mx/seccion36/seccion-36-del-snte-celebra-su-55-aniversario-un-festejo-de-unidad-y-por-la-unidad-gremial/" class="full-slide-link"> La delegación DV-52 les desea un féliz día del padre </a></h2>
-</div>
-</div>
-</div>
+    @foreach($collection as $item)
+    <div class="nectar-recent-post-slide  post-ref-0">
+        <div class="nectar-recent-post-bg"
+            style="background-image: url('{{ asset('storage/' . $item->imagen_s1) }}'); ">
+        </div>
+        <div class="recent-post-container container">
+            <div class="inner-wrap"><span class="strong"><a
+                        class="notass36"><span
+                            class="notass36">NotasS36</span></a></span>
+                            <h2 class="full-slide-title white-text">{{ $item->slider1 }}</h2>
+            </div>
+        </div>
+    </div>
+    @endforeach
+    @foreach($collection as $item)
+    <div class="nectar-recent-post-slide  post-ref-0">
+        <div class="nectar-recent-post-bg"
+            style="background-image: url('{{ asset('storage/' . $item->imagen_s2) }}'); ">
+        </div>
+        <div class="recent-post-container container">
+            <div class="inner-wrap"><span class="strong"><a
+                        class="notass36"><span
+                            class="notass36">NotasS36</span></a></span>
+                            <h2 class="full-slide-title white-text">{{ $item->slider2 }}</h2>
+            </div>
+        </div>
+    </div>
+    @endforeach
+    @foreach($collection as $item)
+    <div class="nectar-recent-post-slide  post-ref-0">
+        <div class="nectar-recent-post-bg"
+            style="background-image: url('{{ asset('storage/' . $item->imagen_s3) }}'); ">
+        </div>
+        <div class="recent-post-container container">
+            <div class="inner-wrap"><span class="strong"><a
+                        class="notass36"><span
+                            class="notass36">NotasS36</span></a></span>
+                            <h2 class="full-slide-title white-text">{{ $item->slider3 }}</h2>
+            </div>
+        </div>
+    </div>
+    @endforeach
 <div class="nectar-recent-post-slide  post-ref-3">
 <div class="nectar-recent-post-bg" style="background-image: url(https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-scaled.jpg); "> </div>
 <div class="recent-post-container container"><div class="inner-wrap"><span class="strong"><a class="notass36" href="https://snte.org.mx/seccion36/category/notass36/"><span class="notass36">NotasS36</span></a></span>

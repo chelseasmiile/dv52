@@ -24,9 +24,28 @@ use App\Http\Controllers\QrController;
 */
 
 
+Route::redirect('/', '/principal'); // Redirecciona la raíz a /principal
+
+Route::resource('principal', PrincipalController::class)->except(['show']);
+
 Route::resource('inicio', PrincipalController::class)->except(['show','destroy']);
 
-Route::get('/principal/create', [PrincipalController::class, 'create'])->name('principal.create');
+// Route::get('/principal/create', [PrincipalController::class, 'create'])->name('principal.create');
+// Route::get('/principal', [PrincipalController::class, 'index'])->name('principal.index');
+ Route::post('/sliders/{id}/asignar', 'PrincipalController@asignar')->name('asignar.slider');
+// Route::resource('principal', PrincipalController::class)->except(['show']);
+
+
+
+// Route::get('/principales', 'PrincipalController@index')->name('principal.index');
+// Route::get('/principal/create', 'PrincipalController@create')->name('principal.create');
+// Route::post('/principal', 'PrincipalController@store')->name('principal.store');
+// Route::get('/principal/{id}/edit', 'PrincipalController@edit')->name('principal.edit');
+// Route::put('/principal/{id}', 'PrincipalController@update')->name('principal.update');
+// Route::delete('/principal/{id}', 'PrincipalController@destroy')->name('principal.destroy');
+// Route::post('/principal/{id}/asignar', 'PrincipalController@asignar')->name('principal.asignar');
+
+
 
 
 
@@ -49,6 +68,10 @@ Route::get('notas/{id}/download', [NotaController::class, 'download'])->name('no
 Route::get('/notas', [NotaController::class, 'index'])->name('notas.index');
 Route::put('notas/{id}', [NotaController::class, 'update'])->name('notas.update');
 Route::get('/notas/create', [NotaController::class, 'create'])->name('notas.create'); // Agregar esta línea
+
+Route::get('/inicio', 'App\Http\Controllers\PrincipalController@show')->name('inicio.show');
+
+
 
 
 
