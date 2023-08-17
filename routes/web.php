@@ -122,6 +122,29 @@ Route::resource('videos', VideoController::class);
 // })->name('videos');
 
 
+
+// Route::get('/principal/create', [PrincipalController::class, 'create'])->name('principal.create');
+// Route::get('/principal', [PrincipalController::class, 'index'])->name('principal.index');
+Route::post('/sliders/{id}/asignar', 'PrincipalController@asignar')->name('asignar.slider');
+// Route::resource('principal', PrincipalController::class)->except(['show']);
+
+
+
+Route::get('/principales', 'PrincipalController@index')->name('principal.index');
+//Route::get('/principal/create', 'PrincipalController@create')->name('principal.create');
+Route::post('/principal', 'PrincipalController@store')->name('principal.store');
+Route::get('/principal/{id}/edit', 'PrincipalController@edit')->name('principal.edit');
+Route::put('/principal/{id}', 'PrincipalController@update')->name('principal.update');
+Route::delete('/principal/{id}', 'PrincipalController@destroy')->name('principal.destroy');
+Route::post('/principal/{id}/asignar', 'PrincipalController@asignar')->name('principal.asignar');
+Route::get('servicios/create', 'QrController@create')->name('servicios.create');
+Route::post('qrs', 'QrController@store')->name('qrs.store');
+Route::get('servicios/create', [QrController::class, 'create'])->name('servicios.create');
+Route::post('qrs', [QrController::class, 'store'])->name('qrs.store');
+Route::get('servicios/create/{galeria}', [QrController::class, 'create'])->name('servicios.create');
+Route::get('qrs/create/{galeria}', [QrController::class, 'create'])->name('qrs.create');
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
