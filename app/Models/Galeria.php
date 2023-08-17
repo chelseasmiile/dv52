@@ -12,9 +12,10 @@ class Galeria extends Model
     public $incrementing = true;
     public $timestamps = true;
 
-    protected $fillable = [
-        'titulo', 'texto_vista_previa', 'descripcion', 'fecha', 'imagen_galeria'
+   protected $fillable = [
+        'categoria','titulo', 'texto_vista_previa', 'descripcion', 'fecha','participantes' ,'imagen_galeria'
     ];
+
 
     public function imagenes()
 {

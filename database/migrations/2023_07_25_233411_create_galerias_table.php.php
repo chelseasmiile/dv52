@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -13,10 +14,12 @@ return new class extends Migration
     {
         Schema::create('galeria', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('categoria');
             $table->string('titulo');
             $table->text('texto_vista_previa');
             $table->text('descripcion');
             $table->dateTime('fecha');
+            $table->string('participantes');
             $table->binary('imagen_galeria');
             $table->timestamps();
         });

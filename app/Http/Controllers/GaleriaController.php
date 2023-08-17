@@ -32,11 +32,14 @@ class GaleriaController extends Controller
     public function store(Request $request)
 {
     $data = $request->validate([
+        'categoria' => 'required',
         'titulo' => 'required',
         'texto_vista_previa' => 'required',
         'descripcion' => 'required',
         'fecha' => 'required|date',
+        'participantes' => 'required',
         'imagen_galeria' => 'required|image',
+    
     ]);
 
     if ($request->hasFile('imagen_galeria')) {
@@ -79,11 +82,14 @@ class GaleriaController extends Controller
         $galeria = Galeria::findOrFail($id);
 
         $data = $request->validate([
-            'titulo' => 'required',
-            'texto_vista_previa' => 'required',
-            'descripcion' => 'required',
-            'fecha' => 'required|date',
-            'imagen_galeria' => 'nullable|image', // Puedes hacer que la imagen sea opcional
+            'categoria' => 'required',
+        'titulo' => 'required',
+        'texto_vista_previa' => 'required',
+        'descripcion' => 'required',
+        'fecha' => 'required|date',
+        'participantes' => 'required',
+        'imagen_galeria' => 'required|image',
+    
         ]);
 
         if ($request->hasFile('imagen_galeria')) {

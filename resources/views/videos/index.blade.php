@@ -731,7 +731,7 @@
     </div>
     </div></div>
     <div class="container">
-      <h1>Lista de Videos</h1>
+     
       <table class="table">
           <thead>
               <tr>

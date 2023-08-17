@@ -767,11 +767,15 @@
                 @csrf
                 @method('PUT') <!-- Método HTTP para la actualización -->
                 <div class="form-group">
+                  <label for="categoria">Categoría:</label>
+                  <input type="text" name="categoria" id="categoria" class="form-control"value="{{ $galeria->categoria }}">
+              </div>
+                <div class="form-group">
                     <label for="titulo">Título:</label>
                     <input type="text" name="titulo" id="titulo" class="form-control" value="{{ $galeria->titulo }}">
                 </div>
                 <div class="form-group">
-                    <label for="texto_vista_previa">Texto vista previa:</label>
+                    <label for="texto_vista_previa">Caracteristicas:</label>
                     <input type="text" name="texto_vista_previa" id="texto_vista_previa" class="form-control" value="{{ $galeria->texto_vista_previa }}">
                 </div>
                 <div class="form-group">
@@ -786,6 +790,10 @@
                     <label for="imagen_galeria">Imagen:</label>
                     <input type="file" name="imagen_galeria" id="imagen_galeria" class="form-control">
                 </div>
+              <div class="form-group">
+                  <label for="participantes">Participantes:</label>
+                  <input type="text" name="participantes" id="participantes" class="form-control"value="{{ $galeria->participantes }}">
+              </div>
                 <button type="submit">Actualizar Galería</button>
             </form>
         </div>

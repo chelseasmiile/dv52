@@ -803,6 +803,32 @@ var nectar_theme_info = {"using_salient":"true"};
 </div>
 </div>
 </article>
+
+<table class="table">
+  <thead>
+      <tr>
+          <th>Categoria</th>
+          <th>Titulo</th>
+          <th>Caracteristicas</th>
+          <th>Fecha de asquisicion</th>
+          <th>Descripcion</th>
+          <th>Participantes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>{{ $galeria->categoria }}</td>
+          <td>{{ $galeria->titulo }}</td>
+          <td>{{ $galeria->texto_vista_previa }}</td>
+          <td>{{ $galeria->fecha }}</td>
+          <td>{{ $galeria->descripcion }}</td>
+          <td>{{ $galeria->participantes }}</td>
+
+      </tr>
+  </tbody>
+</table>
+
+
 </div>
 
 
@@ -843,9 +869,6 @@ var nectar_theme_info = {"using_salient":"true"};
     </div>
 </div>
 
-<a href="{{ route('servicios.create', ['galeria' => $galeria->id]) }}" class="btn btn-primary">
-  Crear Información para QR
-</a>
 
 
 

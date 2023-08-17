@@ -769,11 +769,65 @@ form button:hover {
           <div class="form-group">
             <label for="Seccion">Sección:</label>
             <select name="Seccion" id="seccion" class="form-control">
-                <option value="Sección 1">Sección 1</option>
-                <option value="Sección 2" selected>Sección 2</option> <!-- Esta opción estará seleccionada por defecto -->
-                <option value="Sección 3">Sección 3</option>
-                <!-- Agrega más opciones según sea necesario -->
-            </select>
+              <option value="Sección 1">Sección 1 Aguascalientes</option>
+              <option value="Sección 2">Sección 2 Baja California</option> <!-- Esta opción estará seleccionada por defecto -->
+              <option value="Sección 3">Sección 3 Baja California Sur</option>
+              <option value="Sección 4">Sección 4 Campeche</option>
+              <option value="Sección 5">Sección 5 Coahuila</option>
+              <option value="Sección 6">Sección 6 Colima</option>
+              <option value="Sección 7">Sección 7 Chiapas</option>
+              <option value="Sección 8">Sección 8 Chihuahua</option>
+              <option value="Sección 9">Sección 9 Ciudad de México</option>
+              <option value="Sección 10">Sección 10 Ciudad de México</option>
+              <option value="Sección 11">Sección 11 Ciudad de México</option>
+              <option value="Sección 12">Sección 12 Durango</option>
+              <option value="Sección 13">Sección 13 Guanajuato</option>
+              <option value="Sección 14">Sección 14 Guerrero</option>
+              <option value="Sección 15">Sección 15 Hidalgo</option>
+              <option value="Sección 16">Sección 16 Jalisco</option>
+              <option value="Sección 17">Sección 17 Estado de México</option>
+              <option value="Sección 18">Sección 18 Michoacan </option>
+              <option value="Sección 19">Sección 19 Morelos</option>
+              <option value="Sección 20">Sección 20 Nayarit</option>
+              <option value="Sección 21">Sección 21 Nuevo León</option>
+              <option value="Sección 23">Sección 23 Puebla</option>
+              <option value="Sección 24">Sección 24 Queretaro</option>
+              <option value="Sección 25">Sección 25 Quintana Roo</option>
+              <option value="Sección 26">Sección 26 San Luis Potosí</option>
+              <option value="Sección 27">Sección 27 Sinaloa</option>
+              <option value="Sección 28">Sección 28 Sonora</option>
+              <option value="Sección 29">Sección 29 Tabasco</option>
+              <option value="Sección 30">Sección 30 Tamaulipas</option>
+              <option value="Sección 31">Sección 31 Tlaxcala</option>
+              <option value="Sección 32">Sección 32 Veracrúz</option>
+              <option value="Sección 33">Sección 33 Yucatán</option>
+              <option value="Sección 34">Sección 34 Zacatecas</option>
+              <option value="Sección 35">Sección 35 Coahuila</option>
+              <option value="Sección 36">Sección 36 Estado de México</option>
+              <option value="Sección 37">Sección 37 Baja Californiia</option>
+              <option value="Sección 38">Sección 38 Coahuila</option>
+              <option value="Sección 39">Sección 39 Colima</option>
+              <option value="Sección 40">Sección 40 Chiapas</option>
+              <option value="Sección 42">Sección 42 Chihuahua</option>
+              <option value="Sección 44">Sección 44 Durango</option>
+              <option value="Sección 45">Sección 45 Guanajuato</option>
+              <option value="Sección 47">Sección 47 Jalisco</option>
+              <option value="Sección 49">Sección 49 Nayarit</option>
+              <option value="Sección 50">Sección 50 Nuevo León</option>
+              <option value="Sección 51">Sección 51 Puebla</option>
+              <option value="Sección 52">Sección 52 San Luis Potosí</option>
+              <option value="Sección 53">Sección 53 Sinaloa</option>
+              <option value="Sección 54">Sección 54 Sonora</option>
+              <option value="Sección 55">Sección 55 Tlaxcala</option>
+              <option value="Sección 56">Sección 56 Veracrúz</option>
+              <option value="Sección 57">Sección 57 Yucatán</option>
+              <option value="Sección 58">Sección 58 Zacatecas</option>
+              <option value="Sección 59">Sección 59 Oaxaca</option>
+              <option value="Sección 60">Sección 60 Politécnicos</option>
+              <option value="Sección 61"  selected>Sección 61 Técnologicos</option>
+              <!-- Agrega más opciones según sea necesario -->
+          </select>
+
         </div>
           <div class="form-group">
               <label for="Mensaje">Mensaje:</label>

@@ -766,11 +766,15 @@
         <form action="{{ route('galerias.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
+                <label for="categoria">Categoría:</label>
+                <input type="text" name="categoria" id="categoria" class="form-control">
+            </div>
+            <div class="form-group">
                 <label for="titulo">Título:</label>
                 <input type="text" name="titulo" id="titulo" class="form-control">
             </div>
             <div class="form-group">
-                <label for="texto_vista_previa">Texto vista previa:</label>
+                <label for="texto_vista_previa">Caracteristicas:</label>
                 <input type="text" name="texto_vista_previa" id="texto_vista_previa" class="form-control">
             </div>
             <div class="form-group">
@@ -782,12 +786,17 @@
                 <input type="date" name="fecha" id="fecha" class="form-control">
             </div>
             <div class="form-group">
+                <label for="participantes">Participantes:</label>
+                <input type="text" name="participantes" id="participantes" class="form-control">
+            </div>
+            <div class="form-group">
                 <label for="imagen_galeria">Imagen:</label>
                 <input type="file" name="imagen_galeria" id="imagen_galeria" class="form-control">
             </div>
             <button type="submit">Crear Galería</button>
         </form>
     </div>
+    
         
         
         

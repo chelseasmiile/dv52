@@ -735,9 +735,8 @@
           @foreach($galerias as $galeria)
               <tr>
                   <td>{{ $galeria->titulo }}</td>
-                  <td>{{ $galeria->fecha }}</td>
+                  <td>{{ $galeria->created_at }}</td>
                   <td>
-                    <a href="{{ route('galerias.download', $galeria->id) }}" class="btn btn-sm btn-info" download>Descargar Imagen</a>
                       <a href="{{ route('galerias.edit', $galeria->id) }}" class="btn btn-sm btn-warning">Editar</a>
                       <form action="{{ route('galerias.destroy', $galeria->id) }}" method="post" style="display: inline-block;">
                           @csrf
