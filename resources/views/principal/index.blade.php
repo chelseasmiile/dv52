@@ -631,24 +631,7 @@ var say_what_data = {"replacements":[]};
    </script><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><a href="#ajax-content-wrap" class="nectar-skip-to-content">Skip to main content</a><div class="ocm-effect-wrap"><div class="ocm-effect-wrap-inner">
 <div id="header-space" data-header-mobile-fixed='1'></div>
 <div id="header-outer" data-has-menu="true" data-has-buttons="yes" data-header-button_style="default" data-using-pr-menu="false" data-mobile-fixed="1" data-ptnm="false" data-lhe="animated_underline" data-user-set-bg="#ffffff" data-format="centered-menu-under-logo" data-permanent-transparent="false" data-megamenu-rt="0" data-remove-fixed="1" data-header-resize="0" data-cart="false" data-transparency-option="0" data-box-shadow="small" data-shrink-num="6" data-using-secondary="0" data-using-logo="1" data-logo-height="180" data-m-logo-height="50" data-padding="28" data-full-width="false" data-condense="false">
-<div id="search-outer" class="nectar">
-<div id="search">
-<div class="container">
-<div id="search-box">
-<div class="inner-wrap">
-<div class="col span_12">
-<form role="search" action="https://snte.org.mx/seccion36/" method="GET">
-<input type="text" name="s" value="" aria-label="Buscar" placeholder="Buscar" />
-<span>Presiona enter para buscar o ESC para cerrar</span>
-</form>
-</div>
-</div>
-</div>
-<div id="close"><a href="#"><span class="screen-reader-text">Close Search</span>
-<span class="close-wrap"> <span class="close-line close-line1"></span> <span class="close-line close-line2"></span> </span> </a></div>
-</div>
-</div>
-</div>
+
 <header id="top">
 <div class="container">
 <div class="row">
@@ -687,7 +670,21 @@ var say_what_data = {"replacements":[]};
     </ul>
     </li>
     <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-32"><a href="{!!route('contacto.index')!!}"><span class="menu-title-text">Contacto</span></a></li>
-    <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="{{ route('login') }}"><span class="menu-title-text">Inicia Sesion</span></a></li>
+    @if(auth()->check()) <!-- Verifica si hay una sesión activa -->
+    <!-- Botón de Cerrar Sesión -->
+    <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523">
+      <a target="_blank" rel="noopener" href="{{ route('cerrar-sesion') }}">
+        <span class="menu-title-text">Cerrar Sesion</span>
+    </a>
+  </li>
+@else
+    <!-- Botón de Iniciar Sesión -->
+    <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523">
+        <a target="_blank" rel="noopener" href="{{ url('logeo') }}">
+            <span class="menu-title-text">Inicia Sesion</span>
+        </a>
+    </li>
+@endif
     <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="https://snte.org.mx/registro.html"><span class="menu-title-text">Regístrate</span></a></li>
     <li id="social-in-menu" class="button_social_group">
       <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479">
@@ -784,7 +781,7 @@ var say_what_data = {"replacements":[]};
 </div>
 </div>
 </div></div>
-
+@if(Auth::check())
 <div>
   <li class="menu-item">
       <a href="{{ route('principal.create') }}">
@@ -792,7 +789,7 @@ var say_what_data = {"replacements":[]};
       </a>
   </li>
 </div>
-
+@endif
 
 
 <div id="fws_64723e90b2c3a" data-column-margin="default" data-midnight="dark" class="wpb_row vc_row-fluid vc_row full-width-section" style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap" data-bg-animation="none" data-bg-animation-delay="" data-bg-overlay="false"><div class="inner-wrap row-bg-layer"><div class="row-bg viewport-desktop" style=""></div></div></div><div class="row_col_wrap_12 col span_12 dark left">
@@ -822,7 +819,7 @@ var say_what_data = {"replacements":[]};
 <div style="" class="vc_col-sm-2/5 wpb_column column_container vc_column_container col child_column centered-text padding-3-percent inherit_tablet inherit_phone " data-using-bg="true" data-bg-cover="true" data-padding-pos="all" data-has-bg-color="true" data-bg-color="rgba(0,0,0,0.75)" data-bg-opacity="1" data-animation="" data-delay="0">
 <div class="vc_column-inner"><div class="column-image-bg-wrap column-bg-layer viewport-desktop" data-bg-pos="center center" data-bg-animation="none" data-bg-overlay="false"><div class="inner-wrap"><div class="column-image-bg" style=" background-image: url('https://snte.org.mx/seccion36/wp-content/uploads/sites/37/2020/01/calendario-min.png'); "></div></div></div><div class="column-bg-overlay-wrap column-bg-layer" data-bg-animation="none"><div class="column-bg-overlay" style="opacity: 1; background-color: rgba(0,0,0,0.75);"></div></div>
 <div class="wpb_wrapper">
-<div class="divider-wrap" data-alignment="default"><div style="height: 67px;" class="divider"></div></div><h2 style="color: #ffffff;text-align: center" class="vc_custom_heading">¿En qué te podemos ayudar?</h2><div class="divider-wrap" data-alignment="default"><div style="height: 45px;" class="divider"></div></div><a class="nectar-button small see-through accent-color has-icon wpb_animate_when_almost_visible wpb_bounce bounce" style="" target="_blank" href="{!!route('contacto.index')!!}" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Agenda una cita</span><i class="vc_li vc_li-calendar"></i></a>
+<div class="divider-wrap" data-alignment="default"><div style="height: 67px;" class="divider"></div></div><h2 style="color: #ffffff;text-align: center" class="vc_custom_heading">¿En qué te podemos ayudar?</h2><div class="divider-wrap" data-alignment="default"><div style="height: 45px;" class="divider"></div></div><a class="nectar-button small see-through accent-color " style="" target="_blank" href="{!!route('contacto.index')!!}" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>Agenda una cita</span><i class="vc_li vc_li-calendar"></i></a>
 </div>
 </div>
 </div>
@@ -830,7 +827,7 @@ var say_what_data = {"replacements":[]};
 <div class="vc_column-inner">
 <div class="wpb_wrapper">
 <div class="wpb_gallery wpb_content_element clearfix">
-<div class="wpb_wrapper"><div class="wpb_gallery_slides wpb_flexslider flex-gallery flexslider" data-onclick="custom_link" data-interval="5" data-flex_fx="fade"><ul class="slides" data-d-autorotate=""><li><a href="https://www.centromaestrodebienestar.org/" target="_blank"><img class="skip-lazy " src="https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2020/01/04233214/centro_maestro.jpg" width="1024" height="509" alt="centro_maestro" title="centro_maestro" /></a></li></ul></div>
+<div class="wpb_wrapper"><div class="wpb_gallery_slides " data-onclick="custom_link" data-interval="5" data-flex_fx="fade"><ul class="slides" data-d-autorotate=""><li><a href="https://www.centromaestrodebienestar.org/" target="_blank"><img class="skip-lazy " src="https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2020/01/04233214/centro_maestro.jpg" width="1024" height="509" alt="centro_maestro" title="centro_maestro" /></a></li></ul></div>
 </div>
 </div>
 </div>

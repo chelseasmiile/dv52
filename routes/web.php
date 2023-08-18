@@ -30,6 +30,24 @@ Route::get('/principal/create', [PrincipalController::class, 'create'])->name('p
 Route::get('/principal', [PrincipalController::class, 'index'])->name('inicio');
 
 
+Route::middleware(['guest'])->group(function () {
+    // Rutas que deben ser accesibles solo para invitados
+    Route::get('logeo', [LoginController::class, 'getLogeo']);
+    Route::post('logeo', [LoginController::class, 'postLogeo']);
+    Route::get('/cerrar-sesion', [LoginController::class, 'cerrarSesion'])->name('cerrar-sesion');
+});
+
+// Rutas que deben estar protegidas solo para usuarios autenticados
+Route::middleware(['auth'])->group(function () {
+    // Rutas que requieren autenticación
+});
+
+
+Route::get('alta', [LoginController::class, 'getAlta']);
+Route::post('alta', [LoginController::class, 'postAlta']);
+Route::get('/cerrar-sesion', [LoginController::class, 'cerrarSesion'])->name('cerrar-sesion');
+
+
 
 // Route::get('/', function () {
 //      return view('principal.index');
@@ -145,6 +163,3 @@ Route::get('servicios/create/{galeria}', [QrController::class, 'create'])->name(
 Route::get('qrs/create/{galeria}', [QrController::class, 'create'])->name('qrs.create');
 
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'admins', // Cambiado de 'users' a 'admins'
+        'passwords' => 'users', // Cambiado de 'admins' a 'users'
     ],
 
     /*
@@ -38,7 +38,7 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'admins', // Cambiado de 'users' a 'admins'
+            'provider' => 'users', // Cambiado de 'admins' a 'users'
         ],
     ],
 
@@ -60,12 +60,13 @@ return [
     */
 
     'providers' => [
-        'admins' => [
+        'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Admin::class, // Cambiado de App\Models\User a App\Models\Admin
+            'model' => App\Models\User::class, // Cambiado de 'users' a 'User'
         ],
     ],
 
+    
     /*
     |--------------------------------------------------------------------------
     | Resetting Passwords
@@ -86,8 +87,8 @@ return [
     */
 
     'passwords' => [
-        'admins' => [ // Cambiado de 'users' a 'admins'
-            'provider' => 'admins', // Cambiado de 'users' a 'admins'
+        'users' => [ // Cambiado de 'admins' a 'users'
+            'provider' => 'users', // Cambiado de 'admins' a 'users'
             'table' => 'password_reset_tokens',
             'expire' => 60,
             'throttle' => 60,

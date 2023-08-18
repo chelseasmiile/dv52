@@ -12,7 +12,7 @@
     <meta property="article:publisher" content="https://www.facebook.com/Seccion36ValledeMexico?fref=ts">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@Seccion36Ofic">
-    <meta name="twitter:label1" content="Tiempo de lectura">
+    <meta name="twitter:label1" content="Tiempo de lectura"> 
     <meta name="twitter:data1" content="1 minuto">
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-6D58MTJW3T&amp;l=dataLayer&amp;cx=c"></script><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://snte.org.mx/seccion36/comunicados/","url":"https://snte.org.mx/seccion36/comunicados/","name":"Comunicados - Sección 36 SNTE","isPartOf":{"@id":"https://snte.org.mx/seccion36/#website"},"datePublished":"2020-06-05T18:17:32+00:00","dateModified":"2020-06-05T18:17:32+00:00","breadcrumb":{"@id":"https://snte.org.mx/seccion36/comunicados/#breadcrumb"},"inLanguage":"es-MX","potentialAction":[{"@type":"ReadAction","target":["https://snte.org.mx/seccion36/comunicados/"]}]},{"@type":"BreadcrumbList","@id":"https://snte.org.mx/seccion36/comunicados/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://snte.org.mx/seccion36/"},{"@type":"ListItem","position":2,"name":"Comunicados"}]},{"@type":"WebSite","@id":"https://snte.org.mx/seccion36/#website","url":"https://snte.org.mx/seccion36/","name":"Sección 36 SNTE","description":"","publisher":{"@id":"https://snte.org.mx/seccion36/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://snte.org.mx/seccion36/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"es-MX"},{"@type":"Organization","@id":"https://snte.org.mx/seccion36/#organization","name":"SNTE","url":"https://snte.org.mx/seccion36/","logo":{"@type":"ImageObject","inLanguage":"es-MX","@id":"https://snte.org.mx/seccion36/#/schema/logo/image/","url":"https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2020/04/18043803/snte_300.png","contentUrl":"https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2020/04/18043803/snte_300.png","width":300,"height":96,"caption":"SNTE"},"image":{"@id":"https://snte.org.mx/seccion36/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/Seccion36ValledeMexico?fref=ts","https://twitter.com/Seccion36Ofic","https://www.pinterest.es/seccion36/","https://www.youtube.com/channel/UC85Trk3vEzKw_cGDwfzF5Ug"]}]}</script>
     
@@ -608,24 +608,7 @@
        </script><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0.49803921568627"></feFuncR><feFuncG type="table" tableValues="0 0.49803921568627"></feFuncG><feFuncB type="table" tableValues="0 0.49803921568627"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0 1"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1"></feFuncR><feFuncG type="table" tableValues="0 0.27843137254902"></feFuncG><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0"></feFuncR><feFuncG type="table" tableValues="0 0.64705882352941"></feFuncG><feFuncB type="table" tableValues="0 1"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.78039215686275 1"></feFuncR><feFuncG type="table" tableValues="0 0.94901960784314"></feFuncG><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0.44705882352941 0.4"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.098039215686275 1"></feFuncR><feFuncG type="table" tableValues="0 0.66274509803922"></feFuncG><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><a href="#ajax-content-wrap" class="nectar-skip-to-content">Skip to main content</a><div class="ocm-effect-wrap"><div class="ocm-effect-wrap-inner">
     <div id="header-space" data-header-mobile-fixed="1" style="height: 74px;"></div>
     <div id="header-outer" data-has-menu="true" data-has-buttons="yes" data-header-button_style="default" data-using-pr-menu="false" data-mobile-fixed="1" data-ptnm="false" data-lhe="animated_underline" data-user-set-bg="#ffffff" data-format="centered-menu-under-logo" data-permanent-transparent="false" data-megamenu-rt="0" data-remove-fixed="1" data-header-resize="0" data-cart="false" data-transparency-option="0" data-box-shadow="small" data-shrink-num="6" data-using-secondary="0" data-using-logo="1" data-logo-height="180" data-m-logo-height="50" data-padding="28" data-full-width="false" data-condense="false" class="">
-    <div id="search-outer" class="nectar">
-    <div id="search">
-    <div class="container">
-    <div id="search-box">
-    <div class="inner-wrap">
-    <div class="col span_12">
-    <form role="search" action="https://snte.org.mx/seccion36/" method="GET">
-    <input type="text" name="s" value="" aria-label="Buscar" placeholder="Buscar">
-    <span>Presiona enter para buscar o ESC para cerrar</span>
-    </form>
-    </div>
-    </div>
-    </div>
-    <div id="close"><a href="#"><span class="screen-reader-text">Close Search</span>
-    <span class="close-wrap"> <span class="close-line close-line1"></span> <span class="close-line close-line2"></span> </span> </a></div>
-    </div>
-    </div>
-    </div>
+
     <header id="top">
     <div class="container">
     <div class="row">
@@ -705,10 +688,8 @@
       </form>
   </div>
     <div class="row">
-    <div class="post-area col  span_12 col_last masonry auto_meta_overlaid_spaced  infinite_scroll " data-ams="16px" data-remove-post-date="" data-remove-post-author="" data-remove-post-comment-number="" data-remove-post-nectar-love=""> <div class="posts-container" data-load-animation="none">
-    
-
-
+    <div class="post-area col  span_12 col_last masonry auto_meta_overlaid_spaced  infinite_scroll " data-ams="16px" data-remove-post-date="" data-remove-post-author="" data-remove-post-comment-number="" data-remove-post-nectar-love=""> 
+      <div class="posts-container" data-load-animation="none">
       @foreach($comunicados as $comunicado)
       <article class="masonry-blog-item post-{{ $comunicado->id }} post type-post status-publish format-standard has-post-thumbnail category-comunicadoss36 category-notass36">
         <a href="{{ route('comunicados.download', $comunicado->id) }}" aria-label="{{ $comunicado->titulo }}">
@@ -732,25 +713,10 @@
 </article>
 @endforeach
     
-      <article id="post-2449" class=" masonry-blog-item post-2449 post type-post status-publish format-standard has-post-thumbnail category-comunicadoss36 category-notass36">
-    <div class="inner-wrap">
-    <div class="post-content">
-    <div class="content-inner">
-    <a class="entire-meta-link" href="https://snte.org.mx/seccion36/becas-de-aprovechamiento-para-hijos-de-trabajadores-de-la-seccion-36-valle-de-mexico-del-snte/" aria-label="Becas de Aprovechamiento para hijos de Trabajadores de la Sección 36 Valle de México del SNTE"></a>
-    <span class="post-featured-img"><img width="800" height="720" src="https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2020/06/05181915/Diapositiva1-6-800x720.jpg" class="attachment-medium_featured size-medium_featured skip-lazy wp-post-image" alt="" decoding="async" title="" sizes="(min-width: 690px) 50vw, 100vw"></span>
-    <div class="article-content-wrap">
-    <span class="meta-category"><a class="comunicadoss36" href="https://snte.org.mx/seccion36/category/comunicadoss36/">comunicadoss36</a><a class="notass36" href="https://snte.org.mx/seccion36/category/notass36/">NotasS36</a></span>
-    <div class="post-header">
-    <h3 class="title"><a href="https://snte.org.mx/seccion36/becas-de-aprovechamiento-para-hijos-de-trabajadores-de-la-seccion-36-valle-de-mexico-del-snte/"> Becas de Aprovechamiento para hijos de Trabajadores de la Sección 36 Valle de México del SNTE</a></h3>
-  </div>
     </div>
     </div>
     </div>
-    </div>
-    </article>
-    </div>
-    </div>
-    </div>
+    @if(Auth::check())
     <div><li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="{{ route('comunicados.create') }}"><span class="menu-title-text">Crear comunicado</span></a></li></div>
     <div class="container">
       <div class="container">
@@ -784,6 +750,9 @@
       </table>
     </div>
   </div>
+@endif
+
+
   </div>
     </div>
     </div>

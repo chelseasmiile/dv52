@@ -623,7 +623,51 @@
   form button:hover {
       background-color: #2980b9;
   }
-  
+
+         /* Estilos para el logo */
+         .sidebar-logo img {
+            max-width: 100px; /* Ajusta el tamaño máximo del logo */
+            height: auto;
+        }
+
+        /* Estilos para el formulario */
+        #contact {
+            background-color: #f8f9fa; /* Cambia el color de fondo del formulario */
+            padding: 60px 0;
+        }
+
+        #contact h2 {
+            color: #343a40; /* Cambia el color del título */
+        }
+
+        #contact hr.divider {
+            background-color: #343a40; /* Cambia el color de la línea divisora */
+        }
+
+        #contact .text-muted {
+            color: #6c757d; /* Cambia el color del texto descriptivo */
+        }
+
+        #contact .btn-primary {
+            background-color: #343a40; /* Cambia el color del botón */
+            border-color: #343a40; /* Cambia el color del borde del botón */
+            padding: 10px 20px; /* Ajusta el tamaño del botón */
+            font-size: 18px; /* Ajusta el tamaño de la fuente del botón */
+        }
+
+        #contact .btn-primary:hover {
+            background-color: #6c757d; /* Cambia el color del botón al pasar el cursor */
+            border-color: #6c757d; /* Cambia el color del borde del botón al pasar el cursor */
+        }
+
+        /* Estilos para los campos de entrada */
+        .form-floating {
+            margin-bottom: 20px;
+        }
+
+        .form-floating input {
+            border-radius: 10px; /* Ajusta la curva de los bordes de los campos de entrada */
+        }
     
     </style>
     <script type="text/javascript" src="https://snte.org.mx/seccion36/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>
@@ -681,7 +725,24 @@
        </script><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0.49803921568627"></feFuncR><feFuncG type="table" tableValues="0 0.49803921568627"></feFuncG><feFuncB type="table" tableValues="0 0.49803921568627"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0 1"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1"></feFuncR><feFuncG type="table" tableValues="0 0.27843137254902"></feFuncG><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0"></feFuncR><feFuncG type="table" tableValues="0 0.64705882352941"></feFuncG><feFuncB type="table" tableValues="0 1"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.78039215686275 1"></feFuncR><feFuncG type="table" tableValues="0 0.94901960784314"></feFuncG><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0.44705882352941 0.4"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.098039215686275 1"></feFuncR><feFuncG type="table" tableValues="0 0.66274509803922"></feFuncG><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><a href="#ajax-content-wrap" class="nectar-skip-to-content">Skip to main content</a><div class="ocm-effect-wrap"><div class="ocm-effect-wrap-inner">
     <div id="header-space" data-header-mobile-fixed="1" style="height: 74px;"></div>
     <div id="header-outer" data-has-menu="true" data-has-buttons="yes" data-header-button_style="default" data-using-pr-menu="false" data-mobile-fixed="1" data-ptnm="false" data-lhe="animated_underline" data-user-set-bg="#ffffff" data-format="centered-menu-under-logo" data-permanent-transparent="false" data-megamenu-rt="0" data-remove-fixed="1" data-header-resize="0" data-cart="false" data-transparency-option="0" data-box-shadow="small" data-shrink-num="6" data-using-secondary="0" data-using-logo="1" data-logo-height="180" data-m-logo-height="50" data-padding="28" data-full-width="false" data-condense="false" class="">
-
+    <div id="search-outer" class="nectar">
+    <div id="search">
+    <div class="container">
+    <div id="search-box">
+    <div class="inner-wrap">
+    <div class="col span_12">
+    <form role="search" action="https://snte.org.mx/seccion36/" method="GET">
+    <input type="text" name="s" value="" aria-label="Buscar" placeholder="Buscar">
+    <span>Presiona enter para buscar o ESC para cerrar</span>
+    </form>
+    </div>
+    </div>
+    </div>
+    <div id="close"><a href="#"><span class="screen-reader-text">Close Search</span>
+    <span class="close-wrap"> <span class="close-line close-line1"></span> <span class="close-line close-line2"></span> </span> </a></div>
+    </div>
+    </div>
+    </div>
     <header id="top">
     <div class="container">
     <div class="row">
@@ -742,44 +803,71 @@
     <div class="wpb_raw_code wpb_content_element wpb_raw_html">
     <div class="wpb_wrapper">
         
-        <div class="container">
-            <div class="form-container">
-                <h1 class="form-title">Edición de comunicado</h1>
-                <form action="{{ route('comunicados.update', $comunicado->id) }}" method="post" enctype="multipart/form-data">
-                    @csrf
-                    @method('PUT')
-                        <div class="form-group">
-                            <label for="titulo">Título:</label>
-                            <input type="text" name="titulo" id="titulo" class="form-control" value="{{ $comunicado->titulo }}">
-                        </div>
-                        <div class="form-group">
-                            <label for="texto_vista_previa">Texto vista previa:</label>
-                            <input type="text" name="texto_vista_previa" id="texto_vista_previa" class="form-control" value="{{ $comunicado->texto_vista_previa }}">
-                        </div>
-                        <div class="form-group">
-                            <label for="descripcion">Descripción:</label>
-                            <textarea name="descripcion" id="descripcion" class="form-control">{{ $comunicado->descripcion }}</textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="fecha">Fecha:</label>
-                            <input type="date" name="fecha" id="fecha" class="form-control" value="{{ $comunicado->fecha }}">
-                        </div>
-                        <div class="form-group">
-                            <label for="archivo_pdf">PDF:</label>
-                            <input type="file" name="archivo_pdf" id="archivo_pdf" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="imagen_comunicados">Imagen:</label>
-                            <input type="file" name="imagen_comunicados" id="imagen_comunicados" class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Actualizar</button>
-                        <a href="{{ route('comunicados.index') }}" class="btn btn-secondary">Cancelar</a>
-                    </form>
-                </div>
-            </div>
+        <div class="sidebar-logo text-center">
+            <img src="{{ asset('images/ittolicono.png') }}" alt="Instituto Tecnológico de Toluca" style="max-width: 100px; height: auto;">
+        </div>
         
-        
-       <script src="https://services.cognitoforms.com/scripts/embed.js"></script>
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand">
+              <a href="{!! route('inicio') !!}">Principal</a>
+          </li>
+          <!-- @ auth -->
+          @if(isset($usuario))
+          <li class="sidebar-nav-item">
+              <a href="#">Usuario {{ $usuario->username }}</a>
+          <li class="sidebar-nav-item">
+              <a href="{!! asset('closesession') !!}">Salir</a>
+          </li>                                
+
+          @else
+          
+          <li class="sidebar-nav-item">
+              <a href="{!! asset('logeo') !!}">Inicio de sesion</a>
+          </li>
+          <li class="sidebar-nav-item">
+              <a href="{!! asset('alta') !!}">Dar de alta</a>
+          </li>
+          
+          @endif
+          <!-- @ endauth-->
+      </ul>
+  </nav>
+
+<!-- Contact-->
+<section class="page-section" id="contact">
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-lg-8 col-xl-6 text-center">
+          <h2 class="mt-0">REGISTRO DE USUARIOS</h2>
+          <hr class="divider" />
+      </div>
+  </div>
+  <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+      <div class="col-lg-6">
+           <!-- data-sb-form-api-token="API_TOKEN" -->
+          <form method="POST" action="alta" >
+             {{ csrf_field() }}
+              <!--usuario input-->
+              <div class="form-floating mb-3">
+                  <input class="form-control" id="username" name="username" type="text" placeholder="Teclea tu usuario..." />
+                  <label for="username">Usuario: </label>
+                  <div class="validation"> </div>
+              </div>
+              <!-- password input-->
+              <div class="form-floating mb-3">
+                  <input class="form-control" id="password" name="password" type="password" placeholder="Teclea tu contraseña" />
+                  <label for="password">Contraseña: </label>
+                  <div class="validation"> </div>
+              </div>
+              <!-- Submit Button-->
+              <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">DAR DE ALTA</button></div>
+          </form>
+      </div>
+  </div>
+</div>
+</section>
+
+
     </div>
     </div>
     </div>
