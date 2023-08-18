@@ -4,19 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" /><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
-<title>Inicio - Sección 36 SNTE</title>
-<link rel="canonical" href="https://snte.org.mx/seccion36/" />
+<title>Inicio - DV-52 SNTE</title>
+
 <meta property="og:locale" content="es_MX" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Inicio - Sección 36 SNTE" />
-<meta property="og:url" content="https://snte.org.mx/seccion36/" />
-<meta property="og:site_name" content="Sección 36 SNTE" />
-<meta property="article:publisher" content="https://www.facebook.com/Seccion36ValledeMexico?fref=ts" />
-<meta property="article:modified_time" content="2021-03-18T19:24:27+00:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@Seccion36Ofic" />
-<meta name="twitter:label1" content="Tiempo de lectura" />
-<meta name="twitter:data1" content="3 minutos" />
+<meta property="og:title" content="Inicio - DV-52 SNTE" />
+
+<meta property="og:site_name" content="DV-52 SNTE" />
+
 <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://snte.org.mx/seccion36/","url":"https://snte.org.mx/seccion36/","name":"Inicio - Sección 36 SNTE","isPartOf":{"@id":"https://snte.org.mx/seccion36/#website"},"about":{"@id":"https://snte.org.mx/seccion36/#organization"},"datePublished":"2020-01-01T18:16:26+00:00","dateModified":"2021-03-18T19:24:27+00:00","breadcrumb":{"@id":"https://snte.org.mx/seccion36/#breadcrumb"},"inLanguage":"es-MX","potentialAction":[{"@type":"ReadAction","target":["https://snte.org.mx/seccion36/"]}]},{"@type":"BreadcrumbList","@id":"https://snte.org.mx/seccion36/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio"}]},{"@type":"WebSite","@id":"https://snte.org.mx/seccion36/#website","url":"https://snte.org.mx/seccion36/","name":"Sección 36 SNTE","description":"","publisher":{"@id":"https://snte.org.mx/seccion36/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://snte.org.mx/seccion36/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"es-MX"},{"@type":"Organization","@id":"https://snte.org.mx/seccion36/#organization","name":"SNTE","url":"https://snte.org.mx/seccion36/","logo":{"@type":"ImageObject","inLanguage":"es-MX","@id":"https://snte.org.mx/seccion36/#/schema/logo/image/","url":"https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2020/04/18043803/snte_300.png","contentUrl":"https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2020/04/18043803/snte_300.png","width":300,"height":96,"caption":"SNTE"},"image":{"@id":"https://snte.org.mx/seccion36/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/Seccion36ValledeMexico?fref=ts","https://twitter.com/Seccion36Ofic","https://www.pinterest.es/seccion36/","https://www.youtube.com/channel/UC85Trk3vEzKw_cGDwfzF5Ug"]}]}</script>
 <meta name="google-site-verification" content="lP1T4LuT-eRpwLShyHtIg6RTEpBMAJwG4IFA0a16w50" />
 

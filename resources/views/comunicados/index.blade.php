@@ -2,18 +2,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
-    <title>Comunicados - Sección 36 SNTE</title>
-    <link rel="canonical" href="https://snte.org.mx/seccion36/comunicados/">
-    <meta property="og:locale" content="es_MX">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Comunicados - Sección 36 SNTE">
-    <meta property="og:url" content="https://snte.org.mx/seccion36/comunicados/">
-    <meta property="og:site_name" content="Sección 36 SNTE">
-    <meta property="article:publisher" content="https://www.facebook.com/Seccion36ValledeMexico?fref=ts">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@Seccion36Ofic">
-    <meta name="twitter:label1" content="Tiempo de lectura"> 
-    <meta name="twitter:data1" content="1 minuto">
+    <title>Comunicados - DV-52 SNTE</title>
+
+    <meta property="og:title" content="Comunicados - DV-52 SNTE">
+
+    <meta property="og:site_name" content="DV-52 SNTE">
+
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-6D58MTJW3T&amp;l=dataLayer&amp;cx=c"></script><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://snte.org.mx/seccion36/comunicados/","url":"https://snte.org.mx/seccion36/comunicados/","name":"Comunicados - Sección 36 SNTE","isPartOf":{"@id":"https://snte.org.mx/seccion36/#website"},"datePublished":"2020-06-05T18:17:32+00:00","dateModified":"2020-06-05T18:17:32+00:00","breadcrumb":{"@id":"https://snte.org.mx/seccion36/comunicados/#breadcrumb"},"inLanguage":"es-MX","potentialAction":[{"@type":"ReadAction","target":["https://snte.org.mx/seccion36/comunicados/"]}]},{"@type":"BreadcrumbList","@id":"https://snte.org.mx/seccion36/comunicados/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://snte.org.mx/seccion36/"},{"@type":"ListItem","position":2,"name":"Comunicados"}]},{"@type":"WebSite","@id":"https://snte.org.mx/seccion36/#website","url":"https://snte.org.mx/seccion36/","name":"Sección 36 SNTE","description":"","publisher":{"@id":"https://snte.org.mx/seccion36/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://snte.org.mx/seccion36/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"es-MX"},{"@type":"Organization","@id":"https://snte.org.mx/seccion36/#organization","name":"SNTE","url":"https://snte.org.mx/seccion36/","logo":{"@type":"ImageObject","inLanguage":"es-MX","@id":"https://snte.org.mx/seccion36/#/schema/logo/image/","url":"https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2020/04/18043803/snte_300.png","contentUrl":"https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2020/04/18043803/snte_300.png","width":300,"height":96,"caption":"SNTE"},"image":{"@id":"https://snte.org.mx/seccion36/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/Seccion36ValledeMexico?fref=ts","https://twitter.com/Seccion36Ofic","https://www.pinterest.es/seccion36/","https://www.youtube.com/channel/UC85Trk3vEzKw_cGDwfzF5Ug"]}]}</script>
     
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
