@@ -38,7 +38,7 @@ class ContactoController extends Controller
             // Handle error if needed
         }
 
-        return redirect()->route('inicio');
+        return redirect()->route('principal.index');
     }
 
     /**

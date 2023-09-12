@@ -2,14 +2,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
-    <title>Notas - DV-52 SNTE</title>
-
+    <title>Notas - Sección 36 SNTE</title>
+    <link rel="canonical" href="https://snte.org.mx/seccion36/notas/">
     <meta property="og:locale" content="es_MX">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Notas - DV-52 SNTE">
-
-    <meta property="og:site_name" content="DV-52 SNTE">
-
+    <meta property="og:title" content="Notas - Sección 36 SNTE">
+    <meta property="og:url" content="https://snte.org.mx/seccion36/notas/">
+    <meta property="og:site_name" content="Sección 36 SNTE">
+    <meta property="article:publisher" content="https://www.facebook.com/Seccion36ValledeMexico?fref=ts">
+    <meta property="article:modified_time" content="2020-01-03T03:44:58+00:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Seccion36Ofic">
+    <meta name="twitter:label1" content="Tiempo de lectura">
+    <meta name="twitter:data1" content="1 minuto">
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-6D58MTJW3T&amp;l=dataLayer&amp;cx=c"></script><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://snte.org.mx/seccion36/notas/","url":"https://snte.org.mx/seccion36/notas/","name":"Notas - Sección 36 SNTE","isPartOf":{"@id":"https://snte.org.mx/seccion36/#website"},"datePublished":"2020-01-01T18:05:09+00:00","dateModified":"2020-01-03T03:44:58+00:00","breadcrumb":{"@id":"https://snte.org.mx/seccion36/notas/#breadcrumb"},"inLanguage":"es-MX","potentialAction":[{"@type":"ReadAction","target":["https://snte.org.mx/seccion36/notas/"]}]},{"@type":"BreadcrumbList","@id":"https://snte.org.mx/seccion36/notas/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://snte.org.mx/seccion36/"},{"@type":"ListItem","position":2,"name":"Notas"}]},{"@type":"WebSite","@id":"https://snte.org.mx/seccion36/#website","url":"https://snte.org.mx/seccion36/","name":"Sección 36 SNTE","description":"","publisher":{"@id":"https://snte.org.mx/seccion36/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://snte.org.mx/seccion36/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"es-MX"},{"@type":"Organization","@id":"https://snte.org.mx/seccion36/#organization","name":"SNTE","url":"https://snte.org.mx/seccion36/","logo":{"@type":"ImageObject","inLanguage":"es-MX","@id":"https://snte.org.mx/seccion36/#/schema/logo/image/","url":"https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2020/04/18043803/snte_300.png","contentUrl":"https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2020/04/18043803/snte_300.png","width":300,"height":96,"caption":"SNTE"},"image":{"@id":"https://snte.org.mx/seccion36/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/Seccion36ValledeMexico?fref=ts","https://twitter.com/Seccion36Ofic","https://www.pinterest.es/seccion36/","https://www.youtube.com/channel/UC85Trk3vEzKw_cGDwfzF5Ug"]}]}</script>
     
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -615,12 +620,29 @@
        </script><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0.49803921568627"></feFuncR><feFuncG type="table" tableValues="0 0.49803921568627"></feFuncG><feFuncB type="table" tableValues="0 0.49803921568627"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0 1"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1"></feFuncR><feFuncG type="table" tableValues="0 0.27843137254902"></feFuncG><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0"></feFuncR><feFuncG type="table" tableValues="0 0.64705882352941"></feFuncG><feFuncB type="table" tableValues="0 1"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.78039215686275 1"></feFuncR><feFuncG type="table" tableValues="0 0.94901960784314"></feFuncG><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0.44705882352941 0.4"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.098039215686275 1"></feFuncR><feFuncG type="table" tableValues="0 0.66274509803922"></feFuncG><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg><a href="#ajax-content-wrap" class="nectar-skip-to-content">Skip to main content</a><div class="ocm-effect-wrap"><div class="ocm-effect-wrap-inner">
     <div id="header-space" data-header-mobile-fixed="1" style="height: 74px;"></div>
     <div id="header-outer" data-has-menu="true" data-has-buttons="yes" data-header-button_style="default" data-using-pr-menu="false" data-mobile-fixed="1" data-ptnm="false" data-lhe="animated_underline" data-user-set-bg="#ffffff" data-format="centered-menu-under-logo" data-permanent-transparent="false" data-megamenu-rt="0" data-remove-fixed="1" data-header-resize="0" data-cart="false" data-transparency-option="0" data-box-shadow="small" data-shrink-num="6" data-using-secondary="0" data-using-logo="1" data-logo-height="180" data-m-logo-height="50" data-padding="28" data-full-width="false" data-condense="false" class="">
-
+    <div id="search-outer" class="nectar">
+    <div id="search">
+    <div class="container">
+    <div id="search-box">
+    <div class="inner-wrap">
+    <div class="col span_12">
+    <form role="search" action="https://snte.org.mx/seccion36/" method="GET">
+    <input type="text" name="s" value="" aria-label="Buscar" placeholder="Buscar">
+    <span>Presiona enter para buscar o ESC para cerrar</span>
+    </form>
+    </div>
+    </div>
+    </div>
+    <div id="close"><a href="#"><span class="screen-reader-text">Close Search</span>
+    <span class="close-wrap"> <span class="close-line close-line1"></span> <span class="close-line close-line2"></span> </span> </a></div>
+    </div>
+    </div>
+    </div>
     <header id="top">
     <div class="container">
     <div class="row">
     <div class="col span_3">
-      <a id="logo" href="{!!route('inicio')!!}" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false">
+      <a id="logo" href="{!!route('principal.index')!!}" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false">
         <img class="stnd skip-lazy dark-version" width="1051" height="180" alt="Delegación DV-52 SNTE" src="{{ asset('images/portada.png') }}"> </a>
     </div>
     <div class="col span_9 col_last">
@@ -634,7 +656,7 @@
     <nav>
       <ul class="sf-menu">
         <li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom nectar-regular-menu-item menu-item-41"><a href="https://snte.org.mx/"><span class="menu-title-text">SNTE Nacional</span></a></li>
-        <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-42 current_page_item nectar-regular-menu-item menu-item-44"><a href="{!!route('inicio')!!}" aria-current="page"><span class="menu-title-text">Inicio</span></a></li>
+        <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-42 current_page_item nectar-regular-menu-item menu-item-44"><a href="{!!route('principal.index')!!}" aria-current="page"><span class="menu-title-text">Inicio</span></a></li>
         <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nectar-regular-menu-item menu-item-27"><a href="#"><span class="menu-title-text">Sección Sindical</span></a>
         <ul class="sub-menu">
         <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-28"><a href="{!!route('quienessomos.index')!!}"><span class="menu-title-text">Quiénes somos</span></a></li>
@@ -724,32 +746,29 @@
   <div class="post-area col span_12 col_last masonry auto_meta_overlaid_spaced">
       <div class="posts-container" data-load-animation="none">
             @foreach($notas as $nota)
-            <article class="masonry-blog-item post-{{ $nota->id }} post type-post status-publish format-standard has-post-thumbnail category-comunicadoss36 category-notass36">
-              <a href="{{ route('notas.download', $nota->id) }}" aria-label="{{ $nota->titulo }}">
-                  <div class="inner-wrap">
-                      <div class="post-content">
-                  <div class="content-inner">
-                      <a class="entire-meta-link" href="{{ route('notas.show', $nota->id) }}" aria-label="{{ $nota->titulo }}"></a>
-                      <span class="post-featured-img"><img width="800" height="720" src="{{ asset('storage/' . $nota->imagenes_notas) }}" class="attachment-medium_featured size-medium_featured skip-lazy wp-post-image" alt="" decoding="async" title="" sizes="(min-width: 690px) 50vw, 100vw"></span>
-                      <div class="article-content-wrap">
-                          <span class="meta-category">
-                              <a class="comunicadoss36" href="{{ route('notas.index') }}">Notass36</a>
-                              <a class="notass36" href="{{ route('notas.index') }}">NotasS36</a>
-                          </span>
-                          <div class="post-header">
-                              <h3 class="title"><a href="{{ route('notas.show', $nota->id) }}">{{ $nota->titulo }}</a></h3>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </article>
+                <article id="post-{{ $nota->id }}" class="masonry-blog-item post-{{ $nota->id }} post type-post status-publish format-standard has-post-thumbnail category-notass36">
+                    <div class="inner-wrap">
+                        <div class="post-content">
+                            <div class="content-inner">
+                                <a class="entire-meta-link" aria-label="{{ $nota->titulo }}"></a>
+                                <span class="post-featured-img">
+                                    <img width="800" height="800" src="{{ asset('storage/' . $nota->imagen_nota) }}" class="attachment-medium_featured size-medium_featured skip-lazy wp-post-image" alt="{{ $nota->titulo }}" decoding="async" title="" sizes="(min-width: 690px) 50vw, 100vw">
+                                </span>
+                                <div class="article-content-wrap">
+                                    <span class="meta-category"><a class="notass36" href="https://snte.org.mx/seccion36/category/notass36/">NotasS36</a></span>
+                                    <div class="post-header">
+                                        <h3 class="title">{{ $nota->titulo }}</h3>
+                                    </div>
+                                    <div class="note-preview">{{ $nota->texto_vista_previa }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             @endforeach
         </div>
     </div>
 </div>
-
-
 
 
 
@@ -760,12 +779,12 @@
     <div class="inner-wrap">
     <div class="post-content">
     <div class="content-inner">
-    <a class="entire-meta-link" href="" aria-label="Convocatoria Maestro Altamirano 2023"></a>
+    <a class="entire-meta-link" href="https://snte.org.mx/seccion36/convocatoria-maestro-altamirano-2023/" aria-label="Convocatoria Maestro Altamirano 2023"></a>
     <span class="post-featured-img"><img width="800" height="800" src="https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-800x800.jpg" class="attachment-medium_featured size-medium_featured skip-lazy wp-post-image" alt="" decoding="async" loading="lazy" title="" sizes="(min-width: 690px) 50vw, 100vw" srcset="https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-800x800.jpg 800w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-150x150.jpg 150w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-100x100.jpg 100w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-140x140.jpg 140w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-500x500.jpg 500w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-350x350.jpg 350w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-1000x1000.jpg 1000w"></span>
     <div class="article-content-wrap">
     <span class="meta-category"><a class="notass36" href="https://snte.org.mx/seccion36/category/notass36/">NotasS36</a></span>
     <div class="post-header">
-    <h3 class="title"><a href=""> Convocatoria Maestro Altamirano 2023</a></h3>
+    <h3 class="title"><a href="https://snte.org.mx/seccion36/convocatoria-maestro-altamirano-2023/"> Convocatoria Maestro Altamirano 2023</a></h3>
     </div>
     </div>
     </div>
@@ -776,12 +795,12 @@
     <div class="inner-wrap">
     <div class="post-content">
     <div class="content-inner">
-    <a class="entire-meta-link" href="" aria-label="Convocatoria Rafael Ramírez 2023"></a>
+    <a class="entire-meta-link" href="https://snte.org.mx/seccion36/convocatoria-rafael-ramirez-2023/" aria-label="Convocatoria Rafael Ramírez 2023"></a>
     <span class="post-featured-img"><img width="800" height="800" src="https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-800x800.jpg" class="attachment-medium_featured size-medium_featured skip-lazy wp-post-image" alt="" decoding="async" loading="lazy" title="" sizes="(min-width: 690px) 50vw, 100vw" srcset="https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-800x800.jpg 800w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-150x150.jpg 150w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-100x100.jpg 100w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-140x140.jpg 140w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-500x500.jpg 500w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-350x350.jpg 350w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-1000x1000.jpg 1000w"></span>
     <div class="article-content-wrap">
     <span class="meta-category"><a class="notass36" href="https://snte.org.mx/seccion36/category/notass36/">NotasS36</a></span>
     <div class="post-header">
-    <h3 class="title"><a href=""> Convocatoria Rafael Ramírez 2023</a></h3>
+    <h3 class="title"><a href="https://snte.org.mx/seccion36/convocatoria-rafael-ramirez-2023/"> Convocatoria Rafael Ramírez 2023</a></h3>
     </div>
     </div>
     </div>

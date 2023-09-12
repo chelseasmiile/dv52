@@ -22,25 +22,21 @@ use App\Http\Controllers\ImagenGaleriaController;
 |
 */
 
+Route::get('/galerias/create', [GaleriaController::class, 'create'])->name('galerias.create');
 
-Route::resource('/', PrincipalController::class)->except(['show','destroy']);
+Route::get('/principal', [PrincipalController::class, 'index'])->name('inicio');
+
+Route::resource('/', PrincipalController::class)->except(['destroy']);
 
 Route::get('/principal/create', [PrincipalController::class, 'create'])->name('principal.create');
 
 Route::get('/principal', [PrincipalController::class, 'index'])->name('inicio');
 
-
-Route::middleware(['guest'])->group(function () {
-    // Rutas que deben ser accesibles solo para invitados
     Route::get('logeo', [LoginController::class, 'getLogeo']);
     Route::post('logeo', [LoginController::class, 'postLogeo']);
     Route::get('/cerrar-sesion', [LoginController::class, 'cerrarSesion'])->name('cerrar-sesion');
-});
 
-// Rutas que deben estar protegidas solo para usuarios autenticados
-Route::middleware(['auth'])->group(function () {
-    // Rutas que requieren autenticación
-});
+
 
 
 Route::get('alta', [LoginController::class, 'getAlta']);
@@ -91,6 +87,9 @@ Route::resource('contacto', ContactoController::class)->except(['show','destroy'
 //     return view('contacto.index');
 // })->name('contacto');
 
+
+
+Route::get('/galerias/create', [GaleriaController::class, 'create'])->name('galerias.create');
 Route::get('galerias/{galeria}', [GaleriaController::class, 'show'])->name('galerias.show');
 Route::resource('galerias', GaleriaController::class);
 Route::get('/galerias/{id}/edit', [GaleriaController::class, 'edit'])->name('galerias.edit');
@@ -103,6 +102,7 @@ Route::post('/galerias/{galeria}/add-image', [GaleriaController::class, 'addImag
 
 
 Route::post('/galerias/{galeriaId}/add-image', [ImagenGaleriaController::class, 'store'])->name('imagenes_galeria.store');
+
 
 
 
@@ -141,20 +141,23 @@ Route::resource('videos', VideoController::class);
 
 
 
-// Route::get('/principal/create', [PrincipalController::class, 'create'])->name('principal.create');
+// Route::post('/principal/create', [PrincipalController::class, 'create'])->name('principal.create');
 // Route::get('/principal', [PrincipalController::class, 'index'])->name('principal.index');
-Route::post('/sliders/{id}/asignar', 'PrincipalController@asignar')->name('asignar.slider');
 // Route::resource('principal', PrincipalController::class)->except(['show']);
-
-
-
-Route::get('/principales', 'PrincipalController@index')->name('principal.index');
 //Route::get('/principal/create', 'PrincipalController@create')->name('principal.create');
+
+
+Route::post('/sliders/{id}/asignar', 'PrincipalController@asignar')->name('asignar.slider');
+Route::get('/principal', 'PrincipalController@index')->name('principal.index');
 Route::post('/principal', 'PrincipalController@store')->name('principal.store');
 Route::get('/principal/{id}/edit', 'PrincipalController@edit')->name('principal.edit');
 Route::put('/principal/{id}', 'PrincipalController@update')->name('principal.update');
 Route::delete('/principal/{id}', 'PrincipalController@destroy')->name('principal.destroy');
 Route::post('/principal/{id}/asignar', 'PrincipalController@asignar')->name('principal.asignar');
+Route::get('/principal', [PrincipalController::class, 'index'])->name('principal.index'); // Add this line
+Route::post('/principal', [PrincipalController::class, 'store'])->name('principal.store'); // Add this line
+Route::delete('/principal/{id}', [PrincipalController::class, 'destroy'])->name('principal.destroy');
+
 Route::get('servicios/create', 'QrController@create')->name('servicios.create');
 Route::post('qrs', 'QrController@store')->name('qrs.store');
 Route::get('servicios/create', [QrController::class, 'create'])->name('servicios.create');

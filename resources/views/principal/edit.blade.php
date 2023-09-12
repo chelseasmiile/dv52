@@ -682,7 +682,7 @@
     <div class="container">
     <div class="row">
     <div class="col span_3">
-      <a id="logo" href="{!!route('inicio')!!}" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false">
+      <a id="logo" href="{!!route('principal.index')!!}" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false">
         <img class="stnd skip-lazy dark-version" width="1051" height="180" alt="Delegación DV-52 SNTE" src="{{ asset('images/portada.png') }}"> </a>
     </div>
     <div class="col span_9 col_last">
@@ -696,7 +696,7 @@
     <nav>
       <ul class="sf-menu">
         <li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom nectar-regular-menu-item menu-item-41"><a href="https://snte.org.mx/"><span class="menu-title-text">SNTE Nacional</span></a></li>
-        <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-42 current_page_item nectar-regular-menu-item menu-item-44"><a href="{!!route('inicio')!!}" aria-current="page"><span class="menu-title-text">Inicio</span></a></li>
+        <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-42 current_page_item nectar-regular-menu-item menu-item-44"><a href="{!!route('principal.index')!!}" aria-current="page"><span class="menu-title-text">Inicio</span></a></li>
         <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nectar-regular-menu-item menu-item-27"><a href="#"><span class="menu-title-text">Sección Sindical</span></a>
         <ul class="sub-menu">
         <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-28"><a href="{!!route('quienessomos.index')!!}"><span class="menu-title-text">Quiénes somos</span></a></li>
@@ -741,31 +741,31 @@
       
         <div class="form-container">
             <h1 class="form-title">Editar Información de Slider</h1>
-            <form action="{{ route('principal.update', $quienessomos->id) }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('principal.update', $collection->id) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="form-group">
-                    <label for="vision">Visión:</label>
-                    <input type="text" name="slider1" id="slider1" class="form-control" value="{{ $quienessomos->vslider1 }}">
+                    <label for="slider1">Slider 1:</label>
+                    <input type="text" name="slider1" id="slider1" class="form-control" value="{{ $collection->vslider1 }}">
                 </div>
                 <div class="form-group">
-                    <label for="mision">Misión:</label>
-                    <input type="text" name="slider2" id="slider1" class="form-control" value="{{ $quienessomos->slider2}}">
+                    <label for="slider2">Slider 1:</label>
+                    <input type="text" name="slider2" id="slider2" class="form-control" value="{{ $collection->slider2}}">
                 </div>
                 <div class="form-group">
-                    <label for="valores">Valores:</label>
-                    <input type="text" name="slider3" id="slider1" class="form-control" value="{{ $quienessomos->slider3 }}">
+                    <label for="slider3">Slider 3:</label>
+                    <input type="text" name="slider3" id="slider3" class="form-control" value="{{ $collection->slider3 }}">
                 </div>
                 <div class="form-group">
-                    <label for="imagen_vision">Imagen Visión:</label>
+                    <label for="imagen_s1">Imagen Slider 1:</label>
                     <input type="file" name="imagen_s1" id="imagen_s1" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="imagen_mision">Imagen Misión:</label>
+                    <label for="imagen_s2">Imagen Slider 2:</label>
                     <input type="file" name="imagen_s2" id="imagen_s2" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="imagen_valores">Imagen Valores:</label>
+                    <label for="imagen_s3">Imagen Slider 3:</label>
                     <input type="file" name="imagen_s3" id="imagen_s3" class="form-control">
                 </div>
                 <button type="submit">Actualizar</button>

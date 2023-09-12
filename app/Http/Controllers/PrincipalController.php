@@ -101,7 +101,7 @@ class PrincipalController extends Controller
      */
     public function destroy(string $id)
     {
-        dd('destroy method');
+       // dd('destroy method');
         $collection = Principal::findOrFail($id);
         $collection->delete();
 

@@ -631,7 +631,7 @@ var say_what_data = {"replacements":[]};
 <div class="container">
 <div class="row">
 <div class="col span_3">
-<a id="logo" href="{!!route('inicio')!!}" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false">
+<a id="logo" href="{!!route('principal.index')!!}" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false">
 <img class="stnd skip-lazy dark-version" width="1051" height="180" alt="Delegación DV-52 SNTE" src="{{ asset('images/portada.png') }}"> </a>
 </div>
 <div class="col span_9 col_last">
@@ -645,7 +645,7 @@ var say_what_data = {"replacements":[]};
 <nav>
   <ul class="sf-menu">
     <li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom nectar-regular-menu-item menu-item-41"><a href="https://snte.org.mx/"><span class="menu-title-text">SNTE Nacional</span></a></li>
-    <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-42 current_page_item nectar-regular-menu-item menu-item-44"><a href="{!!route('inicio')!!}" aria-current="page"><span class="menu-title-text">Inicio</span></a></li>
+    <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-42 current_page_item nectar-regular-menu-item menu-item-44"><a href="{!!route('principal.index')!!}" aria-current="page"><span class="menu-title-text">Inicio</span></a></li>
     <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nectar-regular-menu-item menu-item-27"><a href="#"><span class="menu-title-text">Sección Sindical</span></a>
     <ul class="sub-menu">
     <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-28"><a href="{!!route('quienessomos.index')!!}"><span class="menu-title-text">Quiénes somos</span></a></li>
@@ -784,6 +784,39 @@ var say_what_data = {"replacements":[]};
       </a>
   </li>
 </div>
+
+
+<table class="table">
+  <thead>
+      <tr>
+          <th>Slider 1</th>
+          <th>Slider 2</th>
+          <th>Slider 3</th>
+          <th>Acciones</th>
+      </tr>
+  </thead>
+  <tbody>
+    @foreach($collection as $item)
+        <tr>
+            <td>{{ $item->slider1 }}</td>
+            <td>{{ $item->slider2 }}</td>
+            <td>{{ $item->slider3 }}</td>
+            <td>
+                {{-- <a href="{{ asset('storage/' . $item->imagen_s1) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Visión</a>
+                <a href="{{ asset('storage/' . $item->imagen_s2) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Misión</a>
+                <a href="{{ asset('storage/' . $item->imagen_s3) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Valores</a> --}}
+                <a href="{{ route('principal.edit', $item->id) }}" class="btn btn-sm btn-info">Editar</a>
+                <form action="{{ route('principal.destroy', $item->id) }}" method="post" style="display: inline-block">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+    @endforeach
+  </tbody>
+</table>
+
 @endif
 
 

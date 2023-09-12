@@ -2,11 +2,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
-    <title>Contacto - Sección 36 SNTE</title>
+    <title>Login - DV-52 SNTE</title>
     <link rel="canonical" href="https://snte.org.mx/seccion36/contacto/">
     <meta property="og:locale" content="es_MX">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Contacto - Sección 36 SNTE">
+    <meta property="og:title" content="Login - DV-52 SNTE">
     <meta property="og:url" content="https://snte.org.mx/seccion36/contacto/">
     <meta property="og:site_name" content="Sección 36 SNTE">
     <meta property="article:publisher" content="https://www.facebook.com/Seccion36ValledeMexico?fref=ts">
@@ -560,7 +560,7 @@
   }
   
   .form-title {
-    color: white; /* Cambia "white" por el color que desees */
+    color: rgb(2, 2, 2); /* Cambia "white" por el color que desees */
   }
   
   
@@ -597,9 +597,9 @@
   form textarea {
       padding: 15px;
       margin-bottom: 15px;
-      border: 1px solid #ccc;
+      border: 1px solid #000000;
       border-radius: 5px;
-      color: white; /* Texto blanco */
+      color: black; /* Texto blanco */
       background-color: transparent; /* Fondo completamente transparente */
       outline: none; /* Quitamos el resaltado al enfocar el campo */
   }
@@ -747,7 +747,7 @@
     <div class="container">
     <div class="row">
     <div class="col span_3">
-      <a id="logo" href="{!!route('inicio')!!}" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false">
+      <a id="logo" href="{!!route('principal.index')!!}" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false">
         <img class="stnd skip-lazy dark-version" width="1051" height="180" alt="Delegación DV-52 SNTE" src="{{ asset('images/portada.png') }}"> </a>
     </div>
     <div class="col span_9 col_last">
@@ -761,7 +761,7 @@
     <nav>
       <ul class="sf-menu">
         <li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom nectar-regular-menu-item menu-item-41"><a href="https://snte.org.mx/"><span class="menu-title-text">SNTE Nacional</span></a></li>
-        <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-42 current_page_item nectar-regular-menu-item menu-item-44"><a href="{!!route('inicio')!!}" aria-current="page"><span class="menu-title-text">Inicio</span></a></li>
+        <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-42 current_page_item nectar-regular-menu-item menu-item-44"><a href="{!!route('principal.index')!!}" aria-current="page"><span class="menu-title-text">Inicio</span></a></li>
         <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nectar-regular-menu-item menu-item-27"><a href="#"><span class="menu-title-text">Sección Sindical</span></a>
         <ul class="sub-menu">
         <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-28"><a href="{!!route('quienessomos.index')!!}"><span class="menu-title-text">Quiénes somos</span></a></li>
@@ -809,7 +809,7 @@
         
                     <ul class="sidebar-nav">
                         <li class="sidebar-brand">
-                            <a href="{!! route('inicio') !!}">Principal</a>
+                            <a href="{!! route('principal.index') !!}">Principal</a>
                         </li>
                         <!-- @ auth -->
                         @if(isset($usuario))

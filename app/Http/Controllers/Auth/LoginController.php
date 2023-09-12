@@ -53,9 +53,9 @@ class LoginController extends Controller
         $f = Auth::guard('web')->attempt($credentials, $request->filled('remember'));
 
         if ($f) {
-            return redirect()->route('inicio'); // Redirige a la página de inicio después del inicio de sesión exitoso
+            return redirect()->route('principal.index'); // Redirige a la página de inicio después del inicio de sesión exitoso
         } else {
-            return redirect()->route('inicio')->with('error', 'No se pudo iniciar sesión.'); // Redirige a la página de inicio con un mensaje de error
+            return redirect()->route('principal.index')->with('error', 'No se pudo iniciar sesión.'); // Redirige a la página de inicio con un mensaje de error
         }
     }
 
@@ -64,7 +64,7 @@ class LoginController extends Controller
     {
         Auth::logout();
     
-        return redirect()->route('inicio'); // Redirige al usuario a la página de inicio después de cerrar sesión
+        return redirect()->route('principal.index'); // Redirige al usuario a la página de inicio después de cerrar sesión
     }
 
 
@@ -98,6 +98,6 @@ class LoginController extends Controller
         'password' => Hash::make($datos['password']),
     ]);
 
-    return redirect()->route('inicio');
+    return redirect()->route('principal.index');
 }
 }
