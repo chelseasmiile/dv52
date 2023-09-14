@@ -820,7 +820,11 @@
     </div>
     </div>
     @if(Auth::check())
-    <div><li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="{{ route('notas.create') }}"><span class="menu-title-text">Crear nota</span></a></li></div>
+    <div>
+        <a target="_blank" rel="noopener" href="{{ route('notas.create') }}">
+          <button type="submit" class="btn btn-sm btn-danger">Crear Nota</button>
+        </a>
+    </div>
   
     <table class="table">
       <thead>
@@ -836,7 +840,7 @@
                   <td>{{ $nota->titulo }}</td>
                   <td>{{ $nota->created_at }}</td>
                   <td>
-                      <a href="{{ route('notas.download', $nota->id) }}" class="btn btn-sm btn-primary">Descargar PDF</a>
+                      <a href="{{ route('notas.download', $nota->id) }}" class="btn btn-sm btn-primary">Descargar imagen</a>
                       <a href="{{ route('notas.edit', $nota->id) }}" class="btn btn-sm btn-warning">Editar</a>
                       <form action="{{ route('notas.destroy', $nota->id) }}" method="post" style="display: inline-block;">
                           @csrf

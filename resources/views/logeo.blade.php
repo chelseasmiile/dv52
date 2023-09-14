@@ -668,6 +668,16 @@
         .form-floating input {
             border-radius: 10px; /* Ajusta la curva de los bordes de los campos de entrada */
         }
+
+        label[for="username"] {
+            font-family: 'Open Sans', sans-serif;
+            color: black;
+        }
+
+        label[for="password"] {
+            font-family: 'Open Sans', sans-serif;
+            color: black;
+        }
     
     </style>
     <script type="text/javascript" src="https://snte.org.mx/seccion36/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>

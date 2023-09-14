@@ -779,10 +779,17 @@
     </div>
     </div>
     </div>
-    </div>
+ 
 
     @if(Auth::check())
-    <div><li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="{{ route('quienessomos.create') }}"><span class="menu-title-text">Crear quienes somos</span></a></li></div>
+    <div>
+        <a target="_blank" rel="noopener" href="{{ route('quienessomos.create') }}">
+      {{-- <span class="menu-title-text">Crear quienes somos</span> --}}
+      <button type="submit" class="btn btn-sm btn-danger">Crear Quienes Somos</button>
+    </a>
+</div>
+
+</div>
     <table class="table">
       <thead>
           <tr>
@@ -799,9 +806,9 @@
                 <td>{{ $quienessomos->mision }}</td>
                 <td>{{ $quienessomos->valores }}</td>
                 <td>
-                    <a href="{{ asset('storage/' . $quienessomos->imagen_vision) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Visión</a>
+                    {{-- <a href="{{ asset('storage/' . $quienessomos->imagen_vision) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Visión</a>
                     <a href="{{ asset('storage/' . $quienessomos->imagen_mision) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Misión</a>
-                    <a href="{{ asset('storage/' . $quienessomos->imagen_valores) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Valores</a>
+                    <a href="{{ asset('storage/' . $quienessomos->imagen_valores) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Valores</a> --}}
                     <a href="{{ route('quienessomos.edit', $quienessomos->id) }}" class="btn btn-sm btn-info">Editar</a>
                     <form action="{{ route('quienessomos.destroy', $quienessomos->id) }}" method="post" style="display: inline-block">
                         @csrf

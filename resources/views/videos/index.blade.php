@@ -711,6 +711,14 @@
 
 
     @if(Auth::check())
+
+    <div>
+      <a href="{{ route('videos.create') }}">
+      <button type="submit" class="btn btn-sm btn-danger">Añadir video</button>
+    </a>
+    </div>
+
+
     <div class="container">
      
       <table class="table">
@@ -743,7 +751,7 @@
           </tbody>
       </table>
   </div>
-  <a href="{{ route('videos.create') }}" class="btn btn-success">Crear Nuevo Video</a>
+  
 @endif
     </div>
     </div>

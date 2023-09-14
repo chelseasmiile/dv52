@@ -28,26 +28,26 @@ class PrincipalController extends Controller
         //dd('store method');
         $data = $request->validate([
             'slider1' => 'required',
-            'slider2' => 'required',
-            'slider3' => 'required',
+            // 'slider2' => 'required',
+            // 'slider3' => 'required',
             'imagen_s1' => 'required|image|mimes:jpeg,png,jpg,gif',
-            'imagen_s2' => 'required|image|mimes:jpeg,png,jpg,gif',
-            'imagen_s3' => 'required|image|mimes:jpeg,png,jpg,gif',
+            // 'imagen_s2' => 'required|image|mimes:jpeg,png,jpg,gif',
+            // 'imagen_s3' => 'required|image|mimes:jpeg,png,jpg,gif',
         ]);
         //dd('store method');
         $imagens1 = $request->file('imagen_s1')->store('quienessomos_imagenes/s1', 'public');
-        $imagens2 = $request->file('imagen_s2')->store('quienessomos_imagenes/s2', 'public');
-        $imagens3 = $request->file('imagen_s3')->store('quienessomos_imagenes/s3', 'public');
+        // $imagens2 = $request->file('imagen_s2')->store('quienessomos_imagenes/s2', 'public');
+        // $imagens3 = $request->file('imagen_s3')->store('quienessomos_imagenes/s3', 'public');
     
         //dd('store method');
         $collection = new Principal($data);
         $collection->imagen_s1 = $imagens1;
-        $collection->imagen_s2 = $imagens2;
-        $collection->imagen_s3 = $imagens3;
+        // $collection->imagen_s2 = $imagens2;
+        // $collection->imagen_s3 = $imagens3;
         $collection->save();
         //dd('store method');
     
-        return redirect()->route('principal.index')->with('success', 'Información de Quienes Somos creada exitosamente.');
+        return redirect()->route('principal.index')->with('success', 'Slider creada exitosamente.');
     }
 
     /**
@@ -68,11 +68,11 @@ class PrincipalController extends Controller
         dd('update method'); 
         $data = $request->validate([
         'slider1' => 'required',
-        'slider2' => 'required',
-        'slider3' => 'required',
+        // 'slider2' => 'required',
+        // 'slider3' => 'required',
         'imagen_s1' => 'required|image|mimes:jpeg,png,jpg,gif',
-        'imagen_s2' => 'required|image|mimes:jpeg,png,jpg,gif',
-        'imagen_s3' => 'required|image|mimes:jpeg,png,jpg,gif',
+        // 'imagen_s2' => 'required|image|mimes:jpeg,png,jpg,gif',
+        // 'imagen_s3' => 'required|image|mimes:jpeg,png,jpg,gif',
     ]);
 
     if ($request->hasFile('imagen_s1')) {
@@ -80,20 +80,20 @@ class PrincipalController extends Controller
         $data['imagen_s1'] = $imagens1;
     }
 
-    if ($request->hasFile('imagen_s2')) {
-        $imagens2 = $request->file('imagen_s2')->store('slider_imagenes', 'public');
-        $data['imagen_s2'] = $imagens2;
-    }
+    // if ($request->hasFile('imagen_s2')) {
+    //     $imagens2 = $request->file('imagen_s2')->store('slider_imagenes', 'public');
+    //     $data['imagen_s2'] = $imagens2;
+    // }
 
-    if ($request->hasFile('imagen_s3')) {
-        $imagens3 = $request->file('imagen_s3')->store('slider_imagenes', 'public');
-        $data['imagen_s3'] = $imagens3;
-    }
+    // if ($request->hasFile('imagen_s3')) {
+    //     $imagens3 = $request->file('imagen_s3')->store('slider_imagenes', 'public');
+    //     $data['imagen_s3'] = $imagens3;
+    // }
 
     $collection = Principal::findOrFail($id);
 
 
-    return redirect()->route('principal.index')->with('success', 'Información de Quienes Somos actualizada exitosamente.');
+    return redirect()->route('principal.index')->with('success', 'Slider actualizada exitosamente.');
 }
 
     /**
@@ -105,7 +105,7 @@ class PrincipalController extends Controller
         $collection = Principal::findOrFail($id);
         $collection->delete();
 
-        return redirect()->route('principal.index')->with('success', 'Información de Quienes Somos eliminada exitosamente.');
+        return redirect()->route('principal.index')->with('success', 'Slider eliminada exitosamente.');
     }
 
     public function show(string $id)

@@ -655,6 +655,16 @@
     <div class="container-wrap" style="padding-top: 0px; padding-bottom: 0px; min-height: 183.969px;">
     <div class="container main-content" role="main">
     <div class="row">
+      <div class="row" style="text-align: left; margin-top: 10px;">
+        <form action="{{ route('comunicados.index') }}" method="get" style="display: inline-block;">
+            <label for="orden" style="font-size: 14px; margin-right: 5px;">Ordenar por fecha:</label>
+            <select name="orden" id="orden" style="font-size: 14px;">
+                <option value="asc" @if($orden === 'asc') selected @endif>Ascendente</option>
+                <option value="desc" @if($orden === 'desc') selected @endif>Descendente</option>
+            </select>
+            <button type="submit" style="font-size: 14px;">Filtrar</button>
+        </form>
+    </div>
     <div id="fws_64910e7d2bd6b" data-column-margin="default" data-midnight="dark" data-top-percent="6%" data-bottom-percent="6%" class="wpb_row vc_row-fluid vc_row top-level full-width-section first-section loaded" style="padding-top: calc(100vw * 0.06); padding-bottom: calc(100vw * 0.06); "><div class="row-bg-wrap" data-bg-animation="none" data-bg-animation-delay="" data-bg-overlay="false"><div class="inner-wrap row-bg-layer"><div class="row-bg viewport-desktop" style=""></div></div></div><div class="row_col_wrap_12 col span_12 dark left">
     <div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0">
     <div class="vc_column-inner">
@@ -670,17 +680,9 @@
     </div>
     </div>
     </div>
-    </div></div>
-    <div class="row" style="text-align: left; margin-top: 10px;">
-      <form action="{{ route('comunicados.index') }}" method="get" style="display: inline-block;">
-          <label for="orden" style="font-size: 14px; margin-right: 5px;">Ordenar por fecha:</label>
-          <select name="orden" id="orden" style="font-size: 14px;">
-              <option value="asc" @if($orden === 'asc') selected @endif>Ascendente</option>
-              <option value="desc" @if($orden === 'desc') selected @endif>Descendente</option>
-          </select>
-          <button type="submit" style="font-size: 14px;">Filtrar</button>
-      </form>
+    </div>
   </div>
+   
     <div class="row">
     <div class="post-area col  span_12 col_last masonry auto_meta_overlaid_spaced  infinite_scroll " data-ams="16px" data-remove-post-date="" data-remove-post-author="" data-remove-post-comment-number="" data-remove-post-nectar-love=""> 
       <div class="posts-container" data-load-animation="none">
@@ -690,7 +692,7 @@
             <div class="inner-wrap">
                 <div class="post-content">
             <div class="content-inner">
-                <a class="entire-meta-link" href="{{ route('comunicados.show', $comunicado->id) }}" aria-label="{{ $comunicado->titulo }}"></a>
+                <a class="entire-meta-link" href="{{ route('comunicados.show', $comunicado->id) }}" aria-label="{{ $comunicado->titulo }}" ></a>
                 <span class="post-featured-img"><img width="800" height="720" src="{{ asset('storage/' . $comunicado->imagen_comunicados) }}" class="attachment-medium_featured size-medium_featured skip-lazy wp-post-image" alt="" decoding="async" title="" sizes="(min-width: 690px) 50vw, 100vw"></span>
                 <div class="article-content-wrap">
                     <span class="meta-category">
@@ -698,7 +700,7 @@
                         <a class="notass36" href="{{ route('notas.index') }}">NotasS36</a>
                     </span>
                     <div class="post-header">
-                        <h3 class="title"><a href="{{ route('comunicados.show', $comunicado->id) }}">{{ $comunicado->titulo }}</a></h3>
+                        <h3 class="title"><a href="{{ route('comunicados.show', $comunicado->id) }}">{{ $comunicado->titulo }} {{ $comunicado->texto_vista_previa }}</a></h3>
                     </div>
                 </div>
             </div>
@@ -711,7 +713,11 @@
     </div>
     </div>
     @if(Auth::check())
-    <div><li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="{{ route('comunicados.create') }}"><span class="menu-title-text">Crear comunicado</span></a></li></div>
+    <div>
+      <a target="_blank" rel="noopener" href="{{ route('comunicados.create') }}">
+        <button type="submit" class="btn btn-sm btn-danger">Crear Comunicado</button>
+    </a>
+</div>
     <div class="container">
       <div class="container">
         <h1>Comunicados</h1>

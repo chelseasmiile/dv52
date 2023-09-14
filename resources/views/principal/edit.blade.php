@@ -748,26 +748,26 @@
                     <label for="slider1">Slider 1:</label>
                     <input type="text" name="slider1" id="slider1" class="form-control" value="{{ $collection->vslider1 }}">
                 </div>
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label for="slider2">Slider 1:</label>
                     <input type="text" name="slider2" id="slider2" class="form-control" value="{{ $collection->slider2}}">
                 </div>
                 <div class="form-group">
                     <label for="slider3">Slider 3:</label>
                     <input type="text" name="slider3" id="slider3" class="form-control" value="{{ $collection->slider3 }}">
-                </div>
+                </div> --}}
                 <div class="form-group">
                     <label for="imagen_s1">Imagen Slider 1:</label>
                     <input type="file" name="imagen_s1" id="imagen_s1" class="form-control">
                 </div>
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label for="imagen_s2">Imagen Slider 2:</label>
                     <input type="file" name="imagen_s2" id="imagen_s2" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="imagen_s3">Imagen Slider 3:</label>
                     <input type="file" name="imagen_s3" id="imagen_s3" class="form-control">
-                </div>
+                </div> --}}
                 <button type="submit">Actualizar</button>
             </form>
         </div>

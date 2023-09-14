@@ -12,7 +12,7 @@ class Principal extends Model
     protected $table = 'principal';
 
     protected $fillable = [
-        'slider1','slider2','slider3','imagen_s1','imagen_s2','imagen_s3',
+        'slider1','imagen_s1',
     ];
 
     // Definir relaciones con otros modelos si es necesario

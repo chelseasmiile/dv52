@@ -699,7 +699,11 @@
     </div>
 
     @if(Auth::check())
-    <div><li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="{{ route('galerias.create') }}"><span class="menu-title-text">Crear galeria</span></a></li></div>
+    <div>
+        <a target="_blank" rel="noopener" href="{{ route('galerias.create') }}">
+          <button type="submit" class="btn btn-sm btn-danger">Añadir galeria</button>
+        </a>
+    </div>
   
     <table class="table">
       <thead>

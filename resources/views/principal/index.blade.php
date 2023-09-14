@@ -729,7 +729,7 @@ var say_what_data = {"replacements":[]};
         </div>
     </div>
     @endforeach
-    @foreach($collection as $item)
+    {{-- @foreach($collection as $item)
     <div class="nectar-recent-post-slide  post-ref-0">
         <div class="nectar-recent-post-bg"
             style="background-image: url('{{ asset('storage/' . $item->imagen_s2) }}'); ">
@@ -756,7 +756,7 @@ var say_what_data = {"replacements":[]};
             </div>
         </div>
     </div>
-    @endforeach
+    @endforeach --}}
 <div class="nectar-recent-post-slide  post-ref-3">
 <div class="nectar-recent-post-bg" style="background-image: url(https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-scaled.jpg); "> </div>
 <div class="recent-post-container container"><div class="inner-wrap"><span class="strong"><a class="notass36" href="https://snte.org.mx/seccion36/category/notass36/"><span class="notass36">NotasS36</span></a></span>
@@ -778,20 +778,20 @@ var say_what_data = {"replacements":[]};
 </div></div>
 @if(Auth::check())
 <div>
-  <li class="menu-item">
+ 
       <a href="{{ route('principal.create') }}">
-          <span class="menu-title-text">Crear Slider</span>
+        <button type="submit" class="btn btn-sm btn-danger">Crear Slider</button>
       </a>
-  </li>
+
 </div>
 
 
 <table class="table">
   <thead>
       <tr>
-          <th>Slider 1</th>
-          <th>Slider 2</th>
-          <th>Slider 3</th>
+          <th>Slider</th>
+          {{-- <th>Slider 2</th>
+          <th>Slider 3</th> --}}
           <th>Acciones</th>
       </tr>
   </thead>
@@ -799,8 +799,8 @@ var say_what_data = {"replacements":[]};
     @foreach($collection as $item)
         <tr>
             <td>{{ $item->slider1 }}</td>
-            <td>{{ $item->slider2 }}</td>
-            <td>{{ $item->slider3 }}</td>
+            {{-- <td>{{ $item->slider2 }}</td>
+            <td>{{ $item->slider3 }}</td> --}}
             <td>
                 {{-- <a href="{{ asset('storage/' . $item->imagen_s1) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Visión</a>
                 <a href="{{ asset('storage/' . $item->imagen_s2) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Misión</a>
