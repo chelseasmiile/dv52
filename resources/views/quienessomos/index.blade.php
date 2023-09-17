@@ -783,7 +783,7 @@
 
     @if(Auth::check())
     <div>
-        <a target="_blank" rel="noopener" href="{{ route('quienessomos.create') }}">
+        <a rel="noopener" href="{{ route('quienessomos.create') }}">
       {{-- <span class="menu-title-text">Crear quienes somos</span> --}}
       <button type="submit" class="btn btn-sm btn-danger">Crear Quienes Somos</button>
     </a>
@@ -811,10 +811,10 @@
                     <a href="{{ asset('storage/' . $quienessomos->imagen_valores) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Valores</a> --}}
                     <a href="{{ route('quienessomos.edit', $quienessomos->id) }}" class="btn btn-sm btn-info">Editar</a>
                     <form action="{{ route('quienessomos.destroy', $quienessomos->id) }}" method="post" style="display: inline-block">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
-                    </form>
+                      @csrf
+                      @method('DELETE')
+                      <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de eliminar este elemento?')">Eliminar</button>
+                  </form>
                 </td>
             </tr>
         @endforeach
@@ -853,15 +853,12 @@
     <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Dirección:</span></p>
     </div>
     <div>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Av Tecnológico 100-s/n, Agrícola, Metepec, Méx, C.P 52149</span></p>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Télefonos:</span></p>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">51 16 71 12 y 51 16 74 44</span></p>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Correo:</span><span style="font-size: 14px;">&nbsp; &nbsp;
-    <a href="mailto:delegaciondv52@snte.org"></a>
-    </span>
-    <a href="mailto:delegaciondv52@snte.org.mx"><span style="font-size: 14px;">contactoseccion36@snte.org.mx </span></a><span style="font-size: 14px;">&nbsp;</span></p>
-    <p style="text-align: left; line-height: 1;">
-    <br>
+      <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Av Tecnológico 100-s/n, Agrícola, Metepec, Méx, C.P 52149</span></p>
+      <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Télefonos:</span></p>
+      <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Conmutador: 7222087200   Extensión: 4010</span></p>
+      <p style="text-align: left; line-height: 1;">
+      <br>
+      </p>
     </p>
     <p><span style="color: rgb(243, 121, 52); font-family: Tahoma, Geneva, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">© 2023 TODOS LOS DERECHOS RESERVADOS. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
     <a href="https://sntedev1.soysnte.mx/web/avisodeprivacidad/" rel="noopener noreferrer" target="_blank"><span style="color: rgb(243, 121, 52); font-family: Tahoma, Geneva, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">AVISO DE PRIVACIDAD</span></a>

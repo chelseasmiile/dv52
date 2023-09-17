@@ -737,21 +737,33 @@
     <div class="wpb_wrapper">
         
         
-        
       <div class="form-container">
         <h1 class="form-title">Creación de galería</h1>
         <form action="{{ route('galerias.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="categoria">Categoría:</label>
-                <input type="text" name="categoria" id="categoria" class="form-control">
+                <select name="categoria_select" id="categoria_select" class="form-control">
+                    <option value="nueva">Nueva Categoría</option>
+                    @foreach($categorias as $categoria)
+                        <option value="{{ $categoria }}">{{ $categoria }}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="form-group">
                 <label for="titulo">Título:</label>
                 <input type="text" name="titulo" id="titulo" class="form-control">
             </div>
             <div class="form-group">
-                <label for="texto_vista_previa">Caracteristicas:</label>
+              <label for="categoria">Nueva Categoría:</label>
+              <input type="text" name="categoria" id="categoria" class="form-control" disabled>
+          </div>
+            <div class="form-group">
+                <label for="titulo">Título:</label>
+                <input type="text" name="titulo" id="titulo" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="texto_vista_previa">Características:</label>
                 <input type="text" name="texto_vista_previa" id="texto_vista_previa" class="form-control">
             </div>
             <div class="form-group">
@@ -770,12 +782,27 @@
                 <label for="imagen_galeria">Imagen:</label>
                 <input type="file" name="imagen_galeria" id="imagen_galeria" class="form-control">
             </div>
-            <button type="submit">Crear Galería</button>
+            <script>
+              document.addEventListener("DOMContentLoaded", function() {
+                  const categoriaSelect = document.getElementById("categoria_select");
+                  const nuevaCategoriaInput = document.getElementById("categoria");
+          
+                  categoriaSelect.addEventListener("change", function() {
+                      if (categoriaSelect.value === "nueva") {
+                          nuevaCategoriaInput.disabled = false;
+                          nuevaCategoriaInput.value = ""; // Limpia el valor anterior
+                      } else {
+                          nuevaCategoriaInput.disabled = true;
+                          nuevaCategoriaInput.value = categoriaSelect.value; // Copia el valor seleccionado
+                      }
+                  });
+              });
+          </script>
+          
+  
+          <button type="submit">Crear Galería</button>
         </form>
     </div>
-    
-        
-        
         
        <script src="https://services.cognitoforms.com/scripts/embed.js"></script>
     </div>
@@ -814,15 +841,12 @@
     <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Dirección:</span></p>
     </div>
     <div>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Av Tecnológico 100-s/n, Agrícola, Metepec, Méx, C.P 52149</span></p>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Télefonos:</span></p>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">51 16 71 12 y 51 16 74 44</span></p>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Correo:</span><span style="font-size: 14px;">&nbsp; &nbsp;
-    <a href="mailto:delegaciondv52@snte.org"></a>
-    </span>
-    <a href="mailto:delegaciondv52@snte.org.mx"><span style="font-size: 14px;">contactoseccion36@snte.org.mx </span></a><span style="font-size: 14px;">&nbsp;</span></p>
-    <p style="text-align: left; line-height: 1;">
-    <br>
+      <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Av Tecnológico 100-s/n, Agrícola, Metepec, Méx, C.P 52149</span></p>
+      <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Télefonos:</span></p>
+      <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Conmutador: 7222087200   Extensión: 4010</span></p>
+      <p style="text-align: left; line-height: 1;">
+      <br>
+      </p>
     </p>
     <p><span style="color: rgb(243, 121, 52); font-family: Tahoma, Geneva, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">© 2023 TODOS LOS DERECHOS RESERVADOS. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
     <a href="https://sntedev1.soysnte.mx/web/avisodeprivacidad/" rel="noopener noreferrer" target="_blank"><span style="color: rgb(243, 121, 52); font-family: Tahoma, Geneva, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">AVISO DE PRIVACIDAD</span></a>
@@ -915,6 +939,7 @@
     </script>
     <script type="text/javascript" src="https://snte.org.mx/seccion36/wp-content/plugins/js_composer_salient/assets/js/dist/js_composer_front.min.js?ver=6.9.1" id="wpb_composer_front_js-js"></script>
     <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon="{&quot;rayId&quot;:&quot;7da09d922e1a4666&quot;,&quot;token&quot;:&quot;f143f0cda76a4fa19dfc2998f8c22b34&quot;,&quot;version&quot;:&quot;2023.4.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     </body></html>
     @endif

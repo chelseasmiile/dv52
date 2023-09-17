@@ -739,12 +739,11 @@
                       <td>{{ $video->descripcion }}</td>
                       <td><img src="{{ asset('storage/' . $video->miniatura) }}" alt="Miniatura" width="100"></td>
                       <td>
-                          <a href="{{ route('videos.edit', $video->id) }}" class="btn btn-sm btn-primary">Editar</a>
                           <form action="{{ route('videos.destroy', $video->id) }}" method="post" style="display: inline-block;">
-                              @csrf
-                              @method('DELETE')
-                              <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
-                          </form>
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de eliminar este video?')">Eliminar</button>
+                        </form>
                       </td>
                   </tr>
               @endforeach
@@ -785,11 +784,7 @@
     <div>
     <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Av Tecnológico 100-s/n, Agrícola, Metepec, Méx, C.P 52149</span></p>
     <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Télefonos:</span></p>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">51 16 71 12 y 51 16 74 44</span></p>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Correo:</span><span style="font-size: 14px;">&nbsp; &nbsp;
-    <a href="mailto:delegaciondv52@snte.org"></a>
-    </span>
-    <a href="mailto:delegaciondv52@snte.org.mx"><span style="font-size: 14px;">contactoseccion36@snte.org.mx </span></a><span style="font-size: 14px;">&nbsp;</span></p>
+    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Conmutador: 7222087200   Extensión: 4010</span></p>
     <p style="text-align: left; line-height: 1;">
     <br>
     </p>

@@ -30,6 +30,9 @@ Route::resource('/', PrincipalController::class)->except(['destroy']);
 
 Route::get('/principal/create', [PrincipalController::class, 'create'])->name('principal.create');
 
+Route::put('/principal/{id}', [PrincipalController::class, 'update'])->name('principal.update');
+
+
 Route::get('/principal', [PrincipalController::class, 'index'])->name('inicio');
 
     Route::get('logeo', [LoginController::class, 'getLogeo']);
@@ -151,7 +154,7 @@ Route::post('/sliders/{id}/asignar', 'PrincipalController@asignar')->name('asign
 Route::get('/principal', 'PrincipalController@index')->name('principal.index');
 Route::post('/principal', 'PrincipalController@store')->name('principal.store');
 Route::get('/principal/{id}/edit', 'PrincipalController@edit')->name('principal.edit');
-Route::put('/principal/{id}', 'PrincipalController@update')->name('principal.update');
+//Route::put('/principal/{id}', 'PrincipalController@update')->name('principal.update');
 Route::delete('/principal/{id}', 'PrincipalController@destroy')->name('principal.destroy');
 Route::post('/principal/{id}/asignar', 'PrincipalController@asignar')->name('principal.asignar');
 Route::get('/principal', [PrincipalController::class, 'index'])->name('principal.index'); // Add this line

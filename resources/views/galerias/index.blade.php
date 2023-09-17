@@ -700,7 +700,7 @@
 
     @if(Auth::check())
     <div>
-        <a target="_blank" rel="noopener" href="{{ route('galerias.create') }}">
+        <a  rel="noopener" href="{{ route('galerias.create') }}">
           <button type="submit" class="btn btn-sm btn-danger">Añadir galeria</button>
         </a>
     </div>
@@ -719,12 +719,12 @@
                   <td>{{ $galeria->titulo }}</td>
                   <td>{{ $galeria->created_at }}</td>
                   <td>
-                      <a href="{{ route('galerias.edit', $galeria->id) }}" class="btn btn-sm btn-warning">Editar</a>
-                      <form action="{{ route('galerias.destroy', $galeria->id) }}" method="post" style="display: inline-block;">
-                          @csrf
-                          @method('DELETE')
-                          <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
-                      </form>
+      
+                          <form action="{{ route('galerias.destroy', $galeria->id) }}" method="post" style="display: inline-block;" class="delete-form">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de eliminar esta galeria?')">Eliminar</button>
+                        </form>
                   </td>
               </tr>
           @endforeach
@@ -768,15 +768,12 @@
     <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Dirección:</span></p>
     </div>
     <div>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Av Tecnológico 100-s/n, Agrícola, Metepec, Méx, C.P 52149</span></p>
+      <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Av Tecnológico 100-s/n, Agrícola, Metepec, Méx, C.P 52149</span></p>
     <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Télefonos:</span></p>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">51 16 71 12 y 51 16 74 44</span></p>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Correo:</span><span style="font-size: 14px;">&nbsp; &nbsp;
-    <a href="mailto:delegaciondv52@snte.org"></a>
-    </span>
-    <a href="mailto:delegaciondv52@snte.org.mx"><span style="font-size: 14px;">contactoseccion36@snte.org.mx </span></a><span style="font-size: 14px;">&nbsp;</span></p>
+    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Conmutador: 7222087200   Extensión: 4010</span></p>
     <p style="text-align: left; line-height: 1;">
     <br>
+    </p>
     </p>
     <p><span style="color: rgb(243, 121, 52); font-family: Tahoma, Geneva, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">© 2023 TODOS LOS DERECHOS RESERVADOS. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
     <a href="https://sntedev1.soysnte.mx/web/avisodeprivacidad/" rel="noopener noreferrer" target="_blank"><span style="color: rgb(243, 121, 52); font-family: Tahoma, Geneva, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">AVISO DE PRIVACIDAD</span></a>

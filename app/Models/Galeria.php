@@ -28,5 +28,11 @@ public function qr()
     }
 
 
+    public static function getCategoriasUnicas()
+    {
+        return self::select('categoria')->distinct()->pluck('categoria');
+    }
+
+
     // Definir relaciones con otros modelos si es necesario
 }

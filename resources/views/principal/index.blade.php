@@ -23,6 +23,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 /*! This file is auto-generated */
 !function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!s("\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
 </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style type="text/css">
 img.wp-smiley,
 img.emoji {
@@ -570,6 +571,16 @@ html body[data-header-resize="1"] .container-wrap, html body[data-header-format=
     .white-text {
     color: white;
 }
+
+.image-full-size {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 </style>
 <script type='text/javascript' src='https://snte.org.mx/seccion36/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js'></script>
 <script type='text/javascript' src='https://snte.org.mx/seccion36/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js'></script>
@@ -668,19 +679,25 @@ var say_what_data = {"replacements":[]};
     @if(auth()->check()) <!-- Verifica si hay una sesión activa -->
     <!-- Botón de Cerrar Sesión -->
     <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523">
-      <a target="_blank" rel="noopener" href="{{ route('cerrar-sesion') }}">
+      <a rel="noopener" href="{{ route('cerrar-sesion') }}">
         <span class="menu-title-text">Cerrar Sesion</span>
     </a>
   </li>
 @else
     <!-- Botón de Iniciar Sesión -->
     <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523">
-        <a target="_blank" rel="noopener" href="{{ url('logeo') }}">
+        <a rel="noopener" href="{{ url('logeo') }}">
             <span class="menu-title-text">Inicia Sesion</span>
         </a>
     </li>
 @endif
-    <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="https://snte.org.mx/registro.html"><span class="menu-title-text">Regístrate</span></a></li>
+    <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523">
+      <a target="_blank" rel="noopener" href="https://snte.org.mx/registro.html" onclick="return confirm('¿Estás seguro de que deseas abandonar este sitio?')">
+        <span class="menu-title-text">Regístrate</span>
+      </a>
+    </li>
+  
+
     <li id="social-in-menu" class="button_social_group">
       <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479">
         <img src="{{ asset('images/facebook.png') }}" alt="Facebook" style="width: 24px; height: 24px;">
@@ -715,62 +732,43 @@ var say_what_data = {"replacements":[]};
 <div class="wpb_wrapper">
 <div class="nectar-recent-posts-slider" data-height="600" data-animate-in-effect="none" data-remove-post-date="" data-remove-post-author="" data-remove-post-comment-number="" data-remove-post-nectar-love=""><div class="nectar-recent-posts-slider-inner generate-markup">
    
-  @foreach($collection as $item)
-    <div class="nectar-recent-post-slide  post-ref-0">
-        <div class="nectar-recent-post-bg"
-            style="background-image: url('{{ asset('storage/' . $item->imagen_s1) }}'); ">
-        </div>
-        <div class="recent-post-container container">
-            <div class="inner-wrap"><span class="strong"><a
-                        class="notass36"><span
-                            class="notass36">NotasS36</span></a></span>
-                            <h2 class="full-slide-title white-text">{{ $item->slider1 }}</h2>
-            </div>
-        </div>
-    </div>
-    @endforeach
-    {{-- @foreach($collection as $item)
-    <div class="nectar-recent-post-slide  post-ref-0">
-        <div class="nectar-recent-post-bg"
-            style="background-image: url('{{ asset('storage/' . $item->imagen_s2) }}'); ">
-        </div>
-        <div class="recent-post-container container">
-            <div class="inner-wrap"><span class="strong"><a
-                        class="notass36"><span
-                            class="notass36">NotasS36</span></a></span>
-                            <h2 class="full-slide-title white-text">{{ $item->slider2 }}</h2>
-            </div>
-        </div>
-    </div>
-    @endforeach
-    @foreach($collection as $item)
-    <div class="nectar-recent-post-slide  post-ref-0">
-        <div class="nectar-recent-post-bg"
-            style="background-image: url('{{ asset('storage/' . $item->imagen_s3) }}'); ">
-        </div>
-        <div class="recent-post-container container">
-            <div class="inner-wrap"><span class="strong"><a
-                        class="notass36"><span
-                            class="notass36">NotasS36</span></a></span>
-                            <h2 class="full-slide-title white-text">{{ $item->slider3 }}</h2>
-            </div>
-        </div>
-    </div>
-    @endforeach --}}
-<div class="nectar-recent-post-slide  post-ref-3">
-<div class="nectar-recent-post-bg" style="background-image: url(https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-scaled.jpg); "> </div>
-<div class="recent-post-container container"><div class="inner-wrap"><span class="strong"><a class="notass36" href="https://snte.org.mx/seccion36/category/notass36/"><span class="notass36">NotasS36</span></a></span>
-<h2 class="post-ref-3"><a href=" https://snte.org.mx/seccion36/convocatoria-maestro-altamirano-2023/" class="full-slide-link"> Convocatoria Maestro Altamirano 2023 </a></h2>
-</div>
-</div>
-</div>
-<div class="nectar-recent-post-slide  post-ref-4">
-<div class="nectar-recent-post-bg" style="background-image: url(https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-scaled.jpg); "> </div>
-<div class="recent-post-container container"><div class="inner-wrap"><span class="strong"><a class="notass36" href="https://snte.org.mx/seccion36/category/notass36/"><span class="notass36">NotasS36</span></a></span>
-<h2 class="post-ref-4"><a href=" https://snte.org.mx/seccion36/convocatoria-rafael-ramirez-2023/" class="full-slide-link"> Convocatoria Rafael Ramírez 2023 </a></h2>
-</div>
-</div>
-</div>
+
+  @foreach($collection->reverse() as $item)
+  <div class="nectar-recent-post-slide  post-ref-0">
+      <div class="nectar-recent-post-bg image-full-size"
+          style="background-image: url('{{ asset('storage/' . $item->imagen_s1) }}');">
+      </div>
+      <div class="recent-post-container container">
+          <div class="inner-wrap"><span class="strong"><a
+                      class="notass36"><span
+                          class="notass36">NotasS36</span></a></span>
+                          <h2 class="full-slide-title white-text">{{ $item->slider1 }}</h2>
+          </div>
+      </div>
+  </div>
+  
+@endforeach
+<script>
+    // JavaScript para ajustar el tamaño del contenedor según las imágenes
+    var imageContainers = document.querySelectorAll('.image-full-size');
+
+    imageContainers.forEach(function(container) {
+        var image = new Image();
+        image.src = container.style.backgroundImage.slice(5, -2); // Obtener la URL de la imagen
+        image.onload = function() {
+            var imageWidth = this.width;
+            var imageHeight = this.height;
+            var containerWidth = container.clientWidth;
+
+            if (imageWidth / imageHeight > containerWidth / container.clientHeight) {
+                container.style.backgroundSize = '100% auto';
+            } else {
+                container.style.backgroundSize = 'auto 100%';
+            }
+        };
+    });
+</script>
+
 </div></div>
 </div>
 </div>
@@ -790,8 +788,6 @@ var say_what_data = {"replacements":[]};
   <thead>
       <tr>
           <th>Slider</th>
-          {{-- <th>Slider 2</th>
-          <th>Slider 3</th> --}}
           <th>Acciones</th>
       </tr>
   </thead>
@@ -799,18 +795,13 @@ var say_what_data = {"replacements":[]};
     @foreach($collection as $item)
         <tr>
             <td>{{ $item->slider1 }}</td>
-            {{-- <td>{{ $item->slider2 }}</td>
-            <td>{{ $item->slider3 }}</td> --}}
             <td>
-                {{-- <a href="{{ asset('storage/' . $item->imagen_s1) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Visión</a>
-                <a href="{{ asset('storage/' . $item->imagen_s2) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Misión</a>
-                <a href="{{ asset('storage/' . $item->imagen_s3) }}" class="btn btn-sm btn-primary" download>Descargar Imagen de Valores</a> --}}
                 <a href="{{ route('principal.edit', $item->id) }}" class="btn btn-sm btn-info">Editar</a>
                 <form action="{{ route('principal.destroy', $item->id) }}" method="post" style="display: inline-block">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
-                </form>
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de eliminar este Slide?')">Eliminar</button>
+              </form>
             </td>
         </tr>
     @endforeach
@@ -996,15 +987,12 @@ var say_what_data = {"replacements":[]};
 <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Dirección:</span></p>
 </div>
 <div>
-<p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Av Tecnológico 100-s/n, Agrícola, Metepec, Méx, C.P 52149</span></p>
-<p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Télefonos:</span></p>
-<p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">51 16 71 12 y 51 16 74 44</span></p>
-<p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Correo:</span><span style="font-size: 14px;">&nbsp; &nbsp;
-<a href="mailto:delegaciondv52@snte.org"></a>
-</span>
-<a href="mailto:delegaciondv52@snte.org.mx"><span style="font-size: 14px;">contactoseccion36@snte.org.mx </span></a><span style="font-size: 14px;">&nbsp;</span></p>
-<p style="text-align: left; line-height: 1;">
-<br>
+  <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Av Tecnológico 100-s/n, Agrícola, Metepec, Méx, C.P 52149</span></p>
+  <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Télefonos:</span></p>
+  <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Conmutador: 7222087200   Extensión: 4010</span></p>
+  <p style="text-align: left; line-height: 1;">
+  <br>
+  </p>
 </p>
 <p><span style="color: rgb(243, 121, 52); font-family: Tahoma, Geneva, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">© 2023 TODOS LOS DERECHOS RESERVADOS. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
 <a href="https://sntedev1.soysnte.mx/web/avisodeprivacidad/" rel="noopener noreferrer" target="_blank"><span style="color: rgb(243, 121, 52); font-family: Tahoma, Geneva, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">AVISO DE PRIVACIDAD</span></a>

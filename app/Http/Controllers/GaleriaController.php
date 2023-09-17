@@ -23,7 +23,8 @@ class GaleriaController extends Controller
      */
     public function create()
     {
-        return view('galerias.create');
+        $categorias = Galeria::getCategoriasUnicas(); // Obtener las categorías únicas desde las galerías
+        return view('galerias.create', compact('categorias'));
     }
 
     /**
@@ -41,6 +42,15 @@ class GaleriaController extends Controller
         'imagen_galeria' => 'required|image',
     
     ]);
+
+    if ($data['categoria'] === 'Nueva categoría') {
+        $nuevaCategoria = $request->input('nuevaCategoria');
+
+        // Aquí puedes realizar la lógica para guardar la nueva categoría en la base de datos si lo deseas
+
+        // Luego, actualiza el valor de 'categoria' con la nueva categoría
+        $data['categoria'] = $nuevaCategoria;
+    }
 
     if ($request->hasFile('imagen_galeria')) {
         $imagePath = $request->file('imagen_galeria')->store('imagenes_galeria', 'public');

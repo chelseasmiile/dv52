@@ -775,38 +775,8 @@
     <div class="row">
     <div class="post-area col  span_12 col_last masonry auto_meta_overlaid_spaced  infinite_scroll " data-ams="16px" data-remove-post-date="" data-remove-post-author="" data-remove-post-comment-number="" data-remove-post-nectar-love="" style="margin-bottom: 0px;"> <div class="posts-container" data-load-animation="none">
     
-    <article id="post-6757" class=" masonry-blog-item post-6757 post type-post status-publish format-standard has-post-thumbnail category-notass36">
-    <div class="inner-wrap">
-    <div class="post-content">
-    <div class="content-inner">
-    <a class="entire-meta-link" href="https://snte.org.mx/seccion36/convocatoria-maestro-altamirano-2023/" aria-label="Convocatoria Maestro Altamirano 2023"></a>
-    <span class="post-featured-img"><img width="800" height="800" src="https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-800x800.jpg" class="attachment-medium_featured size-medium_featured skip-lazy wp-post-image" alt="" decoding="async" loading="lazy" title="" sizes="(min-width: 690px) 50vw, 100vw" srcset="https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-800x800.jpg 800w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-150x150.jpg 150w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-100x100.jpg 100w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-140x140.jpg 140w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-500x500.jpg 500w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-350x350.jpg 350w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/22201529/COVER-FONDO-09-1-1000x1000.jpg 1000w"></span>
-    <div class="article-content-wrap">
-    <span class="meta-category"><a class="notass36" href="https://snte.org.mx/seccion36/category/notass36/">NotasS36</a></span>
-    <div class="post-header">
-    <h3 class="title"><a href="https://snte.org.mx/seccion36/convocatoria-maestro-altamirano-2023/"> Convocatoria Maestro Altamirano 2023</a></h3>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </article>
-    <article id="post-6751" class=" masonry-blog-item post-6751 post type-post status-publish format-standard has-post-thumbnail category-notass36">
-    <div class="inner-wrap">
-    <div class="post-content">
-    <div class="content-inner">
-    <a class="entire-meta-link" href="https://snte.org.mx/seccion36/convocatoria-rafael-ramirez-2023/" aria-label="Convocatoria Rafael Ramírez 2023"></a>
-    <span class="post-featured-img"><img width="800" height="800" src="https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-800x800.jpg" class="attachment-medium_featured size-medium_featured skip-lazy wp-post-image" alt="" decoding="async" loading="lazy" title="" sizes="(min-width: 690px) 50vw, 100vw" srcset="https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-800x800.jpg 800w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-150x150.jpg 150w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-100x100.jpg 100w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-140x140.jpg 140w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-500x500.jpg 500w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-350x350.jpg 350w, https://cdnsnte1.s3.us-west-1.amazonaws.com/wp-content/uploads/sites/37/2022/11/18171840/COVER-FONDO-06-1000x1000.jpg 1000w"></span>
-    <div class="article-content-wrap">
-    <span class="meta-category"><a class="notass36" href="https://snte.org.mx/seccion36/category/notass36/">NotasS36</a></span>
-    <div class="post-header">
-    <h3 class="title"><a href="https://snte.org.mx/seccion36/convocatoria-rafael-ramirez-2023/"> Convocatoria Rafael Ramírez 2023</a></h3>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </article>
+ 
+
     </div>
     <div id="pagination" data-is-text="All items loaded"><span aria-current="page" class="page-numbers current">1</span>
     <a class="page-numbers" href="https://snte.org.mx/seccion36/notas/page/2/">2</a>
@@ -843,10 +813,10 @@
                       <a href="{{ route('notas.download', $nota->id) }}" class="btn btn-sm btn-primary">Descargar imagen</a>
                       <a href="{{ route('notas.edit', $nota->id) }}" class="btn btn-sm btn-warning">Editar</a>
                       <form action="{{ route('notas.destroy', $nota->id) }}" method="post" style="display: inline-block;">
-                          @csrf
-                          @method('DELETE')
-                          <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
-                      </form>
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de eliminar esta nota?')">Eliminar</button>
+                    </form>
                   </td>
               </tr>
           @endforeach
@@ -884,15 +854,12 @@
     <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Dirección:</span></p>
     </div>
     <div>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Av Tecnológico 100-s/n, Agrícola, Metepec, Méx, C.P 52149</span></p>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Télefonos:</span></p>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">51 16 71 12 y 51 16 74 44</span></p>
-    <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Correo:</span><span style="font-size: 14px;">&nbsp; &nbsp;
-    <a href="mailto:delegaciondv52@snte.org"></a>
-    </span>
-    <a href="mailto:delegaciondv52@snte.org.mx"><span style="font-size: 14px;">contactoseccion36@snte.org.mx </span></a><span style="font-size: 14px;">&nbsp;</span></p>
-    <p style="text-align: left; line-height: 1;">
-    <br>
+      <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Av Tecnológico 100-s/n, Agrícola, Metepec, Méx, C.P 52149</span></p>
+      <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Télefonos:</span></p>
+      <p style="text-align: left; line-height: 1;"><span style="font-size: 14px;">Conmutador: 7222087200   Extensión: 4010</span></p>
+      <p style="text-align: left; line-height: 1;">
+      <br>
+      </p>
     </p>
     <p><span style="color: rgb(243, 121, 52); font-family: Tahoma, Geneva, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">© 2023 TODOS LOS DERECHOS RESERVADOS. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
     <a href="https://sntedev1.soysnte.mx/web/avisodeprivacidad/" rel="noopener noreferrer" target="_blank"><span style="color: rgb(243, 121, 52); font-family: Tahoma, Geneva, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">AVISO DE PRIVACIDAD</span></a>
