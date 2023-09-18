@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Principal;
+use Illuminate\Support\Facades\Log;
 
 class PrincipalController extends Controller
 {
@@ -25,30 +26,27 @@ class PrincipalController extends Controller
 
     public function store(Request $request)
     {
-        //dd('store method');
-        $data = $request->validate([
-            'slider1' => 'required',
-            // 'slider2' => 'required',
-            // 'slider3' => 'required',
-            'imagen_s1' => 'required|image|mimes:jpeg,png,jpg,gif',
-            // 'imagen_s2' => 'required|image|mimes:jpeg,png,jpg,gif',
-            // 'imagen_s3' => 'required|image|mimes:jpeg,png,jpg,gif',
-        ]);
-        //dd('store method');
-        $imagens1 = $request->file('imagen_s1')->store('quienessomos_imagenes/s1', 'public');
-        // $imagens2 = $request->file('imagen_s2')->store('quienessomos_imagenes/s2', 'public');
-        // $imagens3 = $request->file('imagen_s3')->store('quienessomos_imagenes/s3', 'public');
+        try {
+            $data = $request->validate([
+                'slider1' => 'required',
+                'imagen_s1' => 'required|image|mimes:jpeg,png,jpg,gif',
+            ]);
     
-        //dd('store method');
-        $collection = new Principal($data);
-        $collection->imagen_s1 = $imagens1;
-        // $collection->imagen_s2 = $imagens2;
-        // $collection->imagen_s3 = $imagens3;
-        $collection->save();
-        //dd('store method');
+            $imagens1 = $request->file('imagen_s1')->store('quienessomos_imagenes/s1', 'public');
     
-        return redirect()->route('principal.index')->with('success', 'Slider creada exitosamente.');
+            $collection = new Principal($data);
+            $collection->imagen_s1 = $imagens1;
+            $collection->save();
+    
+            return redirect()->route('principal.index')->with('success', 'Slider creado exitosamente.');
+        } catch (\Exception $e) {
+            // Maneja la excepción de la forma que prefieras
+            // Por ejemplo, registra el error en un log y muestra un mensaje de error
+            Log::error($e->getMessage());
+            return redirect()->route('principal.create')->with('error', 'No se pudo guardar la información, verifique que esta introduciendo una imagen compatible.');
+        }
     }
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -56,45 +54,46 @@ class PrincipalController extends Controller
     public function edit(string $id)
     {
         $collection = Principal::findOrFail($id);
-        dd($collection); // Debugging line
+        //dd($collection); // Debugging line
         return view('principal.edit', compact('collection'));
     }
 
     /**
      * Update the specified resource in storage.
      */
+
+     
     public function update(Request $request, $id)
     {
-        dd('update method'); 
-        $data = $request->validate([
-        'slider1' => 'required',
-        // 'slider2' => 'required',
-        // 'slider3' => 'required',
-        'imagen_s1' => 'required|image|mimes:jpeg,png,jpg,gif',
-        // 'imagen_s2' => 'required|image|mimes:jpeg,png,jpg,gif',
-        // 'imagen_s3' => 'required|image|mimes:jpeg,png,jpg,gif',
-    ]);
-
-    if ($request->hasFile('imagen_s1')) {
-        $imagens1 = $request->file('imagen_s1')->store('slider_imagenes', 'public');
-        $data['imagen_s1'] = $imagens1;
+        try {
+            // Valida los datos del formulario
+            $data = $request->validate([
+                'slider1' => 'required',
+                'imagen_s1' => 'required|image|mimes:jpeg,png,jpg,gif',
+            ]);
+    
+            // Busca el registro en la base de datos
+            $collection = Principal::findOrFail($id);
+    
+            // Actualiza los campos del modelo con los datos validados
+            $collection->update($data);
+    
+            // Sube la nueva imagen si se ha proporcionado
+            if ($request->hasFile('imagen_s1')) {
+                $imagenS1 = $request->file('imagen_s1')->store('slider_imagenes', 'public');
+                $collection->imagen_s1 = $imagenS1;
+                $collection->save();
+            }
+    
+            return redirect()->route('principal.index')->with('success', 'Slider actualizada exitosamente.');
+        } catch (\Exception $e) {
+            // Maneja la excepción de la forma que prefieras
+            // Por ejemplo, registra el error en un log y muestra un mensaje de error
+            Log::error($e->getMessage());
+            return redirect()->route('principal.edit', $id)->with('error', 'No se pudo guardar la información, verifique que esta introduciendo una imagen compatible.');
+        }
     }
-
-    // if ($request->hasFile('imagen_s2')) {
-    //     $imagens2 = $request->file('imagen_s2')->store('slider_imagenes', 'public');
-    //     $data['imagen_s2'] = $imagens2;
-    // }
-
-    // if ($request->hasFile('imagen_s3')) {
-    //     $imagens3 = $request->file('imagen_s3')->store('slider_imagenes', 'public');
-    //     $data['imagen_s3'] = $imagens3;
-    // }
-
-    $collection = Principal::findOrFail($id);
-
-
-    return redirect()->route('principal.index')->with('success', 'Slider actualizada exitosamente.');
-}
+    
 
     /**
      * Remove the specified resource from storage.

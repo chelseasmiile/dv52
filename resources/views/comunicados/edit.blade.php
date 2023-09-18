@@ -772,6 +772,22 @@
                 </div>
             </div>
         
+            <input type="hidden" id="error-message" value="{{ session('error') ?? '' }}">
+
+@if(session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+    @endif
+
+
+    <script>
+var errorMessage = document.getElementById('error-message').value;
+
+if (errorMessage) {
+    alert(errorMessage);
+}
+</script>
         
        <script src="https://services.cognitoforms.com/scripts/embed.js"></script>
     </div>

@@ -714,7 +714,7 @@
     </div>
     @if(Auth::check())
     <div>
-      <a target="_blank" rel="noopener" href="{{ route('comunicados.create') }}">
+      <a  rel="noopener" href="{{ route('comunicados.create') }}">
         <button type="submit" class="btn btn-sm btn-danger">Crear Comunicado</button>
     </a>
 </div>
@@ -731,7 +731,7 @@
               </tr>
           </thead>
           <tbody>
-              @foreach($comunicados as $comunicado)
+              @foreach($comunicados->reverse() as $comunicado)
                   <tr>
                       <td>{{ $comunicado->titulo }}</td>
                       <td>{{ $comunicado->created_at }}</td>

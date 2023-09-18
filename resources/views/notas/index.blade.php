@@ -805,7 +805,7 @@
           </tr>
       </thead>
       <tbody>
-          @foreach($notas as $nota)
+          @foreach($notas->reverse() as $nota)
               <tr>
                   <td>{{ $nota->titulo }}</td>
                   <td>{{ $nota->created_at }}</td>

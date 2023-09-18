@@ -738,14 +738,8 @@
     <div class="wpb_wrapper">
     <div class="wpb_raw_code wpb_content_element wpb_raw_html">
     <div class="wpb_wrapper">
-      
       <div class="form-container">
         <h1 class="form-title">Creación de Slider</h1>
-        @if(session('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
-        @endif
         <form action="{{ route('principal.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
@@ -775,6 +769,24 @@
             <button type="submit">Enviar</button>
         </form>
     </div>
+
+    <input type="hidden" id="error-message" value="{{ session('error') ?? '' }}">
+
+    @if(session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+        @endif
+
+
+        <script>
+    var errorMessage = document.getElementById('error-message').value;
+
+    if (errorMessage) {
+        alert(errorMessage);
+    }
+</script>
+
 
 
 

@@ -591,6 +591,9 @@ html body[data-header-resize="1"] .container-wrap, html body[data-header-format=
 var say_what_data = {"replacements":[]};
 /* ]]> */
 </script>
+
+
+
 <script type='text/javascript' src='https://snte.org.mx/seccion36/wp-content/plugins/say-what/assets/build/frontend.js?ver=fd31684c45e4d85aeb4e' id='say-what-js-js'></script>
 <script type='text/javascript' src='https://snte.org.mx/seccion36/wp-includes/js/jquery/jquery.min.js?ver=3.6.4' id='jquery-core-js'></script>
 <script type='text/javascript' src='https://snte.org.mx/seccion36/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0' id='jquery-migrate-js'></script>
@@ -653,6 +656,7 @@ var say_what_data = {"replacements":[]};
 <span class="screen-reader-text">Menu</span><span aria-hidden="true"> <i class="lines-button x2"> <i class="lines"></i> </i> </span>
 </a></div>
 </div>
+
 <nav>
   <ul class="sf-menu">
     <li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom nectar-regular-menu-item menu-item-41"><a href="https://snte.org.mx/"><span class="menu-title-text">SNTE Nacional</span></a></li>
@@ -726,8 +730,7 @@ var say_what_data = {"replacements":[]};
 </div>
 </div>
 </div></div>
-<div id="fws_64723e909ce50" data-column-margin="default" data-midnight="dark" class="wpb_row vc_row-fluid vc_row vc_row-o-full-height vc_row-o-columns-middle vc_row-o-equal-height vc_row-flex" style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap" data-bg-animation="none" data-bg-animation-delay="" data-bg-overlay="false"><div class="inner-wrap row-bg-layer"><div class="row-bg viewport-desktop" style=""></div></div></div><div class="row_col_wrap_12 col span_12 dark left">
-<div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone " data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0">
+<div id="fws_64723e909ce50" class="main-slider-container" data-column-margin="default" data-midnight="dark" class="wpb_row vc_row-fluid vc_row vc_row-o-full-height vc_row-o-columns-middle vc_row-o-equal-height vc_row-flex" style="padding-top: 0px; padding-bottom: 0px; "><div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone " data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0">
 <div class="vc_column-inner">
 <div class="wpb_wrapper">
 <div class="nectar-recent-posts-slider" data-height="600" data-animate-in-effect="none" data-remove-post-date="" data-remove-post-author="" data-remove-post-comment-number="" data-remove-post-nectar-love=""><div class="nectar-recent-posts-slider-inner generate-markup">
@@ -744,36 +747,42 @@ var say_what_data = {"replacements":[]};
                           class="notass36">NotasS36</span></a></span>
                           <h2 class="full-slide-title white-text">{{ $item->slider1 }}</h2>
           </div>
+          
       </div>
+ 
   </div>
-  
+
 @endforeach
+</div></div>
+</div>
+</div>
 <script>
-    // JavaScript para ajustar el tamaño del contenedor según las imágenes
-    var imageContainers = document.querySelectorAll('.image-full-size');
+  // JavaScript para ajustar el tamaño del contenedor según las imágenes
+  var mainSliderContainer = document.querySelector('.main-slider-container');
 
-    imageContainers.forEach(function(container) {
-        var image = new Image();
-        image.src = container.style.backgroundImage.slice(5, -2); // Obtener la URL de la imagen
-        image.onload = function() {
-            var imageWidth = this.width;
-            var imageHeight = this.height;
-            var containerWidth = container.clientWidth;
+  if (mainSliderContainer) {
+      var imageContainers = mainSliderContainer.querySelectorAll('.image-full-size');
 
-            if (imageWidth / imageHeight > containerWidth / container.clientHeight) {
-                container.style.backgroundSize = '100% auto';
-            } else {
-                container.style.backgroundSize = 'auto 100%';
-            }
-        };
-    });
+      imageContainers.forEach(function(container) {
+          var image = new Image();
+          image.src = container.style.backgroundImage.slice(5, -2); // Obtener la URL de la imagen
+          image.onload = function() {
+              var imageWidth = this.width;
+              var imageHeight = this.height;
+              var containerWidth = container.clientWidth;
+
+              if (imageWidth / imageHeight > containerWidth / container.clientHeight) {
+                  container.style.backgroundSize = '100% auto';
+              } else {
+                  container.style.backgroundSize = 'auto 100%';
+              }
+          };
+      });
+  }
 </script>
-
-</div></div>
 </div>
 </div>
 </div>
-</div></div>
 @if(Auth::check())
 <div>
  
@@ -792,7 +801,7 @@ var say_what_data = {"replacements":[]};
       </tr>
   </thead>
   <tbody>
-    @foreach($collection as $item)
+    @foreach($collection->reverse() as $item)
         <tr>
             <td>{{ $item->slider1 }}</td>
             <td>

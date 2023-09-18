@@ -732,7 +732,7 @@
               </tr>
           </thead>
           <tbody>
-              @foreach($videos as $video)
+              @foreach($videos->reverse() as $video)
                   <tr>
                       <td>{{ $video->id }}</td>
                       <td>{{ $video->titulo }}</td>

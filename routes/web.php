@@ -24,16 +24,29 @@ use App\Http\Controllers\ImagenGaleriaController;
 
 Route::get('/galerias/create', [GaleriaController::class, 'create'])->name('galerias.create');
 
+
 Route::get('/principal', [PrincipalController::class, 'index'])->name('inicio');
-
-Route::resource('/', PrincipalController::class)->except(['destroy']);
-
 Route::get('/principal/create', [PrincipalController::class, 'create'])->name('principal.create');
-
+Route::get('/principal/{id}/edit', 'PrincipalController@edit')->name('principal.edit');
+Route::resource('/', PrincipalController::class)->except(['destroy']);
 Route::put('/principal/{id}', [PrincipalController::class, 'update'])->name('principal.update');
+Route::get('/principal/{id}/edit', [PrincipalController::class, 'edit'])->name('principal.edit');
 
 
-Route::get('/principal', [PrincipalController::class, 'index'])->name('inicio');
+
+// Route::get('/principal', [PrincipalController::class, 'index'])->name('inicio');
+
+// Route::resource('/', PrincipalController::class)->except(['destroy']);
+
+// Route::get('/principal/create', [PrincipalController::class, 'create'])->name('principal.create');
+
+// Route::put('/principal/{id}', [PrincipalController::class, 'update'])->name('principal.update');
+
+// Route::get('/principal/{id}/edit', 'PrincipalController@edit')->name('principal.edit');
+
+
+
+// Route::get('/principal', [PrincipalController::class, 'index'])->name('inicio');
 
     Route::get('logeo', [LoginController::class, 'getLogeo']);
     Route::post('logeo', [LoginController::class, 'postLogeo']);
@@ -58,6 +71,7 @@ Route::get('comunicados/{id}/download', [ComunicadoController::class, 'download'
 Route::get('comunicados/{id}', [ComunicadoController::class, 'show'])->name('comunicados.show');
 Route::get('comunicados/create', [ComunicadoController::class, 'create'])->name('comunicados.create');
 Route::resource('comunicados', ComunicadoController::class)->except(['show']);
+Route::put('comunicados/{id}', [ComunicadoController::class, 'update'])->name('comunicados.update');
 
 
 
@@ -96,6 +110,7 @@ Route::get('/galerias/create', [GaleriaController::class, 'create'])->name('gale
 Route::get('galerias/{galeria}', [GaleriaController::class, 'show'])->name('galerias.show');
 Route::resource('galerias', GaleriaController::class);
 Route::get('/galerias/{id}/edit', [GaleriaController::class, 'edit'])->name('galerias.edit');
+Route::get('/galerias/update', [GaleriaController::class, 'update'])->name('galerias.update');
 Route::delete('/galerias/{id}', [GaleriaController::class, 'destroy'])->name('galerias.destroy');
 Route::get('/galerias/{id}/download', [GaleriaController::class, 'download'])->name('galerias.download');
 
@@ -153,7 +168,6 @@ Route::resource('videos', VideoController::class);
 Route::post('/sliders/{id}/asignar', 'PrincipalController@asignar')->name('asignar.slider');
 Route::get('/principal', 'PrincipalController@index')->name('principal.index');
 Route::post('/principal', 'PrincipalController@store')->name('principal.store');
-Route::get('/principal/{id}/edit', 'PrincipalController@edit')->name('principal.edit');
 //Route::put('/principal/{id}', 'PrincipalController@update')->name('principal.update');
 Route::delete('/principal/{id}', 'PrincipalController@destroy')->name('principal.destroy');
 Route::post('/principal/{id}/asignar', 'PrincipalController@asignar')->name('principal.asignar');

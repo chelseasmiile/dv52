@@ -714,12 +714,13 @@
           </tr>
       </thead>
       <tbody>
-          @foreach($galerias as $galeria)
+          @foreach($galerias->reverse() as $galeria)
               <tr>
                   <td>{{ $galeria->titulo }}</td>
                   <td>{{ $galeria->created_at }}</td>
                   <td>
       
+                    <a href="{{ route('galerias.edit', $galeria->id) }}" class="btn btn-sm btn-warning">Editar</a>
                           <form action="{{ route('galerias.destroy', $galeria->id) }}" method="post" style="display: inline-block;" class="delete-form">
                             @csrf
                             @method('DELETE')

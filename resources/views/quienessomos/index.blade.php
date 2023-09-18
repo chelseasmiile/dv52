@@ -800,7 +800,7 @@
           </tr>
       </thead>
       <tbody>
-        @foreach($quienessomosList as $quienessomos)
+        @foreach($quienessomosList->reverse() as $quienessomos)
             <tr>
                 <td>{{ $quienessomos->vision }}</td>
                 <td>{{ $quienessomos->mision }}</td>
