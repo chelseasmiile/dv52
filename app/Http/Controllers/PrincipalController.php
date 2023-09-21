@@ -14,7 +14,7 @@ class PrincipalController extends Controller
     public function index()
     {
         $collection = Principal::all();
-        //dd($collection); // Debugging line
+        dd($collection); // Debugging line
         return view('principal.index', compact('collection'));
     }
 
