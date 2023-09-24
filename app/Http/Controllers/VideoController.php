@@ -62,43 +62,38 @@ class VideoController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-{
-    // dd("Reached the store method"); // Verifica si llega al método store
+    {
+        try {
+            $data = $request->validate([
+                'titulo' => 'required',
+                'youtube_video_id' => ['required', new YoutubeUrl],
+                'descripcion' => 'required',
+            ]);
     
-    $data = $request->validate([
-        'titulo' => 'required',
-        'youtube_video_id' => ['required', new YoutubeUrl],
-        'descripcion' => 'required',
-    ]);
-
-    //dd("Validated input data");
+            // Procesar y almacenar la miniatura
+            if ($request->hasFile('miniatura')) {
+                $imagePath = $request->file('miniatura')->store('imagenes_miniatura', 'public');
+                $data['miniatura'] = $imagePath;
+            }
     
-    // Procesar y almacenar la miniatura
-    if ($request->hasFile('miniatura')) {
-        //dd("Miniatura file exists");
-        $imagePath = $request->file('miniatura')->store('imagenes_miniatura', 'public');
-        $data['miniatura'] = $imagePath;
-    }
-
-    // Extraer el ID del video de la URL completa de YouTube
-    $urlParts = parse_url($data['youtube_video_id']);
-    if ($urlParts && isset($urlParts['query'])) {
-        parse_str($urlParts['query'], $queryParameters);
-        if (isset($queryParameters['v'])) {
-            $data['youtube_video_id'] = $queryParameters['v'];
+            // Extraer el ID del video de la URL completa de YouTube
+            $urlParts = parse_url($data['youtube_video_id']);
+            if ($urlParts && isset($urlParts['query'])) {
+                parse_str($urlParts['query'], $queryParameters);
+                if (isset($queryParameters['v'])) {
+                    $data['youtube_video_id'] = $queryParameters['v'];
+                }
+            }
+    
+            Video::create($data);
+    
+            return redirect()->route('videos.index')->with('success', 'Video creado exitosamente');
+        } catch (\Exception $e) {
+            // Manejar la excepción y devolver un mensaje de error
+            return redirect()->route('videos.create')->with('error', 'No se pudo crear el video. Verifique que todos los campos sean correctos y vuelva a intentarlo.');
         }
     }
-
-    //dd("Video data processed");
-
-    Video::create($data);
-
-    //dd("Video created");
-
-    return redirect()->route('videos.index')->with('success', 'Video creado exitosamente');
-}
-
-
+    
     
 
     /**
@@ -120,8 +115,9 @@ class VideoController extends Controller
 }
 
     
-    public function update(Request $request, $id)
-    {
+public function update(Request $request, $id)
+{
+    try {
         // Validación de los datos del formulario
         $request->validate([
             'titulo' => 'required',
@@ -129,28 +125,32 @@ class VideoController extends Controller
             'miniatura' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Puedes ajustar las reglas según tus necesidades
             'descripcion' => 'required',
         ]);
-    
+
         // Encuentra el video que deseas actualizar según el ID proporcionado
         $video = Video::findOrFail($id);
-    
+
         // Actualiza los campos del video con los datos del formulario
         $video->titulo = $request->input('titulo');
         $video->youtube_video_id = $request->input('youtube_video_id');
         $video->descripcion = $request->input('descripcion');
-    
+
         // Si se cargó una nueva miniatura, guárdala
         if ($request->hasFile('miniatura')) {
             $miniatura = $request->file('miniatura');
             $rutaMiniatura = $miniatura->store('miniaturas', 'public');
             $video->miniatura = $rutaMiniatura;
         }
-    
+
         // Guarda los cambios en el video
         $video->save();
-    
-        // Redirige de nuevo a la lista de videos u otra página según tus necesidades
+
         return redirect()->route('videos.index')->with('success', 'Video actualizado exitosamente');
+    } catch (\Exception $e) {
+        // Manejar la excepción y devolver un mensaje de error
+        return redirect()->route('videos.edit', $id)->with('error', 'No se pudo actualizar el video. Verifique que todos los campos sean correctos y vuelva a intentarlo.');
     }
+}
+
     
 
     /**

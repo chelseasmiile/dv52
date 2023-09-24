@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Galeria;
 use Illuminate\Support\Facades\Storage;
 use App\Models\ImagenGaleria;
+use Illuminate\Support\Facades\Validator;
 
 
 class GaleriaController extends Controller
@@ -31,38 +32,43 @@ class GaleriaController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-{
-    $data = $request->validate([
-        'categoria' => 'required',
-        'titulo' => 'required',
-        'texto_vista_previa' => 'required',
-        'descripcion' => 'required',
-        'fecha' => 'required|date',
-        'participantes' => 'required',
-        'imagen_galeria' => 'required|image',
+    {
+        try {
+            $data = $request->validate([
+                'categoria' => 'required',
+                'titulo' => 'required',
+                'texto_vista_previa' => 'required',
+                'descripcion' => 'required',
+                'fecha' => 'required|date',
+                'participantes' => 'required',
+                'imagen_galeria' => 'required|image',
+            ]);
     
-    ]);
-
-    if ($data['categoria'] === 'Nueva categoría') {
-        $nuevaCategoria = $request->input('nuevaCategoria');
-
-        // Aquí puedes realizar la lógica para guardar la nueva categoría en la base de datos si lo deseas
-
-        // Luego, actualiza el valor de 'categoria' con la nueva categoría
-        $data['categoria'] = $nuevaCategoria;
+            if ($data['categoria'] === 'Nueva categoría') {
+                $nuevaCategoria = $request->input('nuevaCategoria');
+    
+                // Aquí puedes realizar la lógica para guardar la nueva categoría en la base de datos si lo deseas
+    
+                // Luego, actualiza el valor de 'categoria' con la nueva categoría
+                $data['categoria'] = $nuevaCategoria;
+            }
+    
+            if ($request->hasFile('imagen_galeria')) {
+                $imagePath = $request->file('imagen_galeria')->store('imagenes_galeria', 'public');
+                $data['imagen_galeria'] = $imagePath;
+            }
+    
+            Galeria::create($data);
+    
+            $ultimaGaleria = Galeria::latest()->first();
+    
+            return redirect()->route('galerias.index')->with('success', 'Galería creada exitosamente.')->with('ultimaGaleria', $ultimaGaleria);
+        } catch (\Exception $e) {
+            // Manejar la excepción y devolver un mensaje de error
+            return redirect()->route('galerias.create')->with('error', 'No se pudo crear la galería. Verifique que todos los campos sean correctos y vuelva a intentarlo.');
+        }
     }
-
-    if ($request->hasFile('imagen_galeria')) {
-        $imagePath = $request->file('imagen_galeria')->store('imagenes_galeria', 'public');
-        $data['imagen_galeria'] = $imagePath;
-    }
-
-    Galeria::create($data);
-
-    $ultimaGaleria = Galeria::latest()->first();
-
-    return redirect()->route('galerias.index')->with('success', 'Galería creada exitosamente.')->with('ultimaGaleria', $ultimaGaleria);
-}
+    
 
     /**
      * Display the specified resource.
@@ -88,18 +94,18 @@ class GaleriaController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, $id)
-    {
+{
+    try {
         $galeria = Galeria::findOrFail($id);
 
         $data = $request->validate([
             'categoria' => 'required',
-        'titulo' => 'required',
-        'texto_vista_previa' => 'required',
-        'descripcion' => 'required',
-        'fecha' => 'required|date',
-        'participantes' => 'required',
-        'imagen_galeria' => 'required|image',
-    
+            'titulo' => 'required',
+            'texto_vista_previa' => 'required',
+            'descripcion' => 'required',
+            'fecha' => 'required|date',
+            'participantes' => 'required',
+            'imagen_galeria' => 'required|image',
         ]);
 
         if ($request->hasFile('imagen_galeria')) {
@@ -112,8 +118,12 @@ class GaleriaController extends Controller
 
         $galeria->update($data);
 
-        return redirect()->route('galerias.index')->with('success', 'Galería actualizada exitosamente.');
-    }
+        return redirect()->route('galerias.index')->with('success', 'Galería creada exitosamente.');
+        } catch (\Exception $e) {
+            // Manejar la excepción y devolver un mensaje de error
+            return redirect()->route('galerias.index')->with('error', 'No se pudo editar la galería. Verifique que todos los campos sean correctos y vuelva a intentarlo.');
+        }
+}
 
     /**
      * Remove the specified resource from storage.

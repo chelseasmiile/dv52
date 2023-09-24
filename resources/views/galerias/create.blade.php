@@ -762,12 +762,8 @@
             </div>
             <div class="form-group">
               <label for="categoria">Nueva Categoría:</label>
-              <input type="text" name="categoria" id="categoria" class="form-control" disabled>
+              <input type="text" name="categoria" id="categoria" class="form-control" >
           </div>
-            <div class="form-group">
-                <label for="titulo">Título:</label>
-                <input type="text" name="titulo" id="titulo" class="form-control">
-            </div>
             <div class="form-group">
                 <label for="texto_vista_previa">Características:</label>
                 <input type="text" name="texto_vista_previa" id="texto_vista_previa" class="form-control">
@@ -791,20 +787,14 @@
             <script>
               document.addEventListener("DOMContentLoaded", function() {
                   const categoriaSelect = document.getElementById("categoria_select");
-                  const nuevaCategoriaInput = document.getElementById("categoria");
-          
+                  const categoriaInput = document.getElementById("categoria");
+            
                   categoriaSelect.addEventListener("change", function() {
-                      if (categoriaSelect.value === "nueva") {
-                          nuevaCategoriaInput.disabled = false;
-                          nuevaCategoriaInput.value = ""; // Limpia el valor anterior
-                      } else {
-                          nuevaCategoriaInput.disabled = true;
-                          nuevaCategoriaInput.value = categoriaSelect.value; // Copia el valor seleccionado
-                      }
+                      categoriaInput.value = categoriaSelect.value; // Copia el valor seleccionado
                   });
               });
-          </script>
-          
+            </script>
+            
   
           <button type="submit">Crear Galería</button>
         </form>

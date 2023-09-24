@@ -31,26 +31,32 @@ class NotaController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-{
-    $data = $request->validate([
-        'titulo' => 'required',
-        'texto_vista_previa' => 'required',
-        'descripcion' => 'required',
-        'fecha' => 'required|date',
-        'imagen_nota' => 'required|image',
-    ]);
-
-    if ($request->hasFile('imagen_nota')) {
-        $imagePath = $request->file('imagen_nota')->store('imagenes_notas', 'public');
-        $data['imagen_nota'] = $imagePath;
+    {
+        try {
+            $data = $request->validate([
+                'titulo' => 'required',
+                'texto_vista_previa' => 'required',
+                'descripcion' => 'required',
+                'fecha' => 'required|date',
+                'imagen_nota' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            ]);
+    
+            if ($request->hasFile('imagen_nota')) {
+                $imagePath = $request->file('imagen_nota')->store('imagenes_notas', 'public');
+                $data['imagen_nota'] = $imagePath;
+            }
+    
+            Nota::create($data);
+    
+            $ultimaNota = Nota::latest()->first();
+    
+            return redirect()->route('notas.index')->with('success', 'Nota creada exitosamente.')->with('ultimaNota', $ultimaNota);
+        } catch (\Exception $e) {
+            // Manejar la excepción y devolver un mensaje de error
+            return redirect()->route('notas.create')->with('error', 'No se pudo crear la nota. Verifique que todos los campos sean correctos y vuelva a intentarlo.');
+        }
     }
-
-    Nota::create($data);
-
-    $ultimaNota = Nota::latest()->first();
-
-    return redirect()->route('notas.index')->with('success', 'Nota creada exitosamente.')->with('ultimaNota', $ultimaNota);
-}
+    
 
 
     /**
@@ -80,7 +86,7 @@ public function update(Request $request, string $id)
             'titulo' => 'required',
             'texto_vista_previa' => 'required',
             'descripcion' => 'required',
-            'fecha' => 'required',
+            'fecha' => 'required|date',
             'imagen_nota' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -98,10 +104,12 @@ public function update(Request $request, string $id)
         $nota->save();
 
         return redirect()->route('notas.index')->with('success', 'Nota actualizada exitosamente');
-    } catch (Exception $e) {
-        dd($e->getMessage()); // Si hay algún error inesperado, muestra el mensaje de excepción
+    } catch (\Exception $e) {
+        // Manejar la excepción y devolver un mensaje de error
+        return redirect()->route('notas.edit', $id)->with('error', 'No se pudo actualizar la nota. Verifique que todos los campos sean correctos y vuelva a intentarlo.');
     }
 }
+
 
 public function destroy(string $id)
 {

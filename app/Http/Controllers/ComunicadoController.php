@@ -23,6 +23,7 @@ class ComunicadoController extends Controller
 
     public function store(Request $request)
     {
+        try { 
         $data = $request->validate([
             'titulo' => 'required',
             'texto_vista_previa' => 'required',
@@ -46,6 +47,10 @@ class ComunicadoController extends Controller
         $comunicado->save();
     
         return redirect()->route('comunicados.index')->with('success', 'Comunicado creado exitosamente.');
+    } catch (\Exception $e) {
+        // Manejar la excepción y devolver un mensaje de error
+        return redirect()->route('comunicados.create')->with('error', 'No se pudo crear el comunicado. Verifique que todos los campos sean correctos y vuelva a intentarlo.');
+    }
     }
     
 
@@ -99,9 +104,10 @@ public function edit($id)
             $comunicado->save();
         
             return redirect()->route('comunicados.index')->with('success', 'Comunicado actualizado exitosamente.');
-        } catch (Exception $e) {
-            dd($e->getMessage());
-        }
+    } catch (\Exception $e) {
+        // Manejar la excepción y devolver un mensaje de error
+        return redirect()->route('comunicados.edit', $id)->with('error', 'No se pudo actualizar el comunicado. Verifique que todos los campos sean correctos y vuelva a intentarlo.');
+    }
     }
     
 
