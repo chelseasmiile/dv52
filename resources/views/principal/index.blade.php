@@ -599,32 +599,38 @@ html body[data-header-resize="1"] .container-wrap, html body[data-header-format=
     }
 
     .slider {
-        position: relative;
-        max-width: 1366px; /* Ajusta el ancho máximo según tus preferencias */
-        max-height: 768px; /* Ajusta la altura máxima según tus preferencias */
-        margin: 0 auto; /* Centra el slider en la página */
-    }
+    position: relative;
+    max-width: 1280px; /* Ancho máximo del slider */
+    max-height: 720px; /* Altura máxima del slider */
+    margin: 0 auto; /* Centra el slider en la página */
+    overflow: hidden; /* Oculta contenido que exceda las dimensiones del slider */
+}
 
-    .slides {
-        position: relative;
-        display: flex;
-        overflow: hidden;
-    }
+.slides {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
 
-    .slide {
-        width: 100%; /* Ancho fijo del slide */
-        flex-shrink: 0;
-        animation-name: slide;
-        animation-duration: 40s;
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+  
+    animation-name: slide;
+        animation-duration: 60s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-    }
+}
 
-    .slide img {
-        width: 100%;
-        height: auto; /* Ajustar altura automáticamente */
-        vertical-align: top;
-    }
+.slide img {
+  max-width: 100%; /* Ajusta la imagen para que no supere el ancho del slider */
+    max-height: 100%; /* Ajusta la imagen para que no supere la altura del slider */
+    width: auto; /* Restaura el ancho automático para mantener la proporción */
+    height: auto; /* Restaura la altura automática para mantener la proporción */
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin estirar ni cortar */
+
+}
 
     .slide a {
         width: 100%;
@@ -804,7 +810,7 @@ var say_what_data = {"replacements":[]};
     @if(auth()->check()) <!-- Verifica si hay una sesión activa -->
     <!-- Botón de Cerrar Sesión -->
     <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523">
-      <a rel="noopener" href="{{ route('cerrar-sesion') }}">
+      <a rel="noopener" href="{{ route('cerrar-sesion') }} " onclick="return confirm('¿Estás seguro de que deseas cerrar sesión?')">
         <span class="menu-title-text">Cerrar Sesion</span>
     </a>
   </li>
@@ -879,14 +885,32 @@ var say_what_data = {"replacements":[]};
                                                         @endforeach
                                                     </ul>
                                                     <ul class="slider-controler" id="slider-controls">
-                                                        @foreach ($collection->reverse() as $key => $item)
-                                                            <li><a data-slide="#slide{{ $key + 1 }}">&bull;</a></li>
-                                                        @endforeach
-                                                    </ul>
+                                                      @foreach ($collection->reverse() as $key => $item)
+                                                          <li><a data-slide="{{ $key + 1 }}">&bull;</a></li>
+                                                      @endforeach
+                                                  </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
+                                    {{-- <script>
+    $(document).ready(function() {
+        // Agregar un controlador de clic para los bullets
+        $('.slider-controler a').on('click', function(e) {
+            e.preventDefault(); // Evitar que el enlace se comporte normalmente
+            
+            var targetSlide = $(this).data('slide'); // Obtener el número de la diapositiva desde el atributo 'data-slide'
+            
+            // Ocultar todas las diapositivas
+            $('.slide').hide();
+            
+            // Mostrar la diapositiva deseada
+            $('#slide' + targetSlide).show();
+        });
+    });
+</script> --}}
+
                                     
                                     <script>
                                         // JavaScript para ajustar el tamaño del contenedor según las imágenes

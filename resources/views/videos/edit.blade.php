@@ -756,7 +756,7 @@
                 <input type="text" name="titulo" id="titulo" class="form-control" value="{{ old('titulo', $video->titulo) }}" required>
             </div>
             <div class="form-group">
-                <label for="youtube_video_id">ID del video de YouTube (La URL completa):</label>
+                <label for="youtube_video_id">ID del video de YouTube (Únicamente lo que se encuentra despúes de "="):</label>
                 <input type="text" name="youtube_video_id" id="youtube_video_id" class="form-control" value="{{ old('youtube_video_id', $video->youtube_video_id) }}" required>
             </div>
             <div class="form-group">

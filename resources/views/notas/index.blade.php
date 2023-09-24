@@ -797,7 +797,7 @@
     </div>
     @if(Auth::check())
     <div>
-        <a target="_blank" rel="noopener" href="{{ route('notas.create') }}">
+        <a rel="noopener" href="{{ route('notas.create') }}">
           <button type="submit" class="btn btn-sm btn-danger">Crear Nota</button>
         </a>
     </div>
