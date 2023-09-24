@@ -14,7 +14,7 @@ class PrincipalController extends Controller
     public function index()
     {
         $collection = Principal::all();
-        dd($collection); // Debugging line
+        //dd($collection); // Debugging line
         return view('principal.index', compact('collection'));
     }
 
@@ -42,6 +42,7 @@ class PrincipalController extends Controller
         } catch (\Exception $e) {
             // Maneja la excepción de la forma que prefieras
             // Por ejemplo, registra el error en un log y muestra un mensaje de error
+           // abort(500, 'No se recibió un código de autenticación.'); 
             Log::error($e->getMessage());
             return redirect()->route('principal.create')->with('error', 'No se pudo guardar la información, verifique que esta introduciendo una imagen compatible.');
         }

@@ -716,8 +716,14 @@
         </ul>
         </li>
         <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-32"><a href="{!!route('contacto.index')!!}"><span class="menu-title-text">Contacto</span></a></li>
-        <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="https://snte.org.mx/registro.html"><span class="menu-title-text">Regístrate</span></a></li>
-        <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479">
+        <li id="menu-item-523"
+        class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523">
+        <a target="_blank" rel="noopener"
+            href="https://snte.org.mx/registro.html"
+            onclick="return confirm('¿Estás seguro de que deseas abandonar este sitio?')">
+            <span class="menu-title-text">Regístrate</span>
+        </a>
+    </li>        <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479">
           <img src="{{ asset('images/facebook.png') }}" alt="Facebook" style="width: 24px; height: 24px;">
       </a>
         </ul>
@@ -739,39 +745,24 @@
     <div class="wpb_raw_code wpb_content_element wpb_raw_html">
     <div class="wpb_wrapper">
       
-        <div class="form-container">
-            <h1 class="form-title">Editar Información de Slider</h1>
-            <form action="{{ route('principal.update', $collection->id) }}" method="post" enctype="multipart/form-data">
-                @csrf
-                @method('PUT')
-                <div class="form-group">
-                    <label for="slider1">Slider 1:</label>
-                    <input type="text" name="slider1" id="slider1" class="form-control" value="{{ $collection->vslider1 }}">
-                </div>
-                {{-- <div class="form-group">
-                    <label for="slider2">Slider 1:</label>
-                    <input type="text" name="slider2" id="slider2" class="form-control" value="{{ $collection->slider2}}">
-                </div>
-                <div class="form-group">
-                    <label for="slider3">Slider 3:</label>
-                    <input type="text" name="slider3" id="slider3" class="form-control" value="{{ $collection->slider3 }}">
-                </div> --}}
-                <div class="form-group">
-                    <label for="imagen_s1">Imagen Slider 1:</label>
-                    <input type="file" name="imagen_s1" id="imagen_s1" class="form-control">
-                </div>
-                {{-- <div class="form-group">
-                    <label for="imagen_s2">Imagen Slider 2:</label>
-                    <input type="file" name="imagen_s2" id="imagen_s2" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="imagen_s3">Imagen Slider 3:</label>
-                    <input type="file" name="imagen_s3" id="imagen_s3" class="form-control">
-                </div> --}}
-                <button type="submit">Actualizar</button>
-            </form>
-        </div>
-
+      <div class="form-container">
+        <h1 class="form-title">Editar Información de Slider</h1>
+        <form action="{{ route('principal.update', $collection->id) }}" method="post" enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
+            <div class="form-group">
+                <label for="slider1">Slider 1:</label>
+                <input type="text" name="slider1" id="slider1" class="form-control" value="{{ $collection->slider1 }}">
+            </div>
+            <!-- Resto del formulario -->
+            <div class="form-group">
+                <label for="imagen_s1">Imagen Slider 1:</label>
+                <input type="file" name="imagen_s1" id="imagen_s1" class="form-control">
+            </div>
+            <!-- Resto del formulario -->
+            <button type="submit">Actualizar</button>
+        </form>
+    </div>
         <input type="hidden" id="error-message" value="{{ session('error') ?? '' }}">
 
 @if(session('error'))

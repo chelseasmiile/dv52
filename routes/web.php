@@ -91,6 +91,10 @@ Route::post('qrs', [QrController::class, 'store'])->name('qrs.store');
 Route::get('servicios/create/{galeria}', [QrController::class, 'create'])->name('servicios.create');
 Route::get('qrs/create/{galeria}', [QrController::class, 'create'])->name('qrs.create');
 
+Route::get('/videos/edit/{id}', 'VideoController@edit')->name('videos.edit');
+Route::put('/videos/update/{id}', 'VideoController@update')->name('videos.update');
+Route::delete('/videos/delete/{id}', 'VideoController@destroy')->name('videos.destroy');
+
 
 
 

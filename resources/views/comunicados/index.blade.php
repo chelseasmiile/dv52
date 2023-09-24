@@ -641,8 +641,14 @@
         </ul>
         </li>
         <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-32"><a href="{!!route('contacto.index')!!}"><span class="menu-title-text">Contacto</span></a></li>
-        <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="https://snte.org.mx/registro.html"><span class="menu-title-text">Regístrate</span></a></li>
-        <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479">
+        <li id="menu-item-523"
+        class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523">
+        <a target="_blank" rel="noopener"
+            href="https://snte.org.mx/registro.html"
+            onclick="return confirm('¿Estás seguro de que deseas abandonar este sitio?')">
+            <span class="menu-title-text">Regístrate</span>
+        </a>
+    </li>        <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479">
           <img src="{{ asset('images/facebook.png') }}" alt="Facebook" style="width: 24px; height: 24px;">
       </a>
     </nav>
@@ -845,8 +851,14 @@
     </ul>
     </li>
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="https://snte.org.mx/seccion36/contacto/">Contacto</a></li>
-    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-523"><a target="_blank" rel="noopener" href="https://snte.org.mx/registro.html">Regístrate</a></li>
-    </ul>
+    <li id="menu-item-523"
+    class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523">
+    <a target="_blank" rel="noopener"
+        href="https://snte.org.mx/registro.html"
+        onclick="return confirm('¿Estás seguro de que deseas abandonar este sitio?')">
+        <span class="menu-title-text">Regístrate</span>
+    </a>
+</li>    </ul>
     <ul class="menu secondary-header-items">
     </ul>
     </div>

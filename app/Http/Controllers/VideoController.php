@@ -112,18 +112,46 @@ class VideoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
-    }
+    public function edit($id)
+{
+    $video = Video::findOrFail($id); // Buscar el video por su ID
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    return view('videos.edit', compact('video')); // Pasar el video a la vista de edición
+}
+
+    
+    public function update(Request $request, $id)
     {
-        //
+        // Validación de los datos del formulario
+        $request->validate([
+            'titulo' => 'required',
+            'youtube_video_id' => 'required',
+            'miniatura' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Puedes ajustar las reglas según tus necesidades
+            'descripcion' => 'required',
+        ]);
+    
+        // Encuentra el video que deseas actualizar según el ID proporcionado
+        $video = Video::findOrFail($id);
+    
+        // Actualiza los campos del video con los datos del formulario
+        $video->titulo = $request->input('titulo');
+        $video->youtube_video_id = $request->input('youtube_video_id');
+        $video->descripcion = $request->input('descripcion');
+    
+        // Si se cargó una nueva miniatura, guárdala
+        if ($request->hasFile('miniatura')) {
+            $miniatura = $request->file('miniatura');
+            $rutaMiniatura = $miniatura->store('miniaturas', 'public');
+            $video->miniatura = $rutaMiniatura;
+        }
+    
+        // Guarda los cambios en el video
+        $video->save();
+    
+        // Redirige de nuevo a la lista de videos u otra página según tus necesidades
+        return redirect()->route('videos.index')->with('success', 'Video actualizado exitosamente');
     }
+    
 
     /**
      * Remove the specified resource from storage.

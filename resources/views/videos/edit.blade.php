@@ -716,8 +716,14 @@
         </ul>
         </li>
         <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-32"><a href="{!!route('contacto.index')!!}"><span class="menu-title-text">Contacto</span></a></li>
-        <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="https://snte.org.mx/registro.html"><span class="menu-title-text">Regístrate</span></a></li>
-        <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479">
+        <li id="menu-item-523"
+        class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523">
+        <a target="_blank" rel="noopener"
+            href="https://snte.org.mx/registro.html"
+            onclick="return confirm('¿Estás seguro de que deseas abandonar este sitio?')">
+            <span class="menu-title-text">Regístrate</span>
+        </a>
+    </li>        <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479">
           <img src="{{ asset('images/facebook.png') }}" alt="Facebook" style="width: 24px; height: 24px;">
       </a>
     </nav>
@@ -741,28 +747,34 @@
         
         
       <div class="form-container">
-        <h1 class="form-title">Creación de videos</h1>
-        <form action="{{ route('videos.store') }}" method="post" enctype="multipart/form-data">
+        <h1 class="form-title">Edición de videos</h1>
+        <form action="{{ route('videos.update', $video->id) }}" method="post" enctype="multipart/form-data">
             @csrf
+            @method('PATCH') <!-- Usar PATCH para la actualización -->
             <div class="form-group">
                 <label for="titulo">Título:</label>
-                <input type="text" name="titulo" id="titulo" class="form-control" required>
+                <input type="text" name="titulo" id="titulo" class="form-control" value="{{ old('titulo', $video->titulo) }}" required>
             </div>
             <div class="form-group">
                 <label for="youtube_video_id">ID del video de YouTube (La URL completa):</label>
-                <input type="text" name="youtube_video_id" id="youtube_video_id" class="form-control" required>
+                <input type="text" name="youtube_video_id" id="youtube_video_id" class="form-control" value="{{ old('youtube_video_id', $video->youtube_video_id) }}" required>
             </div>
             <div class="form-group">
                 <label for="miniatura">Miniatura:</label>
-                <input type="file" name="miniatura" id="miniatura" class="form-control" accept="image/*" required>
+                <input type="file" name="miniatura" id="miniatura" class="form-control" accept="image/*">
+                {{-- @if ($video->miniatura)
+                    <p>Miniatura actual:</p>
+                    <img src="{{ asset('storage/' . $video->miniatura) }}" alt="Miniatura actual" width="100">
+                @endif --}}
             </div>
             <div class="form-group">
                 <label for="descripcion">Descripción:</label>
-                <textarea name="descripcion" id="descripcion" class="form-control" required></textarea>
+                <textarea name="descripcion" id="descripcion" class="form-control" required>{{ old('descripcion', $video->descripcion) }}</textarea>
             </div>
-            <button type="submit" onclick="console.log('Submit button pressed')">Enviar</button>
+            <button type="submit" onclick="console.log('Submit button pressed')">Actualizar</button>
         </form>
     </div>
+    
 
     <input type="hidden" id="error-message" value="{{ session('error') ?? '' }}">
 
