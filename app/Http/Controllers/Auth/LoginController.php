@@ -43,19 +43,22 @@ class LoginController extends Controller
 
     public function postLogeo(Request $request)
     {
-        //dd('Executing cerrarSesion');
-        $this->validate($request, [
-            'username' => 'required',
-            'password' => 'required',
-        ]);
+        try {
+            $this->validate($request, [
+                'username' => 'required',
+                'password' => 'required',
+            ]);
 
-        $credentials = $request->only('username', 'password');
-        $f = Auth::guard('web')->attempt($credentials, $request->filled('remember'));
+            $credentials = $request->only('username', 'password');
+            $f = Auth::guard('web')->attempt($credentials, $request->filled('remember'));
 
-        if ($f) {
-            return redirect()->route('principal.index'); // Redirige a la página de inicio después del inicio de sesión exitoso
-        } else {
-            return redirect()->route('principal.index')->with('error', 'No se pudo iniciar sesión.'); // Redirige a la página de inicio con un mensaje de error
+            if ($f) {
+                return redirect()->route('principal.index'); // Redirige a la página de inicio después del inicio de sesión exitoso
+            } else {
+                throw new \Exception('Credenciales incorrectas'); // Lanza una excepción personalizada si las credenciales son incorrectas
+            }
+        } catch (\Exception $e) {
+            return view('badlogin');
         }
     }
 
@@ -77,7 +80,7 @@ class LoginController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
     
-        return redirect('https://www.eneba.com/?af_id=operagx-desktop');
+
     }
 
     public function getAlta()

@@ -678,6 +678,22 @@
             font-family: 'Open Sans', sans-serif;
             color: black;
         }
+
+        /* Estilo para el contenedor principal */
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Estilo para el encabezado */
+h1 {
+    font-size: 36px;
+    color: black; /* Color de texto negro */
+}
+
+
+
+
     
     </style>
     <script type="text/javascript" src="https://snte.org.mx/seccion36/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>
@@ -813,87 +829,13 @@
     <div class="wpb_raw_code wpb_content_element wpb_raw_html">
     <div class="wpb_wrapper">
         
-        <div class="sidebar-logo text-center">
-            <img src="{{ asset('images/ittolicono.png') }}" alt="Instituto Tecnológico de Toluca" style="max-width: 100px; height: auto;">
-        </div>
-        
-                    <ul class="sidebar-nav">
-                        <li class="sidebar-brand">
-                            <a href="{!! route('principal.index') !!}">Principal</a>
-                        </li>
-                        <!-- @ auth -->
-                        @if(isset($usuario))
-                        <li class="sidebar-nav-item">
-                            <a href="#">Usuario {{ $usuario->username }}</a>
-                        <li class="sidebar-nav-item">
-                            <a href="{!! asset('closesession') !!}">Salir</a>
-                        </li>                                
-        
-                        @else
-                        
-                        <li class="sidebar-nav-item">
-                            <a href="{!! asset('logeo') !!}">Inicio de sesion</a>
-                        </li>
-                        <li class="sidebar-nav-item">
-                            <a href="{!! asset('alta') !!}">Dar de alta</a>
-                        </li>
-                        
-                        @endif
-                        <!-- @ endauth-->
-                    </ul>
-                </nav>
-        <!-- Contact-->
-        <section class="page-section" id="contact">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">INICIAR SESION</h2>
-                        <hr class="divider" />
-                        <p class="text-muted mb-5">Por favor, ingresa tu usuario y contraseña</p>
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                  <div class="col-lg-6 d-flex justify-content-center">
-                    <form method="POST" action="logeo" class="w-100">
-                        {{ csrf_field() }}
-                        
-   
-                
-                        <!--usuario input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="username" name="username" type="text" placeholder="Teclea tu usuario..." />
-                            <label for="username">Usuario</label>
-                        </div>
-                
-                        <!-- password input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="password" name="password" type="password" placeholder="Teclea tu contraseña" />
-                            <label for="password">Contraseña</label>
-                        </div>
-                
-                        <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">INICIAR</button></div>
-                        
-                    </form>
-                </div>
-                </div>
-            </div>
-        </section>
-        <input type="hidden" id="error-message" value="{{ session('error') ?? '' }}">
+       
 
-        @if(session('error'))
-            <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-            @endif
-        
-        
-            <script>
-        var errorMessage = document.getElementById('error-message').value;
-        
-        if (errorMessage) {
-            alert(errorMessage);
-        }
-        </script>
+        <div class="container">
+            <h1>Credenciales incorrectas</h1>
+            <a href="{{ url('logeo') }}" class="btn btn-sm btn-info">Regresar al inicio de sesión</a>
+        </div>
+
           
     </div>
     </div>
