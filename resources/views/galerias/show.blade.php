@@ -803,10 +803,25 @@ var nectar_theme_info = {"using_salient":"true"};
 </table>
 </div>
 </div>
+<input type="hidden" id="error-message" value="{{ session('error') ?? '' }}">
+
+@if(session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+    @endif
+
+    <script>
+var errorMessage = document.getElementById('error-message').value;
+
+if (errorMessage) {
+alert(errorMessage);
+}
+</script>
 
 @if(Auth::check())
 
-<a href="#" data-toggle="modal" data-target="#addImageModal" class="add-image-button">Añadir Nueva Imagen</a>
+<a href="#" data-toggle="modal" data-target="#addImageModal" class="add-image-button" >Añadir Nueva Imagen</a>
 
 <!-- Modal para cargar nueva imagen -->
 <div class="modal fade" id="addImageModal" tabindex="-1" role="dialog" aria-labelledby="addImageModalLabel" aria-hidden="true">
@@ -819,7 +834,7 @@ var nectar_theme_info = {"using_salient":"true"};
                 <!-- Formulario para cargar imagen -->
                 <form action="{{ route('upload.image') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <input type="file" name="imagen">
+                    <input type="file" name="imagen" accept="image/*">
                     <input type="hidden" name="galeriaId" value="{{ $galeria->id }}"> <!-- Agrega el ID de la galería -->
                     <button type="submit">Subir imagen</button>
                 </form>

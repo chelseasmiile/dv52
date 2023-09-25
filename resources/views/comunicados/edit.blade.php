@@ -766,11 +766,11 @@
                         </div>
                         <div class="form-group">
                             <label for="archivo_pdf">PDF:</label>
-                            <input type="file" name="archivo_pdf" id="archivo_pdf" class="form-control">
+                            <input type="file" name="archivo_pdf" id="archivo_pdf" class="form-control" accept="application/pdf">
                         </div>
                         <div class="form-group">
                             <label for="imagen_comunicados">Imagen:</label>
-                            <input type="file" name="imagen_comunicados" id="imagen_comunicados" class="form-control">
+                            <input type="file" name="imagen_comunicados" id="imagen_comunicados" class="form-control" accept="image/*">
                         </div>
                         <button type="submit" class="btn btn-primary">Actualizar</button>
                         <a href="{{ route('comunicados.index') }}" class="btn btn-secondary">Cancelar</a>

@@ -145,6 +145,7 @@ class GaleriaController extends Controller
 
     public function addImage(Request $request, $id)
     {
+        try{
         // Validaciones y procesamiento de la imagen
 
         $galeria = Galeria::findOrFail($id);
@@ -164,6 +165,10 @@ class GaleriaController extends Controller
         dd('Imagen guardada en la base de datos');
 
         return redirect()->route('galerias.show', $galeria)->with('success', 'Imagen agregada exitosamente.');
+    } catch (\Exception $e) {
+        // Manejar la excepción y devolver un mensaje de error
+        return redirect()->route('galerias.show', $galeria)->with('error', 'No se pudo crear la galería. Verifique que todos los campos sean correctos y vuelva a intentarlo.');
+    }
     }
 
 

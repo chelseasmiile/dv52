@@ -762,7 +762,7 @@
           </div> --}}
           <div class="form-group">
               <label for="imagen_s1">Imagen Slider 1:</label>
-              <input type="file" name="imagen_s1" id="imagen_s1" class="form-control">
+              <input type="file" name="imagen_s1" id="imagen_s1" class="form-control" accept="image/*" required>
           </div>
           {{-- <div class="form-group">
               <label for="imagen_s2">Imagen Slider 2:</label>

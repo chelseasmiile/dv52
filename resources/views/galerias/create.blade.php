@@ -782,7 +782,7 @@
             </div>
             <div class="form-group">
                 <label for="imagen_galeria">Imagen:</label>
-                <input type="file" name="imagen_galeria" id="imagen_galeria" class="form-control">
+                <input type="file" name="imagen_galeria" id="imagen_galeria" class="form-control" accept="image/*" required>
             </div>
             <script>
               document.addEventListener("DOMContentLoaded", function() {

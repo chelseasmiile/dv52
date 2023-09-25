@@ -757,7 +757,7 @@
             <!-- Resto del formulario -->
             <div class="form-group">
                 <label for="imagen_s1">Imagen Slider 1:</label>
-                <input type="file" name="imagen_s1" id="imagen_s1" class="form-control">
+                <input type="file" name="imagen_s1" id="imagen_s1" class="form-control" accept="image/*">
             </div>
             <!-- Resto del formulario -->
             <button type="submit">Actualizar</button>

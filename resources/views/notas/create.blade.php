@@ -768,7 +768,7 @@
               </div>
               <div class="form-group">
                   <label for="imagen_nota">Imagen:</label>
-                  <input type="file" name="imagen_nota" id="imagen_nota" class="form-control">
+                  <input type="file" name="imagen_nota" id="imagen_nota" class="form-control" accept="image/*">
               </div>
               <button type="submit">Enviar</button>
           </form>

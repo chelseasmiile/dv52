@@ -764,15 +764,15 @@
             </div>
             <div class="form-group">
                 <label for="imagen_vision">Imagen Visión:</label>
-                <input type="file" name="imagen_vision" id="imagen_vision" class="form-control">
+                <input type="file" name="imagen_vision" id="imagen_vision" class="form-control" accept="image/*" required>
             </div>
             <div class="form-group">
                 <label for="imagen_mision">Imagen Misión:</label>
-                <input type="file" name="imagen_mision" id="imagen_mision" class="form-control">
+                <input type="file" name="imagen_mision" id="imagen_mision" class="form-control" accept="image/*" required>
             </div>
             <div class="form-group">
                 <label for="imagen_valores">Imagen Valores:</label>
-                <input type="file" name="imagen_valores" id="imagen_valores" class="form-control">
+                <input type="file" name="imagen_valores" id="imagen_valores" class="form-control" accept="image/*" required>
             </div>
             <button type="submit">Enviar</button>
         </form>
