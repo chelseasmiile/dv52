@@ -848,17 +848,26 @@
           <form method="POST" action="alta" >
              {{ csrf_field() }}
               <!--usuario input-->
-              <div class="form-floating mb-3">
-                  <input class="form-control" id="username" name="username" type="text" placeholder="Teclea tu usuario..." />
-                  <label for="username">Usuario: </label>
-                  <div class="validation"> </div>
-              </div>
-              <!-- password input-->
-              <div class="form-floating mb-3">
-                  <input class="form-control" id="password" name="password" type="password" placeholder="Teclea tu contraseña" />
-                  <label for="password">Contraseña: </label>
-                  <div class="validation"> </div>
-              </div>
+              <!-- Agregar el campo de "Nombre de usuario" -->
+<div class="form-floating mb-3">
+  <label for="username">Usuario</label>
+  <input class="form-control" id="username" name="username" type="text" placeholder="Teclea tu usuario..." />
+
+</div>
+
+<!-- Mantén los campos existentes de "Correo Electrónico" y "Contraseña" -->
+<div class="form-floating mb-3">
+  <label for="email">Correo Electrónico</label>
+  <input class="form-control" id="email" name="email" type="email" placeholder="Teclea tu correo electrónico..." />
+
+</div>
+
+<div class="form-floating mb-3">
+  <label for="password">Contraseña</label>
+  <input class="form-control" id="password" name="password" type="password" placeholder="Teclea tu contraseña" />
+  
+</div>
+
               <!-- Submit Button-->
               <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">DAR DE ALTA</button></div>
           </form>

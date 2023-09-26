@@ -10,6 +10,10 @@ use App\Http\Controllers\VideoController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\QuienessomosController;
 use App\Http\Controllers\ImagenGaleriaController;
+use App\Http\Controllers\ResetPasswordController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -51,13 +55,33 @@ Route::get('/principal/{id}/edit', [PrincipalController::class, 'edit'])->name('
     Route::get('logeo', [LoginController::class, 'getLogeo']);
     Route::post('logeo', [LoginController::class, 'postLogeo']);
     Route::get('/cerrar-sesion', [LoginController::class, 'cerrarSesion'])->name('cerrar-sesion');
+    
 
+    Route::get('logeo', [LoginController::class, 'getLogeo'])->name('logeo');
 
 
 
 Route::get('alta', [LoginController::class, 'getAlta']);
 Route::post('alta', [LoginController::class, 'postAlta']);
 Route::get('/cerrar-sesion', [LoginController::class, 'cerrarSesion'])->name('cerrar-sesion');
+
+// Ruta para mostrar el formulario de solicitud de restablecimiento de contraseña
+Route::get('/forgot-password', [ResetPasswordController::class, 'showForgotPasswordForm'])->name('password.request');
+
+// Ruta para enviar el correo electrónico con el enlace de restablecimiento de contraseña
+Route::post('/forgot-password', [ResetPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+
+// Ruta para mostrar el formulario de restablecimiento de contraseña con un token
+Route::get('/reset-password/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+
+// Ruta para procesar el restablecimiento de contraseña
+Route::post('/reset-password', [ResetPasswordController::class, 'resetPassword'])->name('password.update');
+
+// Ruta para mostrar el formulario de solicitud de restablecimiento de contraseña
+Route::get('/password/reset', [ResetPasswordController::class, 'showForgotPasswordForm'])->name('password.reset.request');
+
+
+
 
 
 

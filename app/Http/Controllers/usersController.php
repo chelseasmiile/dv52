@@ -14,6 +14,7 @@ class UsersController extends Controller
      */
     public function index()
     {
+        dd('Imagen subida correctamente');
         $usuarios = users::orderBy('name')->get();
         $usr_current = Auth::user();
         return view('users.index')->with('usuarios', $usuarios)
@@ -25,6 +26,7 @@ class UsersController extends Controller
      */
     public function create()
     {
+        dd('Imagen subida correctamente');
         $usr_current = Auth::user();
         return view('users.create')->with('usuario', $usr_current);
     }
@@ -34,6 +36,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
 {
+    dd('Imagen subida correctamente');
     $datos = $request->all();
     users::create([
         'username' => $datos['username'],

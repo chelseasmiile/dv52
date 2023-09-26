@@ -861,19 +861,31 @@
                 
                         <!--usuario input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="username" name="username" type="text" placeholder="Teclea tu usuario..." />
-                            <label for="username">Usuario</label>
-                        </div>
-                
+                          <label for="username">Usuario</label>
+                          <input class="form-control" id="username" name="username" type="text" placeholder="Teclea tu usuario..." />
+                        
+                      </div>
                         <!-- password input-->
                         <div class="form-floating mb-3">
+                          <label for="password">Contraseña</label>
                             <input class="form-control" id="password" name="password" type="password" placeholder="Teclea tu contraseña" />
-                            <label for="password">Contraseña</label>
+                            
                         </div>
                 
-                        <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">INICIAR</button></div>
+                        <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">INICIAR</button>
+                        
+
+
+                        </div>
+
                         
                     </form>
+
+                    <!-- Enlace para solicitar restablecimiento de contraseña -->
+<div class="text-center mt-3">
+  <a target="blank" href="{{ route('password.reset.request') }}">Olvidaste tu contraseña</a>
+
+</div>
                 </div>
                 </div>
             </div>
@@ -885,6 +897,13 @@
                 {{ session('error') }}
             </div>
             @endif
+
+            @if(session('status'))
+<div class="alert alert-success">
+    {{ session('status') }}
+</div>
+@endif
+
         
         
             <script>

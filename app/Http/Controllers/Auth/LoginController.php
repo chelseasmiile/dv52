@@ -42,27 +42,25 @@ class LoginController extends Controller
     }
 
     public function postLogeo(Request $request)
-    {
-        try {
-            $this->validate($request, [
-                'username' => 'required',
-                'password' => 'required',
-            ]);
+{
+    try {
+        $this->validate($request, [
+            'username' => 'required',
+            'password' => 'required',
+        ]);
 
-            $credentials = $request->only('username', 'password');
-            $f = Auth::guard('web')->attempt($credentials, $request->filled('remember'));
+        $credentials = $request->only('username', 'password');
+        $f = Auth::guard('web')->attempt($credentials, $request->filled('remember'));
 
-            if ($f) {
-                return redirect()->route('principal.index'); // Redirige a la página de inicio después del inicio de sesión exitoso
-            } else {
-                throw new \Exception('Credenciales incorrectas'); // Lanza una excepción personalizada si las credenciales son incorrectas
-            }
-        } catch (\Exception $e) {
-            return view('badlogin');
+        if ($f) {
+            return redirect()->route('principal.index'); // Redirige a la página de inicio después del inicio de sesión exitoso
+        } else {
+            throw new \Exception('Credenciales incorrectas'); // Lanza una excepción personalizada si las credenciales son incorrectas
         }
+    } catch (\Exception $e) {
+        return view('badlogin');
     }
-
-    
+}
     public function cerrarSesion(Request $request)
     {
         Auth::logout();
@@ -85,22 +83,22 @@ class LoginController extends Controller
 
     public function getAlta()
     {
+       
         //dd('Executing cerrarSesion');
         return view('alta');
     }
 
     public function postAlta(Request $request)
 {
-    //dd('Executing cerrarSesion');
     $datos = $request->all();
-    // Agrega esta línea para verificar los datos antes de crear el usuario
-    //dd($datos);
 
     User::create([
         'username' => $datos['username'],
+        'email' => $datos['email'], // Agrega el campo "email" aquí
         'password' => Hash::make($datos['password']),
     ]);
 
     return redirect()->route('principal.index');
 }
+
 }
