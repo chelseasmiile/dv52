@@ -751,12 +751,12 @@
             @csrf
             @method('PUT')
             <div class="form-group">
-                <label for="slider1">Slider 1:</label>
+                <label for="slider1">Slider:</label>
                 <input type="text" name="slider1" id="slider1" class="form-control" value="{{ $collection->slider1 }}">
             </div>
             <!-- Resto del formulario -->
             <div class="form-group">
-                <label for="imagen_s1">Imagen Slider 1:</label>
+                <label for="imagen_s1">Imagen Slider (La medida recomendada es 1366*768, si se introduce una medida diferente es posible que no se ajuste adecuadamente)</label>
                 <input type="file" name="imagen_s1" id="imagen_s1" class="form-control" accept="image/*">
             </div>
             <!-- Resto del formulario -->
