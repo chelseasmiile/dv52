@@ -714,14 +714,8 @@
         </ul>
         </li>
         <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-32"><a href="{!!route('contacto.index')!!}"><span class="menu-title-text">Contacto</span></a></li>
-        <li id="menu-item-523"
-        class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523">
-        <a target="_blank" rel="noopener"
-            href="https://snte.org.mx/registro.html"
-            onclick="return confirm('¿Estás seguro de que deseas abandonar este sitio?')">
-            <span class="menu-title-text">Regístrate</span>
-        </a>
-    </li>        <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479">
+        <li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color_2 menu-item-523"><a target="_blank" rel="noopener" href="https://snte.org.mx/registro.html"><span class="menu-title-text">Regístrate</span></a></li>
+        <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100068161818479">
           <img src="{{ asset('images/facebook.png') }}" alt="Facebook" style="width: 24px; height: 24px;">
       </a>
     </nav>
@@ -771,7 +765,7 @@
                 </div>
                 <div class="form-group">
                     <label for="imagen_galeria">Imagen:</label>
-                    <input type="file" name="imagen_galeria" id="imagen_galeria" class="form-control" accept="image/*">
+                    <input type="file" name="imagen_galeria" id="imagen_galeria" class="form-control">
                 </div>
               <div class="form-group">
                   <label for="participantes">Participantes:</label>
@@ -780,6 +774,7 @@
                 <button type="submit">Actualizar Galería</button>
             </form>
         </div>
+        
         <input type="hidden" id="error-message" value="{{ session('error') ?? '' }}">
 
         @if(session('error'))
@@ -787,19 +782,17 @@
                 {{ session('error') }}
             </div>
             @endif
-
+        
+        
             <script>
-var errorMessage = document.getElementById('error-message').value;
-
-if (errorMessage) {
-    alert(errorMessage);
-}
-</script>
-    
-    
+        var errorMessage = document.getElementById('error-message').value;
         
-        
-       <script src="https://services.cognitoforms.com/scripts/embed.js"></script>
+        if (errorMessage) {
+            alert(errorMessage);
+        }
+        </script>
+                
+               <script src="https://services.cognitoforms.com/scripts/embed.js"></script>
     </div>
     </div>
     </div>

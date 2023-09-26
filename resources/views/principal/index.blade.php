@@ -600,8 +600,8 @@ html body[data-header-resize="1"] .container-wrap, html body[data-header-format=
 
     .slider {
     position: relative;
-    max-width: 1280px; /* Ancho máximo del slider */
-    max-height: 720px; /* Altura máxima del slider */
+    max-width: 1920px; /* Ancho máximo del slider */
+    max-height: 1080px; /* Altura máxima del slider */
     margin: 0 auto; /* Centra el slider en la página */
     overflow: hidden; /* Oculta contenido que exceda las dimensiones del slider */
 }

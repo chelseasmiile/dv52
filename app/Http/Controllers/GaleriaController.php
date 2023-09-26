@@ -119,10 +119,9 @@ class GaleriaController extends Controller
         $galeria->update($data);
 
         return redirect()->route('galerias.index')->with('success', 'Galería creada exitosamente.');
-        } catch (\Exception $e) {
-            // Manejar la excepción y devolver un mensaje de error
-            return redirect()->route('galerias.index')->with('error', 'No se pudo editar la galería. Verifique que todos los campos sean correctos y vuelva a intentarlo.');
-        }
+    } catch (\Exception $e) {
+        return view('maledit');
+    }
 }
 
     /**

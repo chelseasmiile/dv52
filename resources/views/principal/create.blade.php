@@ -761,7 +761,7 @@
               <input type="text" name="slider3" id="slider3" class="form-control">
           </div> --}}
           <div class="form-group">
-              <label for="imagen_s1">Imagen Slider (La medida recomendada es 1366*768, si se introduce una medida diferente es posible que no se ajuste adecuadamente)</label>
+              <label for="imagen_s1">Imagen Slider (La medida recomendada es 1366*768, si se introduce una medida menor es posible que no se ajuste adecuadamente)</label>
               <input type="file" name="imagen_s1" id="imagen_s1" class="form-control" accept="image/*" required>
           </div>
           {{-- <div class="form-group">

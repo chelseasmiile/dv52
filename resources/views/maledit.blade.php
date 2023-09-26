@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
-    <title>Error en el inicio de sesión - DV-52 SNTE</title>
+    <title>Error - DV-52 SNTE</title>
     <link rel="canonical" href="https://snte.org.mx/seccion36/contacto/">
     <meta property="og:locale" content="es_MX">
     <meta property="og:type" content="article">
@@ -838,8 +838,8 @@ h1 {
        
 
         <div class="container">
-            <h1>Credenciales incorrectas</h1>
-            <a href="{{ url('logeo') }}" class="btn btn-sm btn-info">Regresar al inicio de sesión</a>
+            <h1>Error al editar la galeria</h1>
+            <a href="{{ url('galerias') }}" class="btn btn-sm btn-info">Regresar al menu de galerias</a>
         </div>
 
           

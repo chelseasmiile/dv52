@@ -882,28 +882,30 @@
                       </div>
                   </div>
               </section>
-              <input type="hidden" id="error-message" value="{{ session('error') ?? '' }}">
-  
-              @if(session('error'))
-                  <div class="alert alert-danger">
-                      {{ session('error') }}
-                  </div>
-                  @endif
-      
-                  @if(session('status'))
-      <div class="alert alert-success">
-          {{ session('status') }}
-      </div>
-      @endif
-      
-              
-              
-                  <script>
-              var errorMessage = document.getElementById('error-message').value;
-              
-              if (errorMessage) {
-                  alert(errorMessage);
-              }
+
+              @if ($errors->any())
+              <div class="custom-error-alert">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+          @endif
+
+              @if (session('status'))
+<div class="alert alert-success">
+{{ session('status') }}
+</div>
+@endif
+
+
+              <script>
+                  var errorMessage = document.getElementById('error-message').value;
+
+                  if (errorMessage) {
+                      alert(errorMessage);
+                  }
               </script>
                 
           </div>

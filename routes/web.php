@@ -141,7 +141,7 @@ Route::get('/galerias/{id}/edit', [GaleriaController::class, 'edit'])->name('gal
 Route::get('/galerias/update', [GaleriaController::class, 'update'])->name('galerias.update');
 Route::delete('/galerias/{id}', [GaleriaController::class, 'destroy'])->name('galerias.destroy');
 Route::get('/galerias/{id}/download', [GaleriaController::class, 'download'])->name('galerias.download');
-
+Route::put('/galerias/{id}', [GaleriaController::class, 'update'])->name('galerias.update'); // Ruta de actualización (método PUT)
 
 
 Route::post('/galerias/{galeria}/add-image', [GaleriaController::class, 'addImage'])->name('galerias.addImage');
