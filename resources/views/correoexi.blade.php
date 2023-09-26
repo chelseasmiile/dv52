@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
-    <title>Error en el inicio de sesión - DV-52 SNTE</title>
+    <title>Correo exitoso - DV-52 SNTE</title>
     <link rel="canonical" href="https://snte.org.mx/seccion36/contacto/">
     <meta property="og:locale" content="es_MX">
     <meta property="og:type" content="article">
@@ -692,6 +692,11 @@ h1 {
     font-size: 36px;
     color: black; /* Color de texto negro */
 }
+/* Estilo para el encabezado */
+h2 {
+    font-size: 30px;
+    color: black; /* Color de texto negro */
+}
 
 
 
@@ -838,8 +843,15 @@ h1 {
        
 
         <div class="container">
-            <h1>Credenciales incorrectas</h1>
-            <a href="{{ url('logeo') }}" class="btn btn-sm btn-info">Regresar al inicio de sesión</a>
+            <h1>Se ha enviado el correo con éxito</h1>
+        </div>
+
+        <div class="container">
+            <h2>En caso de no encontrar el correo, busca en tu bandeja de spam</h2>
+        </div>
+
+        <div class="container">
+            <a href="{!!route('principal.index')!!}" class="btn btn-sm btn-info">Regresar al inicio</a>
         </div>
 
           

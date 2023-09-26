@@ -62,7 +62,7 @@ class GaleriaController extends Controller
     
             $ultimaGaleria = Galeria::latest()->first();
     
-            return redirect()->route('galerias.index')->with('success', 'Galería creada exitosamente.')->with('ultimaGaleria', $ultimaGaleria);
+            return view('galeriaexitoso');
         } catch (\Exception $e) {
             // Manejar la excepción y devolver un mensaje de error
             return redirect()->route('galerias.create')->with('error', 'No se pudo crear la galería. Verifique que todos los campos sean correctos y vuelva a intentarlo.');
@@ -118,7 +118,7 @@ class GaleriaController extends Controller
 
         $galeria->update($data);
 
-        return redirect()->route('galerias.index')->with('success', 'Galería creada exitosamente.');
+        return view('galeriaexitoso');
     } catch (\Exception $e) {
         return view('maledit');
     }

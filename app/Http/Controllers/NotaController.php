@@ -50,7 +50,7 @@ class NotaController extends Controller
     
             $ultimaNota = Nota::latest()->first();
     
-            return redirect()->route('notas.index')->with('success', 'Nota creada exitosamente.')->with('ultimaNota', $ultimaNota);
+            return view('notaexitoso');
         } catch (\Exception $e) {
             // Manejar la excepción y devolver un mensaje de error
             return redirect()->route('notas.create')->with('error', 'No se pudo crear la nota. Verifique que todos los campos sean correctos y vuelva a intentarlo.');
@@ -103,7 +103,7 @@ public function update(Request $request, string $id)
 
         $nota->save();
 
-        return redirect()->route('notas.index')->with('success', 'Nota actualizada exitosamente');
+        return view('notaexitoso');
     } catch (\Exception $e) {
         // Manejar la excepción y devolver un mensaje de error
         return redirect()->route('notas.edit', $id)->with('error', 'No se pudo actualizar la nota. Verifique que todos los campos sean correctos y vuelva a intentarlo.');

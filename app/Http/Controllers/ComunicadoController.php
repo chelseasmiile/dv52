@@ -46,7 +46,7 @@ class ComunicadoController extends Controller
         $comunicado->archivo_pdf = $rutaArchivo;
         $comunicado->save();
     
-        return redirect()->route('comunicados.index')->with('success', 'Comunicado creado exitosamente.');
+        return view('comuniexitoso');
     } catch (\Exception $e) {
         // Manejar la excepción y devolver un mensaje de error
         return redirect()->route('comunicados.create')->with('error', 'No se pudo crear el comunicado. Verifique que todos los campos sean correctos y vuelva a intentarlo.');
@@ -103,7 +103,7 @@ public function edit($id)
         
             $comunicado->save();
         
-            return redirect()->route('comunicados.index')->with('success', 'Comunicado actualizado exitosamente.');
+            return view('comuniexitoso');
     } catch (\Exception $e) {
         // Manejar la excepción y devolver un mensaje de error
         return redirect()->route('comunicados.edit', $id)->with('error', 'No se pudo actualizar el comunicado. Verifique que todos los campos sean correctos y vuelva a intentarlo.');

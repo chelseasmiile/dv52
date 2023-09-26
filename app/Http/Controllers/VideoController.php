@@ -87,7 +87,7 @@ class VideoController extends Controller
     
             Video::create($data);
     
-            return redirect()->route('videos.index')->with('success', 'Video creado exitosamente');
+            return view('videoexitoso');
         } catch (\Exception $e) {
             // Manejar la excepción y devolver un mensaje de error
             return redirect()->route('videos.create')->with('error', 'No se pudo crear el video. Verifique que todos los campos sean correctos y vuelva a intentarlo.');
@@ -144,7 +144,7 @@ public function update(Request $request, $id)
         // Guarda los cambios en el video
         $video->save();
 
-        return redirect()->route('videos.index')->with('success', 'Video actualizado exitosamente');
+        return view('videoexitoso');
     } catch (\Exception $e) {
         // Manejar la excepción y devolver un mensaje de error
         return redirect()->route('videos.edit', $id)->with('error', 'No se pudo actualizar el video. Verifique que todos los campos sean correctos y vuelva a intentarlo.');

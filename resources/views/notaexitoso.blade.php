@@ -1,10 +1,10 @@
-
+@if(Auth::check())
 
 <html lang="es-MX" class="js" style="--nectar-sticky-top-distance: 50px;"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
-    <title>Error en el inicio de sesión - DV-52 SNTE</title>
+    <title>Se ha creado con éxito - DV-52 SNTE</title>
     <link rel="canonical" href="https://snte.org.mx/seccion36/contacto/">
     <meta property="og:locale" content="es_MX">
     <meta property="og:type" content="article">
@@ -838,8 +838,8 @@ h1 {
        
 
         <div class="container">
-            <h1>Credenciales incorrectas</h1>
-            <a href="{{ url('logeo') }}" class="btn btn-sm btn-info">Regresar al inicio de sesión</a>
+            <h1>Nota creada con éxito</h1>
+            <a href="{!!route('notas.index')!!}" class="btn btn-sm btn-info">Regresar al menu de notas</a>
         </div>
 
           
@@ -979,4 +979,4 @@ h1 {
     <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon="{&quot;rayId&quot;:&quot;7da09d922e1a4666&quot;,&quot;token&quot;:&quot;f143f0cda76a4fa19dfc2998f8c22b34&quot;,&quot;version&quot;:&quot;2023.4.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
     
     </body></html>
-   
+    @endif

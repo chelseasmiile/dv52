@@ -66,7 +66,7 @@ class QuienessomosController extends Controller
         $quienessomos->imagen_valores = $imagenValores;
         $quienessomos->save();
 
-        return redirect()->route('quienessomos.index')->with('success', 'Información de Quienes Somos creada exitosamente.');
+        return view('quienessexitoso');
     } catch (\Exception $e) {
         // Maneja la excepción de la forma que prefieras
         // Por ejemplo, registra el error en un log y muestra un mensaje de error
@@ -127,7 +127,7 @@ class QuienessomosController extends Controller
     
             $quienessomos->update($data);
     
-            return redirect()->route('quienessomos.index')->with('success', 'Información de Quienes Somos actualizada exitosamente.');
+            return view('quienessexitoso');
         } catch (\Exception $e) {
             // Maneja la excepción de la forma que prefieras
             // Por ejemplo, registra el error en un log y muestra un mensaje de error

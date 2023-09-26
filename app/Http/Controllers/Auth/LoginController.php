@@ -42,25 +42,26 @@ class LoginController extends Controller
     }
 
     public function postLogeo(Request $request)
-{
-    try {
-        $this->validate($request, [
-            'username' => 'required',
-            'password' => 'required',
-        ]);
-
-        $credentials = $request->only('username', 'password');
-        $f = Auth::guard('web')->attempt($credentials, $request->filled('remember'));
-
-        if ($f) {
-            return redirect()->route('principal.index'); // Redirige a la página de inicio después del inicio de sesión exitoso
-        } else {
-            throw new \Exception('Credenciales incorrectas'); // Lanza una excepción personalizada si las credenciales son incorrectas
+    {
+        try {
+            $this->validate($request, [
+                'username' => 'required',
+                'password' => 'required',
+            ]);
+    
+            $credentials = $request->only('username', 'password');
+            $f = Auth::guard('web')->attempt($credentials, $request->filled('remember'));
+    
+            if ($f) {
+                return view('goodlogin');
+            } else {
+                throw new \Exception('Credenciales incorrectas'); // Lanza una excepción personalizada si las credenciales son incorrectas
+            }
+        } catch (\Exception $e) {
+            return view('badlogin');
         }
-    } catch (\Exception $e) {
-        return view('badlogin');
     }
-}
+    
     public function cerrarSesion(Request $request)
     {
         Auth::logout();
@@ -98,7 +99,7 @@ class LoginController extends Controller
         'password' => Hash::make($datos['password']),
     ]);
 
-    return redirect()->route('principal.index');
+    return view('newuser');
 }
 
 }

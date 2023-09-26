@@ -821,7 +821,7 @@ alert(errorMessage);
 
 @if(Auth::check())
 
-<a href="#" data-toggle="modal" data-target="#addImageModal" class="add-image-button" >Añadir Nueva Imagen</a>
+
 
 <!-- Modal para cargar nueva imagen -->
 <div class="modal fade" id="addImageModal" tabindex="-1" role="dialog" aria-labelledby="addImageModalLabel" aria-hidden="true">
@@ -836,7 +836,8 @@ alert(errorMessage);
                     @csrf
                     <input type="file" name="imagen" accept="image/*">
                     <input type="hidden" name="galeriaId" value="{{ $galeria->id }}"> <!-- Agrega el ID de la galería -->
-                    <button type="submit">Subir imagen</button>
+                    <button type="submit" id="subirImagenBtn">Subir imagen</button>
+
                 </form>
             </div>
         </div>
@@ -844,6 +845,31 @@ alert(errorMessage);
 </div>
 
 @endif
+
+<!-- Agrega esta sección de scripts al final de tu vista -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Selecciona el elemento del input de archivo
+    var inputImagen = $("input[name='imagen']");
+
+    // Selecciona el botón de "Subir imagen"
+    var subirImagenBtn = $("#subirImagenBtn");
+
+    // Deshabilita el botón de "Subir imagen" inicialmente
+    subirImagenBtn.prop("disabled", true);
+
+    // Escucha el evento de cambio en el input de archivo
+    inputImagen.on("change", function() {
+        // Habilita el botón de "Subir imagen" si se selecciona una imagen
+        if (inputImagen.val() !== "") {
+            subirImagenBtn.prop("disabled", false);
+        } else {
+            // Deshabilita el botón si no se selecciona una imagen
+            subirImagenBtn.prop("disabled", true);
+        }
+    });
+</script>
+
 
 
 

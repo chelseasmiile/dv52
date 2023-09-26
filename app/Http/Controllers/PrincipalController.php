@@ -38,7 +38,7 @@ class PrincipalController extends Controller
             $collection->imagen_s1 = $imagens1;
             $collection->save();
     
-            return redirect()->route('principal.index')->with('success', 'Slider creado exitosamente.');
+            return view('sliderexi');
         } catch (\Exception $e) {
             // Maneja la excepción de la forma que prefieras
             // Por ejemplo, registra el error en un log y muestra un mensaje de error
@@ -86,7 +86,7 @@ class PrincipalController extends Controller
                 $collection->save();
             }
     
-            return redirect()->route('principal.index')->with('success', 'Slider actualizada exitosamente.');
+            return view('sliderexi');
         } catch (\Exception $e) {
             // Maneja la excepción de la forma que prefieras
             // Por ejemplo, registra el error en un log y muestra un mensaje de error
