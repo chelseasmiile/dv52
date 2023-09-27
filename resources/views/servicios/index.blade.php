@@ -739,6 +739,7 @@
 
 <script>
   var qrGenerated = false;
+  var qrcodeInstance = null;
 
   function generateQRCode() {
     var link = document.getElementById("link-input").value;
@@ -749,7 +750,11 @@
       return;
     }
 
-    var qrcode = new QRCode(document.getElementById("qrcode"), {
+    // Eliminar el contenido anterior del elemento qrcode
+    var qrcodeDiv = document.getElementById("qrcode");
+    qrcodeDiv.innerHTML = '';
+
+    qrcodeInstance = new QRCode(qrcodeDiv, {
       text: link,
       width: 512,
       height: 512
@@ -775,6 +780,7 @@
     printWindow.print();
   }
 </script>
+
      
   </div>
   </div>
